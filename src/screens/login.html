@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Login</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-box">
+      <div class="logo-text">LTS</div>
+      <div class="subtitle">Learner Tracking System</div>
+
+      <!-- Login Form -->
+      <div id="login-form">
+        <div class="form-group">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" placeholder="Enter your username" />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your temporary password" />
+        </div>
+        <button id="login-button" class="btn btn-primary" style="width:100%" onclick="showPasswordSetup()">
+          Log In
+        </button>
+      </div>
+
+      <!-- Password Setup (hidden initially) -->
+      <div id="password-setup" style="display:none">
+        <h2 style="margin-bottom:16px; color:#003366;">Set New Password</h2>
+        <div class="form-group">
+          <label for="password-new">New Password</label>
+          <input type="password" id="password-new" placeholder="Create a new password" />
+        </div>
+        <div class="form-group">
+          <label for="password-confirm">Confirm Password</label>
+          <input type="password" id="password-confirm" placeholder="Re-enter your new password" />
+        </div>
+        <div id="password-rules" class="password-rules">
+          <strong>Password Requirements:</strong>
+          &#8226; At least 8 characters<br />
+          &#8226; One uppercase letter (A-Z)<br />
+          &#8226; One lowercase letter (a-z)<br />
+          &#8226; One number (0-9)<br />
+          &#8226; One special character (!@#$%^&amp;*)
+        </div>
+        <br />
+        <button id="password-submit" class="btn btn-success" style="width:100%" onclick="goToUserDetails()">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../tours/login-tour.js"></script>
+  <script>
+    function showPasswordSetup() {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("password-setup").style.display = "block";
+    }
+
+    function goToUserDetails() {
+      window.location.href = "user-details.html";
+    }
+  </script>
+</body>
+</html>

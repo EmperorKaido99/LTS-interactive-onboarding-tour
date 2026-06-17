@@ -1,0 +1,35 @@
+{
+  "login-tour": {
+    "login-username": "First, enter your LTS username. This is usually your employee ID or the username provided by your administrator.",
+    "login-password": "Next, enter your temporary password. You would have received this in your welcome email.",
+    "login-button": "Click the Log In button to access the system for the first time.",
+    "password-new": "Since this is your first login, you need to set a new password. Enter a password that meets the requirements shown below.",
+    "password-confirm": "Re-enter your new password here to confirm it matches.",
+    "password-rules": "Make sure your password follows all of these rules: at least 8 characters, one uppercase letter, one number, and one special character.",
+    "password-submit": "Click Submit to save your new password. You will then be taken to the User Details page."
+  },
+  "user-details-tour": {
+    "user-first-name": "Verify your first name is correct. Update it if needed.",
+    "user-last-name": "Verify your last name. This should match your official records.",
+    "user-email": "Enter or update your email address. This will be used for system notifications and password resets.",
+    "user-phone": "Enter your phone number. This is optional but helpful for account recovery.",
+    "user-department": "Select your department from the dropdown. This determines which modules and reports you can access.",
+    "user-role": "Your role is displayed here. It is set by your administrator and controls your permissions in the system.",
+    "user-save": "Once all details are correct, click Save Changes. You will be redirected to the LTS Home page."
+  },
+  "home-tour": {
+    "home-header": "This is the LTS header bar. It appears on every page and gives you quick access to the main sections of the system.",
+    "home-nav": "Use the navigation links to move between different areas: Home, Reports, Documents, and Help.",
+    "home-news": "The News and Announcements section shows important updates, system changes, and training reminders.",
+    "home-quick-links": "Quick Links give you one-click access to the most commonly used tools: Service Requests, 6NA forms, Reports, and Documents.",
+    "home-sr-link": "Click here to access the Service Request module, where you can create and track support tickets.",
+    "home-6na-link": "Click here to open the 6NA forms section for compliance and audit-related submissions."
+  },
+  "help-tour": {
+    "help-contact": "If you need assistance, here are the main support contacts for the LTS system.",
+    "help-email": "For non-urgent questions, send an email to the LTS support team.",
+    "help-phone": "For urgent issues, call the support hotline during business hours.",
+    "help-documents": "The Documents section contains user guides, training manuals, and reference materials you can download.",
+    "help-faq": "Check the FAQ section for answers to common questions about the system before contacting support."
+  }
+}

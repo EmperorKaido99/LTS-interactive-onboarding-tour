@@ -1,0 +1,25 @@
+{
+  "name": "lts-interactive-onboarding-tour",
+  "version": "1.0.0",
+  "description": "Interactive onboarding tour for the Learner Tracking System (LTS), built with Driver.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmperorKaido99/LTS-interactive-onboarding-tour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EmperorKaido99/LTS-interactive-onboarding-tour/issues"
+  },
+  "homepage": "https://github.com/EmperorKaido99/LTS-interactive-onboarding-tour#readme",
+  "dependencies": {
+    "driver.js": "^1.4.0"
+  }
+}

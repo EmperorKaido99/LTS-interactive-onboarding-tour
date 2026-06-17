@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Home</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+  <header id="home-header" class="lts-header">
+    <span class="logo">LTS</span>
+    <nav id="home-nav">
+      <a href="home.html">Home</a>
+      <a href="#">Reports</a>
+      <a href="#">Documents</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <div class="lts-main">
+    <!-- News & Announcements -->
+    <div id="home-news" class="card">
+      <h2>News &amp; Announcements</h2>
+      <div class="news-item">
+        <span class="date">June 15, 2026</span>
+        <h3>System Maintenance Scheduled</h3>
+        <p>LTS will undergo scheduled maintenance on June 22 from 2:00 AM to 5:00 AM EST.</p>
+      </div>
+      <div class="news-item">
+        <span class="date">June 10, 2026</span>
+        <h3>New Training Module Available</h3>
+        <p>The updated Safety Compliance module is now live. All users must complete it by July 1.</p>
+      </div>
+      <div class="news-item">
+        <span class="date">June 1, 2026</span>
+        <h3>Welcome to LTS 3.0</h3>
+        <p>We have upgraded the system with a refreshed interface and improved reporting tools.</p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="card">
+      <h2>Quick Links</h2>
+      <div id="home-quick-links" class="quick-links">
+        <div id="home-sr-link" class="quick-link-card">
+          <div class="icon">&#128221;</div>
+          <div class="label">Service Requests</div>
+        </div>
+        <div id="home-6na-link" class="quick-link-card">
+          <div class="icon">&#128203;</div>
+          <div class="label">6NA Forms</div>
+        </div>
+        <div class="quick-link-card">
+          <div class="icon">&#128202;</div>
+          <div class="label">Reports</div>
+        </div>
+        <div class="quick-link-card">
+          <div class="icon">&#128196;</div>
+          <div class="label">Documents</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:16px;">
+      <a href="help.html" class="btn btn-secondary">Continue to Help &amp; Support &rarr;</a>
+    </div>
+  </div>
+
+  <script type="module" src="../tours/home-tour.js"></script>
+</body>
+</html>

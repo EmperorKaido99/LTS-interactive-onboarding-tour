@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Help &amp; Support</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+  <header class="lts-header">
+    <span class="logo">LTS</span>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="#">Reports</a>
+      <a href="#">Documents</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <div class="lts-main">
+    <!-- Contact Information -->
+    <div id="help-contact" class="card">
+      <h2>Contact Support</h2>
+      <p style="margin-bottom:16px; color:#666;">
+        Need help? Reach out using any of the methods below.
+      </p>
+      <div class="contact-grid">
+        <div id="help-email" class="contact-item">
+          <div class="label">Email</div>
+          <p>lts-support@company.com</p>
+        </div>
+        <div id="help-phone" class="contact-item">
+          <div class="label">Phone</div>
+          <p>+1 (800) 555-0199</p>
+          <p style="font-size:0.8rem; color:#999;">Mon–Fri, 8 AM – 6 PM EST</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents -->
+    <div id="help-documents" class="card">
+      <h2>Documents &amp; Guides</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LTS User Guide v3.0</td>
+            <td>PDF</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+          <tr>
+            <td>Service Request Handbook</td>
+            <td>PDF</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+          <tr>
+            <td>6NA Compliance Checklist</td>
+            <td>Excel</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+          <tr>
+            <td>Password Reset Instructions</td>
+            <td>PDF</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FAQ -->
+    <div id="help-faq" class="card">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary><strong>How do I reset my password?</strong></summary>
+        <p style="padding:8px 0;">Click "Forgot Password" on the login page, or contact support at lts-support@company.com.</p>
+      </details>
+      <details>
+        <summary><strong>How do I submit a Service Request?</strong></summary>
+        <p style="padding:8px 0;">Navigate to Home &rarr; Quick Links &rarr; Service Requests, then fill out the form.</p>
+      </details>
+      <details>
+        <summary><strong>Who do I contact for access issues?</strong></summary>
+        <p style="padding:8px 0;">Contact your department administrator or call the support hotline.</p>
+      </details>
+      <details>
+        <summary><strong>Where can I find training materials?</strong></summary>
+        <p style="padding:8px 0;">Check the Documents &amp; Guides section above, or visit the Reports page for training completion records.</p>
+      </details>
+    </div>
+
+    <div style="text-align:center; margin-top:16px;">
+      <a href="../../index.html" class="btn btn-primary">Restart Tour</a>
+    </div>
+  </div>
+
+  <script type="module" src="../tours/help-tour.js"></script>
+</body>
+</html>

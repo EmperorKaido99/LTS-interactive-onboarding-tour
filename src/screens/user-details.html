@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — User Details</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+  <header class="lts-header">
+    <span class="logo">LTS</span>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <div class="lts-main">
+    <div class="card">
+      <h2>Update Your Details</h2>
+      <p style="margin-bottom:20px; color:#666;">
+        Please verify and complete your profile information below.
+      </p>
+
+      <div class="form-group">
+        <label for="user-first-name">First Name</label>
+        <input type="text" id="user-first-name" value="John" />
+      </div>
+      <div class="form-group">
+        <label for="user-last-name">Last Name</label>
+        <input type="text" id="user-last-name" value="Doe" />
+      </div>
+      <div class="form-group">
+        <label for="user-email">Email Address</label>
+        <input type="email" id="user-email" placeholder="john.doe@company.com" />
+      </div>
+      <div class="form-group">
+        <label for="user-phone">Phone Number</label>
+        <input type="tel" id="user-phone" placeholder="+1 (555) 123-4567" />
+      </div>
+      <div class="form-group">
+        <label for="user-department">Department</label>
+        <select id="user-department">
+          <option value="">— Select Department —</option>
+          <option value="engineering">Engineering</option>
+          <option value="operations">Operations</option>
+          <option value="hr">Human Resources</option>
+          <option value="finance">Finance</option>
+          <option value="safety">Safety &amp; Compliance</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="user-role">Role</label>
+        <input type="text" id="user-role" value="Standard User" disabled />
+      </div>
+
+      <button id="user-save" class="btn btn-primary" onclick="goToHome()">
+        Save Changes
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="../tours/user-details-tour.js"></script>
+  <script>
+    function goToHome() {
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>
