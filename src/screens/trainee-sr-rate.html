@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Trainee Rate Skill Review (Step 3)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — Rate Skills</span>
+    <a class="back-link" href="trainee-sr-setup.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="trainee-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Essential Performance Objectives -->
+      <div class="section-bar" id="sr-essential-header">ESSENTIAL PERFORMANCE OBJECTIVES</div>
+
+      <div style="background:#fff; border:1px solid #ccc;">
+        <!-- Outcome Topics -->
+        <table id="sr-outcome-table">
+          <thead>
+            <tr>
+              <th style="width:40px;">L</th>
+              <th>Outcome</th>
+              <th style="width:80px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="sr-outcome-1" style="cursor:pointer;">
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td><a href="#" onclick="return false;">EP1 - Professionalism, ethics and governance</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">EP2 - Personal effectiveness</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">EP3 - Communication</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Expanded Competency Rating (for EP1) -->
+        <div id="sr-rating-section" style="border-top:2px solid #2b6da3; padding:12px 14px;">
+          <div style="font-weight:700; font-size:0.85rem; margin-bottom:12px; color:#2b6da3;">
+            EP1 - Professionalism, ethics and governance
+          </div>
+
+          <table id="sr-competency-table">
+            <thead>
+              <tr>
+                <th>Competency</th>
+                <th style="width:120px;" id="sr-rating-col">Rating</th>
+                <th id="sr-evidence-col">Evidence / Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AE1.1 - Select appropriate accounting framework and policies</td>
+                <td>
+                  <select id="sr-rating-select" style="width:100%; font-size:0.75rem;">
+                    <option>-- Select --</option>
+                    <option>Not Applicable</option>
+                    <option>1 - Not Yet Competent</option>
+                    <option selected>2 - Partially Competent</option>
+                    <option>3 - Competent</option>
+                    <option>4 - Advanced</option>
+                  </select>
+                </td>
+                <td>
+                  <textarea id="sr-evidence-input" style="width:100%; min-height:40px; font-size:0.75rem; border:1px solid #ccc; padding:4px;" placeholder="Provide specific details using STAR method...">Assisted with preparing financial statements for Client ABC, applying IFRS standards for revenue recognition.</textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>AE1.2 - Account for key entity transactions</td>
+                <td>
+                  <select style="width:100%; font-size:0.75rem;">
+                    <option>-- Select --</option>
+                    <option>Not Applicable</option>
+                    <option>1 - Not Yet Competent</option>
+                    <option>2 - Partially Competent</option>
+                    <option>3 - Competent</option>
+                    <option>4 - Advanced</option>
+                  </select>
+                </td>
+                <td>
+                  <textarea style="width:100%; min-height:40px; font-size:0.75rem; border:1px solid #ccc; padding:4px;" placeholder="Provide specific details using STAR method..."></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="text-align:right; margin-top:12px;">
+            <button id="sr-submit-btn" class="btn-primary btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Performance Objectives -->
+      <div class="section-bar" id="sr-technical-header" style="margin-top:16px;">TECHNICAL PERFORMANCE OBJECTIVES</div>
+      <div style="background:#fff; border:1px solid #ccc;">
+        <table id="sr-tech-table">
+          <thead>
+            <tr>
+              <th style="width:40px;">L</th>
+              <th>Outcome</th>
+              <th style="width:80px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA1 - Auditing and Assurance</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA2 - Financial Accounting and Reporting</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA3 - Management Accounting</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA4 - Taxation</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Document Complete / Finish -->
+      <div style="margin-top:16px; display:flex; gap:8px; padding:10px 14px; background:#f5f5f5; border:1px solid #ccc;">
+        <button id="sr-doc-complete-btn" class="btn-primary btn" onclick="window.location.href='trainee-sr-acca.html'">Document Complete</button>
+        <button class="btn">Print</button>
+        <button id="sr-finish-btn" class="btn" onclick="window.location.href='trainee-sr-acca.html'" style="margin-left:auto;">Finish</button>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="trainee-sr-setup.html" class="nav-btn green">&larr; Back to SR Setup</a>
+    <a href="trainee-sr-acca.html" class="nav-btn">Continue to ACCA Audit Units &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/trainee-sr-rate-tour.js"></script>
+</body>
+</html>

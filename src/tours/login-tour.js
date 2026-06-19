@@ -3,6 +3,8 @@ import { narrate, stopNarration } from "../shared/narrate.js";
 
 const TOUR_NAME = "login-tour";
 
+let currentStepIndex = 0;
+
 const tourDriver = driver({
   showProgress: true,
   animate: true,
@@ -10,29 +12,48 @@ const tourDriver = driver({
   allowClose: true,
   overlayColor: "rgba(0, 0, 0, 0.6)",
   onHighlightStarted: (element, step) => {
-    const stepId = step.element?.replace("#", "");
-    if (stepId) narrate(TOUR_NAME, stepId);
+    const stepId = step.element ? step.element.replace("#", "") : `step-${currentStepIndex}`;
+    narrate(TOUR_NAME, stepId);
+  },
+  onNextClick: () => {
+    currentStepIndex++;
+    tourDriver.moveNext();
+  },
+  onPrevClick: () => {
+    currentStepIndex--;
+    tourDriver.movePrevious();
   },
   onDestroyStarted: () => {
     stopNarration();
+    currentStepIndex = 0;
   },
   steps: [
     {
-      element: "#login-username",
+      element: "#login-bar",
       popover: {
-        title: "Step 1: Enter Username",
+        title: "Step 1: Login Area",
         description:
-          "Enter your LTS username — this is usually your employee ID or the username from your welcome email.",
+          "You will receive a welcome email with your username and password. Enter them here in the login bar at the top of the LTS website (www.LTSystems.co.za).",
+        side: "bottom",
+        align: "center",
+      },
+    },
+    {
+      element: "#top-username",
+      popover: {
+        title: "Step 1a: Username",
+        description:
+          "Enter your assigned USERNAME from the welcome email.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#login-password",
+      element: "#top-password",
       popover: {
-        title: "Step 2: Enter Password",
+        title: "Step 1b: Password",
         description:
-          "Enter the temporary password provided in your welcome email.",
+          "Enter the PASSWORD provided in your welcome email.",
         side: "bottom",
         align: "start",
       },
@@ -40,61 +61,99 @@ const tourDriver = driver({
     {
       element: "#login-button",
       popover: {
-        title: "Step 3: Log In",
+        title: "Step 1c: Click LOGIN",
         description:
-          'Click "Log In" to access the system. Since this is your first login, you will be prompted to set a new password.',
-        side: "top",
+          "Click the LOGIN button to access the system. You will be taken to the Login Credentials screen.",
+        side: "bottom",
+        align: "start",
+      },
+    },
+    {
+      element: "#credentials-panel",
+      popover: {
+        title: "Step 2: Login Credentials",
+        description:
+          "This is the Login Credentials panel. From here you can create a new password or continue to edit your user details.",
+        side: "right",
+        align: "start",
+      },
+    },
+    {
+      element: "#create-password-btn",
+      popover: {
+        title: "Step 2a: Create New Password",
+        description:
+          'Click "Create New Password" to set up your own password. Follow the instructions, then click Save.',
+        side: "bottom",
         align: "start",
       },
       onDeselected: () => {
-        // Show the password setup form when moving past the login button step
-        document.getElementById("login-form").style.display = "none";
-        document.getElementById("password-setup").style.display = "block";
+        document.getElementById("password-dialog").style.display = "block";
       },
     },
     {
-      element: "#password-new",
+      element: "#password-dialog",
       popover: {
-        title: "Step 4: New Password",
+        title: "Step 3: Password Setup",
         description:
-          "Create a strong new password that meets the requirements listed below.",
-        side: "bottom",
+          "This dialog appears when you click Create New Password. Enter your new password and confirm it.",
+        side: "left",
         align: "start",
       },
     },
     {
-      element: "#password-confirm",
+      element: "#new-password",
       popover: {
-        title: "Step 5: Confirm Password",
-        description: "Re-enter your new password to confirm it matches.",
-        side: "bottom",
+        title: "Step 3a: New Password",
+        description:
+          "Enter your new password here.",
+        side: "left",
+        align: "start",
+      },
+    },
+    {
+      element: "#confirm-password",
+      popover: {
+        title: "Step 3b: Confirm Password",
+        description:
+          "Re-enter your new password to confirm it matches.",
+        side: "left",
         align: "start",
       },
     },
     {
       element: "#password-rules",
       popover: {
-        title: "Step 6: Password Requirements",
+        title: "Step 3c: Password Requirements",
         description:
-          "Review these rules carefully. Your password must satisfy all of them before it can be accepted.",
-        side: "top",
+          "Your password must contain: minimum 8 characters, maximum 15 characters, at least 1 alphabet character and at least 1 number.",
+        side: "left",
         align: "start",
       },
     },
     {
-      element: "#password-submit",
+      element: "#save-btn",
       popover: {
-        title: "Step 7: Submit",
+        title: "Step 3d: Save Password",
         description:
-          'Click "Submit" to save your new password. You will be redirected to update your user details.',
-        side: "top",
+          'Click "Save" to save your new password.',
+        side: "left",
         align: "start",
+      },
+    },
+    {
+      element: "#continue-btn",
+      popover: {
+        title: "Step 4: Continue",
+        description:
+          'Click "Continue" to proceed to the next screen: Edit/Update User Details.',
+        side: "top",
+        align: "end",
       },
     },
   ],
 });
 
-// Auto-start the tour when the page loads
 window.addEventListener("load", () => {
   setTimeout(() => tourDriver.drive(), 500);
 });

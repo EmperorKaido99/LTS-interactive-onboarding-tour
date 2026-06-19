@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Reviewer: ACCA Audit Units (Step 3)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Reviewer) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — ACCA Audit Units (Reviewer)</span>
+    <a class="back-link" href="reviewer-sr-review.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="reviewer-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">ACCA AUDIT UNITS — REVIEWER</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:16px 20px;">
+
+        <!-- Reviewer can update audit info -->
+        <div style="background:#d6eaf8; border:1px solid #aed6f1; padding:10px 14px; margin-bottom:16px; font-size:0.8rem; line-height:1.6;">
+          <strong>Reviewer/Supervisor can:</strong><br/>
+          &bull; Update Number of Clients<br/>
+          &bull; Update Audit class hours<br/>
+          &bull; Update Other work hours<br/>
+          &bull; Update Client sectors and Client Size
+        </div>
+
+        <div class="form-row" id="rv-acca-clients">
+          <label style="width:220px;">Number of Clients:</label>
+          <input type="number" value="1" style="max-width:100px;" />
+        </div>
+        <div class="form-row" id="rv-acca-hours">
+          <label style="width:220px;">Audit Class Hours:</label>
+          <input type="number" value="120" style="max-width:100px;" />
+        </div>
+        <div class="form-row">
+          <label style="width:220px;">Other Work Hours:</label>
+          <input type="number" value="40" style="max-width:100px;" />
+        </div>
+
+        <!-- Elements Review -->
+        <div style="margin-top:16px;">
+          <div style="font-weight:700; font-size:0.82rem; margin-bottom:8px; color:#2b6da3;">
+            Review Elements and Statement of Achievement
+          </div>
+          <table id="rv-acca-elements">
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th style="width:120px;">Date</th>
+                <th>Trainee Statement</th>
+                <th style="width:80px;" id="rv-agree-col">Agree?</th>
+                <th id="rv-acca-comment-col">Reviewer Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size:0.75rem;">Planning and risk assessment</td>
+                <td style="font-size:0.75rem;">2025/07/15</td>
+                <td style="font-size:0.75rem; color:#666;">Performed risk assessment for Client ABC audit</td>
+                <td style="text-align:center;">
+                  <select id="rv-agree-select" style="font-size:0.7rem;">
+                    <option selected>Agree</option>
+                    <option>Disagree</option>
+                  </select>
+                </td>
+                <td>
+                  <textarea id="rv-acca-comment-input" style="width:100%; min-height:30px; font-size:0.7rem; border:1px solid #ccc; padding:3px;" placeholder="Reviewer comment..."></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:0.75rem;">Internal controls evaluation</td>
+                <td style="font-size:0.75rem;">2025/08/20</td>
+                <td style="font-size:0.75rem; color:#666;">Evaluated internal controls for payroll cycle</td>
+                <td style="text-align:center;">
+                  <select style="font-size:0.7rem;">
+                    <option selected>Agree</option>
+                    <option>Disagree</option>
+                  </select>
+                </td>
+                <td>
+                  <textarea style="width:100%; min-height:30px; font-size:0.7rem; border:1px solid #ccc; padding:3px;" placeholder="Reviewer comment..."></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Send Back / Sign Off -->
+        <div style="display:flex; justify-content:space-between; margin-top:20px; align-items:center;">
+          <button id="rv-acca-send-back" class="btn" style="font-size:0.8rem;">Send Back to Trainee</button>
+          <button id="rv-acca-signoff-btn" class="btn-primary btn" onclick="window.location.href='reviewer-sr-signoff.html'">Sign Off</button>
+        </div>
+
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="reviewer-sr-review.html" class="nav-btn green">&larr; Back to Review</a>
+    <a href="reviewer-sr-signoff.html" class="nav-btn">Continue to Sign Off &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/reviewer-sr-acca-tour.js"></script>
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LTS — Home Page</title>
+  <title>LTS — Trainee Initiate Skill Review (Step 2)</title>
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
 </head>
 <body>
 
-  <!-- LTS Internal Header (matches screenshot - logo + ACCA Think Ahead) -->
+  <!-- LTS Internal Header -->
   <div class="lts-internal-header">
     <div class="lts-logo">
       <div class="lts-logo-hexagon">LTS</div>
@@ -24,7 +24,7 @@
   <!-- Firm Bar -->
   <div class="lts-firm-bar">
     <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
-    <span class="user-info">Trainee A-LTS (Trainee) | <a href="login.html">LOG OUT</a></span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
   </div>
 
   <!-- Page Header -->
@@ -41,9 +41,9 @@
           Registered Users <span class="chevron">&#9650;</span>
         </div>
         <div class="sidebar-links">
-          <a href="home.html"><span class="dot green"></span> Trainee Home</a>
-          <a href="user-details.html"><span class="dot grey"></span> Edit your details</a>
-          <a href="help.html"><span class="dot blue"></span> Documents</a>
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
         </div>
       </div>
       <div class="sidebar-section">
@@ -65,46 +65,20 @@
       </div>
       <div class="sidebar-promo">Don't display adverts</div>
       <div class="sidebar-calendar">Upskill Events Calendar</div>
-      <div class="sidebar-upcoming">
-        <h4>Upcoming</h4>
-        <div class="upcoming-event">
-          <span class="event-dot"></span>
-          <div>
-            <div class="event-title">2026 Mergers and acquisition - Part 1</div>
-            <div class="event-details">Thursday, July 9 - 9:00 – 11:00am (SAST)</div>
-          </div>
-        </div>
-        <div class="upcoming-event">
-          <span class="event-dot"></span>
-          <div>
-            <div class="event-title">2026 Mergers and acquisition - Part 2</div>
-            <div class="event-details">Thursday, July 16 - 9:00 – 11:00am (SAST)</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Main Content -->
     <div class="lts-content">
 
       <!-- NEWS -->
-      <div id="home-news" class="section-bar">NEWS</div>
-      <div class="news-content" id="news-content">
-        <div class="news-banner">
-          <div>
-            <div class="news-text">Online learning.</div>
-            <div class="news-text">Anytime. Anywhere.</div>
-          </div>
-          <div style="border-left: 2px solid rgba(255,255,255,0.3); padding-left: 16px;">
-            <div class="news-text-sub">Introduction to Machine Learning for Accountants</div>
-          </div>
-          <button class="read-more-btn">Read more >></button>
-        </div>
+      <div id="sr-news" class="section-bar">NEWS</div>
+      <div class="news-content" id="sr-news-content">
+        Update the news to inform trainees about the documents' deadlines.
       </div>
 
       <!-- DAYS SINCE LAST -->
-      <div id="home-days-since" class="section-bar">DAYS SINCE LAST</div>
-      <table id="days-since-table">
+      <div id="sr-days-since" class="section-bar">DAYS SINCE LAST</div>
+      <table id="sr-days-table">
         <thead>
           <tr>
             <th>Document</th>
@@ -130,35 +104,32 @@
       </table>
 
       <!-- OPEN ITEMS -->
-      <div id="home-open-items" class="section-bar">OPEN ITEMS</div>
-      <div class="open-items">
-        <div style="margin-bottom: 6px;">
-          &#128196; <strong>SR Started: 03 December 2025</strong> (A-LTS, Manager) &nbsp; Project ABC
-          <span style="float:right; font-size:0.78rem;">Skill Review not complete. &nbsp; <a href="#">Print</a></span>
-        </div>
-        <div>No Open 6NA's</div>
+      <div id="sr-open-items" class="section-bar">OPEN ITEMS</div>
+      <div class="open-items" id="sr-open-items-content">
+        No Open SR's<br />
+        No Open 6NA's
       </div>
 
       <!-- SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA -->
-      <div id="home-skills-section" class="section-bar">SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA</div>
-      <div class="links-grid" id="skills-links">
-        <div id="link-skill-review" class="link-item">
+      <div id="sr-skills-section" class="section-bar">SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA</div>
+      <div class="links-grid" id="sr-skills-links">
+        <div id="sr-link-skill-review" class="link-item" style="cursor:pointer;" onclick="window.location.href='trainee-sr-setup.html'">
           <span class="link-icon">&#128196;</span>
           <span>Link to<br/>Skill Review</span>
         </div>
-        <div id="link-6na" class="link-item">
+        <div class="link-item">
           <span class="link-icon">&#128196;</span>
           <span>Link to 6NA's</span>
         </div>
-        <div id="link-status-report" class="link-item">
+        <div class="link-item">
           <span class="link-icon">&#128196;</span>
           <span>Status Report</span>
         </div>
-        <div id="link-last-6na" class="link-item">
+        <div class="link-item">
           <span class="link-icon">&#128196;</span>
           <span>Last 6NA</span>
         </div>
-        <div id="link-expected-levels" class="link-item">
+        <div class="link-item">
           <span class="link-icon">&#128196;</span>
           <span>Training Office Defined<br/>Expected Levels</span>
         </div>
@@ -166,7 +137,7 @@
 
       <div style="padding: 10px 14px; background: #fff; border: 1px solid #ccc; border-top: none; font-size:0.8rem;">
         <span class="link-icon">&#128196;</span>
-        Competence Report for ACCA 2023 - CBR, MA, TX, AA According to Period : <strong>Current 6NA</strong> or <strong>Final 6NA</strong>
+        Competence Report for ACCA 2023 According to Period : <strong>Current 6NA</strong> or <strong>Final 6NA</strong>
       </div>
       <div style="padding: 8px 14px; background: #fff; border: 1px solid #ccc; border-top: none; font-size:0.8rem;">
         <span class="link-icon">&#128196;</span>
@@ -176,7 +147,7 @@
       <!-- HOW TO CREATE DOCUMENTS ON LTS -->
       <div class="section-bar">HOW TO CREATE DOCUMENTS ON LTS</div>
       <div style="padding: 12px 14px; background: #fff; border: 1px solid #ccc; font-size:0.85rem; text-align: center;">
-        <a href="help.html">Click here for more LTS training material...</a>
+        <a href="#">Click here for more LTS training material...</a>
       </div>
 
       <!-- BIRTHDAY LIST FOR NEXT 7 DAYS -->
@@ -189,8 +160,8 @@
   </div><!-- end lts-layout -->
 
   <div class="screen-nav">
-    <a href="user-details.html" class="nav-btn green">&larr; Back to User Details</a>
-    <a href="help.html" class="nav-btn">Continue to Documents &rarr;</a>
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="trainee-sr-setup.html" class="nav-btn">Continue to SR Setup &rarr;</a>
   </div>
 
   <!-- Footer -->
@@ -198,6 +169,6 @@
     Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
-  <script type="module" src="../tours/home-tour.js"></script>
+  <script type="module" src="../tours/trainee-sr-home-tour.js"></script>
 </body>
 </html>

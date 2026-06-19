@@ -8,57 +8,228 @@
   <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
 </head>
 <body>
-  <header class="lts-header">
-    <span class="logo">LTS</span>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="help.html">Help</a>
-    </nav>
-  </header>
 
-  <div class="lts-main">
-    <div class="card">
-      <h2>Update Your Details</h2>
-      <p style="margin-bottom:20px; color:#666;">
-        Please verify and complete your profile information below.
-      </p>
-
-      <div class="form-group">
-        <label for="user-first-name">First Name</label>
-        <input type="text" id="user-first-name" value="John" />
-      </div>
-      <div class="form-group">
-        <label for="user-last-name">Last Name</label>
-        <input type="text" id="user-last-name" value="Doe" />
-      </div>
-      <div class="form-group">
-        <label for="user-email">Email Address</label>
-        <input type="email" id="user-email" placeholder="john.doe@company.com" />
-      </div>
-      <div class="form-group">
-        <label for="user-phone">Phone Number</label>
-        <input type="tel" id="user-phone" placeholder="+1 (555) 123-4567" />
-      </div>
-      <div class="form-group">
-        <label for="user-department">Department</label>
-        <select id="user-department">
-          <option value="">— Select Department —</option>
-          <option value="engineering">Engineering</option>
-          <option value="operations">Operations</option>
-          <option value="hr">Human Resources</option>
-          <option value="finance">Finance</option>
-          <option value="safety">Safety &amp; Compliance</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="user-role">Role</label>
-        <input type="text" id="user-role" value="Standard User" disabled />
-      </div>
-
-      <button id="user-save" class="btn btn-primary" onclick="goToHome()">
-        Save Changes
-      </button>
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
     </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="login.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>User Details</span>
+    <a class="back-link" href="login.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="user-details.html"><span class="dot grey"></span> Edit your details</a>
+          <a href="help.html"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+      <div class="sidebar-upcoming">
+        <h4>Upcoming</h4>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Mergers and acquisition - Part 1</div>
+            <div class="event-details">Thursday, July 9 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Mergers and acquisition - Part 2</div>
+            <div class="event-details">Thursday, July 16 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+      <!-- Alert Banner -->
+      <div id="alert-banner" class="alert-banner">
+        PLEASE ENSURE ALL INFORMATION IS CORRECT.
+      </div>
+
+      <div id="view-credentials" style="padding: 6px 14px; background: #fff; border-bottom: 1px solid #ccc;">
+        <a href="login.html" class="view-credentials-link">View/Update Login Credentials</a>
+      </div>
+
+      <div id="note-area" class="note-text">
+        Please review the below and ensure all information is <strong>accurate</strong> and <strong>up to date</strong>. Click on <strong>UPDATE</strong> to proceed to your LTS home page.<br /><br />
+        <strong>NOTE:</strong><br />
+        Email 1 must be your <strong>work email address</strong>. If you want to receive notifications on an additional email, then add the additional email address to email 2.
+      </div>
+
+      <!-- Personal Information -->
+      <div id="personal-info" class="details-form">
+        <div class="form-section-header">Personal Information</div>
+        <div class="form-row">
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" value="A-Mostert" class="mandatory" />
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" value="Susan" class="mandatory" />
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="second-name">Second Name:</label>
+          <input type="text" id="second-name" value="" />
+        </div>
+        <div class="form-row">
+          <label for="dob">Date Of Birth:</label>
+          <input type="text" id="dob" value="2000/02/08" class="mandatory" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="staff-number">Staff Number:</label>
+          <input type="text" id="staff-number" value="" />
+        </div>
+        <div class="form-row">
+          <label for="country">Country:</label>
+          <select id="country" class="mandatory">
+            <option selected>South Africa</option>
+            <option>Other</option>
+          </select>
+          <span class="asterisk">*</span>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div id="contact-info" class="details-form">
+        <div class="form-section-header">Contact Information</div>
+        <div class="form-row">
+          <label for="email1">EMail 1:</label>
+          <input type="email" id="email1" value="Susan@LTSystems.co.zaa" class="mandatory" />
+          <span class="asterisk">*</span>
+          <span class="field-note">Work Email</span>
+        </div>
+        <div class="form-row">
+          <label for="email2">EMail 2:</label>
+          <input type="email" id="email2" value="" />
+          <span class="field-note" style="color: #666;">Additional Email</span>
+        </div>
+      </div>
+
+      <!-- Training Program Information -->
+      <div id="training-info" class="details-form">
+        <div class="form-section-header">Training Program Information</div>
+        <div class="form-row">
+          <label for="acca-number">ACCA Membership Number:</label>
+          <input type="text" id="acca-number" value="" class="mandatory" />
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="elective">Elective:</label>
+          <input type="text" id="elective" value="ACCA Objectives 2023" readonly />
+        </div>
+        <div class="form-row">
+          <label for="mapped-group">Mapped Group:</label>
+          <select id="mapped-group">
+            <option>Not Selected</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="contract-start">Contract Start Date:</label>
+          <input type="text" id="contract-start" value="2024/01/01" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+        </div>
+        <div class="form-row">
+          <label for="contract-end">Contract End Date:</label>
+          <input type="text" id="contract-end" value="2026/12/31" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+        </div>
+        <div class="form-row">
+          <label>Contract Period:</label>
+          <input type="text" value="3" readonly style="max-width:60px;" />
+        </div>
+        <div class="form-row">
+          <label for="training-b-start">Training Period B Start Date:</label>
+          <input type="text" id="training-b-start" value="2025/01/01" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+        </div>
+        <div class="form-row">
+          <label for="training-c-start">Training Period C Start Date:</label>
+          <input type="text" id="training-c-start" value="2026/01/01" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+        </div>
+        <div class="form-row">
+          <label for="training-period">Training Period:</label>
+          <select id="training-period">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">&#9432; To change period, please amend training period dates above.</span>
+        </div>
+      </div>
+
+      <!-- Update Button -->
+      <div class="button-row">
+        <button id="update-btn" class="btn-primary btn" onclick="goToHome()">Update</button>
+      </div>
+
+      <!-- Support Ticket Tabs -->
+      <div id="support-tabs" style="display:flex; gap:0; margin-top:12px;">
+        <div style="background:#2b6da3; color:#fff; padding:6px 16px; font-size:0.8rem; font-weight:600; cursor:pointer;">Log Support Ticket</div>
+        <div style="background:#e0e0e0; color:#333; padding:6px 16px; font-size:0.8rem; font-weight:600; cursor:pointer; border:1px solid #ccc;">Support Tickets</div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="login.html" class="nav-btn green">&larr; Back to Login</a>
+    <a href="home.html" class="nav-btn">Continue to Home Page &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
   <script type="module" src="../tours/user-details-tour.js"></script>

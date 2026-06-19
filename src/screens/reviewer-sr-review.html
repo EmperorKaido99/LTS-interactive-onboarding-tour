@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Reviewer: Review Skills (Step 2 cont.)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Reviewer) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — Review &amp; Rate</span>
+    <a class="back-link" href="reviewer-sr-home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="reviewer-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Edit / Send Back Actions -->
+      <div id="rv-actions-bar" style="background:#f5f5f5; border:1px solid #ccc; padding:8px 14px; display:flex; gap:8px; font-size:0.8rem;">
+        <button id="rv-edit-btn" class="btn" style="font-size:0.75rem;">Edit Skill Review Setup</button>
+        <button id="rv-send-back-btn" class="btn" style="font-size:0.75rem;">Send Back to Trainee</button>
+      </div>
+
+      <!-- Essential Performance Objectives -->
+      <div class="section-bar" id="rv-essential-header">ESSENTIAL PERFORMANCE OBJECTIVES</div>
+
+      <div style="background:#fff; border:1px solid #ccc;">
+        <table id="rv-outcome-table">
+          <thead>
+            <tr>
+              <th style="width:30px;">L</th>
+              <th style="width:30px;">S</th>
+              <th>Outcome</th>
+              <th style="width:80px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="rv-outcome-1" style="cursor:pointer;">
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td><a href="#" onclick="return false;">EP1 - Professionalism, ethics and governance</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">EP2 - Personal effectiveness</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">EP3 - Communication</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Expanded Rating Section -->
+        <div id="rv-rating-section" style="border-top:2px solid #2b6da3; padding:12px 14px;">
+          <div style="font-weight:700; font-size:0.85rem; margin-bottom:12px; color:#2b6da3;">
+            EP1 - Professionalism, ethics and governance
+          </div>
+
+          <table id="rv-competency-table">
+            <thead>
+              <tr>
+                <th>Competency</th>
+                <th style="width:100px;">Trainee Rating</th>
+                <th style="width:100px;" id="rv-reviewer-rating-col">Reviewer Rating</th>
+                <th>Trainee Evidence</th>
+                <th id="rv-comment-col">Reviewer Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size:0.75rem;">AE1.1 - Select appropriate accounting framework</td>
+                <td style="font-size:0.75rem; color:#2b6da3;">2 - Partially Competent</td>
+                <td>
+                  <select id="rv-rating-select" style="width:100%; font-size:0.7rem;">
+                    <option>-- Select --</option>
+                    <option>1 - Not Yet Competent</option>
+                    <option>2 - Partially Competent</option>
+                    <option selected>3 - Competent</option>
+                    <option>4 - Advanced</option>
+                  </select>
+                </td>
+                <td style="font-size:0.7rem; color:#666; font-style:italic;">
+                  Assisted with preparing financial statements for Client ABC
+                </td>
+                <td>
+                  <textarea id="rv-comment-input" style="width:100%; min-height:35px; font-size:0.7rem; border:1px solid #ccc; padding:3px;" placeholder="Add reviewer comment...">Good progress shown. Recommend more exposure to complex scenarios.</textarea>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:0.75rem;">AE1.2 - Account for key entity transactions</td>
+                <td style="font-size:0.75rem; color:#888;">Not Rated</td>
+                <td>
+                  <select style="width:100%; font-size:0.7rem;">
+                    <option>-- Select --</option>
+                    <option>1 - Not Yet Competent</option>
+                    <option>2 - Partially Competent</option>
+                    <option>3 - Competent</option>
+                    <option>4 - Advanced</option>
+                  </select>
+                </td>
+                <td style="font-size:0.7rem; color:#888;">—</td>
+                <td>
+                  <textarea style="width:100%; min-height:35px; font-size:0.7rem; border:1px solid #ccc; padding:3px;" placeholder="Add reviewer comment..."></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="rv-submit-area" style="text-align:right; margin-top:12px;">
+            <button id="rv-submit-btn" class="btn-primary btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Performance Objectives -->
+      <div class="section-bar" id="rv-technical-header" style="margin-top:16px;">TECHNICAL PERFORMANCE OBJECTIVES</div>
+      <div style="background:#fff; border:1px solid #ccc;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:30px;">L</th>
+              <th style="width:30px;">S</th>
+              <th>Outcome</th>
+              <th style="width:80px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA1 - Auditing and Assurance</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+              <td><a href="#" onclick="return false;">FA2 - Financial Accounting and Reporting</a></td>
+              <td><a href="#" onclick="return false;" style="font-size:0.75rem;">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Document Complete / Finish -->
+      <div style="margin-top:16px; display:flex; gap:8px; padding:10px 14px; background:#f5f5f5; border:1px solid #ccc;">
+        <button id="rv-doc-complete-btn" class="btn-primary btn" onclick="window.location.href='reviewer-sr-acca.html'">Document Complete</button>
+        <button class="btn">Print</button>
+        <button id="rv-finish-btn" class="btn" onclick="window.location.href='reviewer-sr-acca.html'" style="margin-left:auto;">Finish</button>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="reviewer-sr-home.html" class="nav-btn green">&larr; Back to Home</a>
+    <a href="reviewer-sr-acca.html" class="nav-btn">Continue to ACCA Audit Units &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/reviewer-sr-review-tour.js"></script>
+</body>
+</html>

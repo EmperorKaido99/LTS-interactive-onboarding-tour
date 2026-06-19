@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Reviewer: Review Skill Review (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Reviewer) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Learner Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select" id="rv-profile-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer/Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button id="rv-continue-btn" class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        There are no firm news entries today.
+      </div>
+
+      <!-- DAYS SINCE LAST -->
+      <div class="section-bar">DAYS SINCE LAST</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Initiated</th>
+            <th>Worked On(In Progress)</th>
+            <th>Finalised</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SR</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 11:28:00 AM<br/>197 Days</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 10:56:00 AM<br/>197 Days</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 10:57:00 AM<br/>197 Days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- OPEN ITEMS -->
+      <div class="section-bar">OPEN ITEMS</div>
+      <div class="open-items" id="rv-open-items">
+        <div style="margin-bottom: 6px;">
+          <a href="reviewer-sr-review.html" id="rv-sr-link" style="font-weight:600;">
+            &#128196; SR Started: 03 December 2025 (Trainee A-LTS) &nbsp; Project ABC
+          </a>
+          <span style="float:right; font-size:0.78rem;">Awaiting Review. &nbsp; <a href="#">Print</a></span>
+        </div>
+      </div>
+
+      <!-- SKILL REVIEWS -->
+      <div class="section-bar">SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA</div>
+      <div class="links-grid">
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Link to<br/>Skill Review</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Link to 6NA's</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Status Report</span>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="reviewer-sr-review.html" class="nav-btn">Continue to Review SR &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/reviewer-sr-home-tour.js"></script>
+</body>
+</html>

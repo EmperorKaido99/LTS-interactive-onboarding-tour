@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.mp3
+dist/
+*.zip
+.claude/

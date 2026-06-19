@@ -1,7 +1,7 @@
 import { driver } from "../../node_modules/driver.js/dist/driver.js.mjs";
 import { narrate, stopNarration } from "../shared/narrate.js";
 
-const TOUR_NAME = "help-tour";
+const TOUR_NAME = "trainee-sr-home-tour";
 
 let currentStepIndex = 0;
 
@@ -29,52 +29,51 @@ const tourDriver = driver({
   },
   steps: [
     {
-      element: "#help-contact",
       popover: {
-        title: "Need Help?",
+        title: "Step 2: Trainee Initiate a Skill Review",
         description:
-          "If you need assistance, contact LTS Support at Support@LTSystems.co.za, or view training material and FAQ under Documents on the LTS Home page.",
+          "Welcome to the LTS Home Page. From here you will initiate a Skill Review by clicking on the 'Link to Skill Review' hyperlink. Let's walk through the key sections on this page first.",
+        side: "bottom",
+        align: "center",
+      },
+    },
+    {
+      element: "#sr-news",
+      popover: {
+        title: "NEWS Section",
+        description:
+          "Update the news to inform trainees about the documents' deadlines.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#help-email",
+      element: "#sr-days-since",
       popover: {
-        title: "Support Email",
+        title: "DAYS SINCE LAST",
         description:
-          "Email the LTS support team at Support@LTSystems.co.za for any assistance.",
+          "This section indicates the last day a document on LTS was created, worked on and finalized.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#acca-docs",
+      element: "#sr-open-items",
       popover: {
-        title: "ACCA Training Programme",
+        title: "OPEN ITEMS",
         description:
-          "This section contains ACCA-related documents including qualification guides, programme handbooks, RPL policies, and PCEF forms.",
+          "Open documents will be listed under OPEN ITEMS. Any SR's or 6NA's currently in progress will appear here.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#training-docs",
+      element: "#sr-link-skill-review",
       popover: {
-        title: "LTS Training Material and FAQ",
+        title: "Link to Skill Review",
         description:
-          "Here you will find all LTS training slides covering Skill Reviews, 6NA processes, and system guides. Download these for reference.",
+          "Click on the hyperlink 'Link to Skill Review' to initiate a skill review. This will take you to the Skill Review setup page.",
         side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#training-docs-list",
-      popover: {
-        title: "Training Slides",
-        description:
-          "Browse and download training slides 1 through 8, covering everything from logging in to finalizing a 6NA assessment.",
-        side: "top",
         align: "start",
       },
     },

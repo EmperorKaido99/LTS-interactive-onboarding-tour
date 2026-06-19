@@ -1,35 +1,129 @@
 {
   "login-tour": {
-    "login-username": "First, enter your LTS username. This is usually your employee ID or the username provided by your administrator.",
-    "login-password": "Next, enter your temporary password. You would have received this in your welcome email.",
-    "login-button": "Click the Log In button to access the system for the first time.",
-    "password-new": "Since this is your first login, you need to set a new password. Enter a password that meets the requirements shown below.",
-    "password-confirm": "Re-enter your new password here to confirm it matches.",
-    "password-rules": "Make sure your password follows all of these rules: at least 8 characters, one uppercase letter, one number, and one special character.",
-    "password-submit": "Click Submit to save your new password. You will then be taken to the User Details page."
+    "login-bar": "You will receive a welcome email with your username and password. Enter them here in the login bar at the top of the LTS website.",
+    "top-username": "Enter your assigned username from the welcome email.",
+    "top-password": "Enter the password provided in your welcome email.",
+    "login-button": "Click the LOGIN button to access the system. You will be taken to the Login Credentials screen.",
+    "credentials-panel": "This is the Login Credentials panel. From here you can create a new password or continue to edit your user details.",
+    "create-password-btn": "Click Create New Password to set up your own password. Follow the instructions, then click Save.",
+    "password-dialog": "This dialog appears when you click Create New Password. Enter your new password and confirm it.",
+    "new-password": "Enter your new password here.",
+    "confirm-password": "Re-enter your new password to confirm it matches.",
+    "password-rules": "Your password must contain: minimum 8 characters, maximum 15 characters, at least 1 alphabet character and at least 1 number.",
+    "save-btn": "Click Save to save your new password.",
+    "continue-btn": "Click Continue to proceed to the next screen: Edit and Update User Details."
   },
   "user-details-tour": {
-    "user-first-name": "Verify your first name is correct. Update it if needed.",
-    "user-last-name": "Verify your last name. This should match your official records.",
-    "user-email": "Enter or update your email address. This will be used for system notifications and password resets.",
-    "user-phone": "Enter your phone number. This is optional but helpful for account recovery.",
-    "user-department": "Select your department from the dropdown. This determines which modules and reports you can access.",
-    "user-role": "Your role is displayed here. It is set by your administrator and controls your permissions in the system.",
-    "user-save": "Once all details are correct, click Save Changes. You will be redirected to the LTS Home page."
+    "alert-banner": "Please ensure all your information is correct before proceeding.",
+    "personal-info": "Update your personal details here. Please take note of the mandatory fields marked with red asterisks. The yellow highlighted fields are compulsory.",
+    "contact-info": "Email 1 must be your work email address. Email 2 may be updated with another personal address for additional notifications.",
+    "training-info": "Contract information must always be accurate. If it needs to be updated, then your Training Officer or assistant can send an email to Support at LT Systems dot co dot za with the correct contract information.",
+    "note-area": "Please verify that all information is accurate and up to date. If not, click on Log Support Ticket to inform the support team.",
+    "support-tabs": "If your information is incorrect and cannot be updated by you, click Log Support Ticket to notify the LTS support team.",
+    "update-btn": "Click the Update button to save all changes and move on to your LTS User Home Page."
   },
   "home-tour": {
-    "home-header": "This is the LTS header bar. It appears on every page and gives you quick access to the main sections of the system.",
-    "home-nav": "Use the navigation links to move between different areas: Home, Reports, Documents, and Help.",
-    "home-news": "The News and Announcements section shows important updates, system changes, and training reminders.",
-    "home-quick-links": "Quick Links give you one-click access to the most commonly used tools: Service Requests, 6NA forms, Reports, and Documents.",
-    "home-sr-link": "Click here to access the Service Request module, where you can create and track support tickets.",
-    "home-6na-link": "Click here to open the 6NA forms section for compliance and audit-related submissions."
+    "home-news": "The NEWS section shows the latest updates on document deadlines and other information related to your programme.",
+    "home-days-since": "This section indicates the last day a document on LTS was created, worked on, and finalized.",
+    "days-since-table": "View when your Skill Review and 6NA documents were last Initiated, Worked On, and Finalised.",
+    "home-open-items": "This shows any Skill Reviews or 6NAs currently open and in progress.",
+    "home-skills-section": "This section gives you access to initiate new documents and view reports. Use the hyperlinks below to navigate.",
+    "link-skill-review": "Click Link to Skill Review to start a new Skill Review.",
+    "link-6na": "Click Link to 6NAs to start a new Six-Monthly Needs Analysis.",
+    "link-status-report": "Click here to view your Status Reports.",
+    "link-last-6na": "Click here to view detail reports of the last finalized 6NA."
   },
   "help-tour": {
-    "help-contact": "If you need assistance, here are the main support contacts for the LTS system.",
-    "help-email": "For non-urgent questions, send an email to the LTS support team.",
-    "help-phone": "For urgent issues, call the support hotline during business hours.",
-    "help-documents": "The Documents section contains user guides, training manuals, and reference materials you can download.",
-    "help-faq": "Check the FAQ section for answers to common questions about the system before contacting support."
+    "help-contact": "If you need assistance, contact LTS Support at Support at LT Systems dot co dot za, or view training material and FAQ under Documents.",
+    "help-email": "Email the LTS support team at Support at LT Systems dot co dot za for any assistance.",
+    "acca-docs": "This section contains ACCA related documents including qualification guides, programme handbooks, RPL policies, and PCEF forms.",
+    "training-docs": "Here you will find all LTS training slides covering Skill Reviews, 6NA processes, and system guides.",
+    "training-docs-list": "Browse and download training slides 1 through 8, covering everything from logging in to finalizing a 6NA assessment."
+  },
+
+  "trainee-sr-home-tour": {
+    "step-0": "Welcome to the LTS Home Page. From here you will initiate a Skill Review by clicking on the Link to Skill Review hyperlink. Let's walk through the key sections on this page first.",
+    "sr-news": "The NEWS section is used to update trainees about document deadlines and important information.",
+    "sr-days-since": "The Days Since Last section indicates the last day a document on LTS was created, worked on, and finalized. This helps you track your document activity.",
+    "sr-open-items": "Open documents will be listed under Open Items. Any Skill Reviews or 6NAs currently in progress will appear here.",
+    "sr-link-skill-review": "Click on the hyperlink Link to Skill Review to initiate a new skill review. This will take you to the Skill Review setup page where you can fill in the details."
+  },
+
+  "trainee-sr-setup-tour": {
+    "step-0": "Now you need to fill in the details to set up your Skill Review. Follow the steps below to complete the setup.",
+    "sr-reviewer-select": "Select your Supervisor or Reviewer from the drop-down list. If you can't find your Reviewer or Supervisor, click on Show All Users. If they are still not listed, contact your office administrator to request that LTS Support create their profile.",
+    "sr-client-desc": "Add the Client Description. This is the assignment or engagement reference for the work being reviewed.",
+    "sr-job-dates": "Select the Job Start Date and Job End Date. Indicate the day that the work, project, or assignment started, and the day it was finalised.",
+    "sr-assignment-desc": "Add the Assignment Description. Include your assigned responsibility and important information related to the work reviewed in this Skill Review.",
+    "sr-additional-notes": "Add Additional Notes if necessary. This is an optional field for any extra information you want to include.",
+    "sr-new-review-btn": "Click New Review to save the information and create your Skill Review. You will then proceed to rating your skills."
+  },
+
+  "trainee-sr-rate-tour": {
+    "step-0": "Now you will rate your skills, provide evidence, and add comments for both Essential and Technical Performance Objectives.",
+    "sr-essential-header": "This section contains the Essential Performance Objectives. You will rate each competency under the relevant outcome topics.",
+    "sr-outcome-1": "Click on the Outcome topic to view all the competencies linked to it. A tick mark under the L column indicates that you have done self-assessment on one or more competencies related to that outcome.",
+    "sr-rating-select": "Click on the rating scale and select a rate for each competency. Options range from Not Yet Competent to Advanced.",
+    "sr-evidence-input": "Capture evidence presented in support of the rate. Provide specific details using the STAR method. Describe the Situation, the Task you were given, the Action you took, and the Result of your actions.",
+    "sr-submit-btn": "Once relevant competencies have been rated, click on Submit to save your changes.",
+    "sr-technical-header": "Now rate the Technical Performance Objectives. The process is the same: click on the Outcome topic to view competencies, select a rating, capture activities performed using the STAR method, and click Submit to save.",
+    "sr-tech-table": "Click on each technical outcome topic such as Auditing and Assurance, Financial Accounting and Reporting, Management Accounting, and Taxation to rate the related competencies.",
+    "sr-doc-complete-btn": "Once you have rated the competencies for this review period, click Document Complete to proceed. The tick marks under L will show which outcomes you have completed self-assessment on.",
+    "sr-finish-btn": "Click Finish to open the ACCA Audit Units page. You can also use the Print hyperlink to view a detailed Skill Review report before proceeding."
+  },
+
+  "trainee-sr-acca-tour": {
+    "step-0": "Complete the ACCA Audit Units section before signing off your Skill Review. Select the appropriate audit type and fill in the required details.",
+    "acca-audit-type": "Select the audit type. Choose Not Applicable if the skill review does not fall under High-risk audits and related work assurance, or Low-risk assurance work. Select High-risk audits if the work performed involves high-risk audits. Select Low-risk assurance if the work performed involves low-risk assurance work.",
+    "acca-other-hours": "Capture Other Work Hours. These are hours not included in any Audit Class above. This may include non-chargeable time, or time spent working in other areas such as research, payroll, tax, or insolvency.",
+    "acca-high-risk-section": "If High-risk audits and related assurance work is selected, you must complete every section on this page before signing off the skill review. This includes Number of Clients, Audit Class hours, Other work hours, Client sectors, and Client Size.",
+    "acca-num-clients": "Update the Number of Clients for this audit engagement.",
+    "acca-audit-hours": "Update the Audit Class hours for the work performed during this period.",
+    "acca-client-sector": "Select one or more Client sectors related to the work performed. Options include Financial Services, Mining, Manufacturing, Retail, and Public Sector.",
+    "acca-client-size": "Select the Client Size. This can also be classified by the firm. Hover over the information icon for more details about size classifications.",
+    "acca-elements-table": "Select one or more elements related to the work performed. For each element selected, capture the Date of achievement and a Statement of achievement describing what was accomplished.",
+    "acca-signoff-btn": "Click on Sign Off Skill Review to proceed to the sign-off declaration page where you will formally submit your Skill Review."
+  },
+
+  "trainee-sr-signoff-tour": {
+    "step-0": "This is the final step. Read the declaration carefully and agree to submit your Skill Review to your Reviewer or Supervisor for assessment.",
+    "sr-declaration": "Read the declaration carefully before clicking on Agree. This confirms that the information you provided in this Skill Review is a true and accurate representation of the work performed and the competencies demonstrated.",
+    "sr-agree-btn": "Click Agree to sign off and submit your Skill Review to your Reviewer or Supervisor for assessment. You will be notified once the review has been completed.",
+    "sr-print-link": "Use the Print hyperlink to view and print a detailed Skill Review report. You can review this report before or after signing off."
+  },
+
+  "reviewer-sr-home-tour": {
+    "step-0": "Welcome to the Reviewer and Supervisor Home Page. You will review Skill Reviews that have been assigned to you by trainees.",
+    "rv-profile-select": "Select Reviewer or Supervisor permission if you have multiple permissions linked to your profile. This ensures you access the system with the correct role.",
+    "rv-continue-btn": "Click on Continue to navigate to the Home Page with your Reviewer permissions active.",
+    "rv-sr-link": "On the Home page, click on the assigned Skill Review hyperlink to begin your review. Skill Reviews awaiting your review will appear under Open Items."
+  },
+
+  "reviewer-sr-review-tour": {
+    "step-0": "Review the Trainee's Essential and Technical Performance Objectives. You can update ratings, rate unrated skills, and add your comments.",
+    "rv-actions-bar": "As a Reviewer or Supervisor, you have the option to Edit the Skill Review setup, or Send the Skill Review back to the Trainee for amendments if changes are needed.",
+    "rv-outcome-table": "Click on the outcome hyperlink to open skills related to the outcome. A tick mark under L indicates skills rated by the Trainee. Click on each outcome to view and review the related competencies.",
+    "rv-outcome-1": "Review the Trainee's Essential Performance Objectives. You can update the Trainee's rating and also rate skills that were NOT rated by the Trainee. Different ratings between you and the Trainee will lead to the rating differences stage.",
+    "rv-reviewer-rating-col": "Select your rating for each competency. You can update the Trainee's existing rating or rate skills the Trainee has not rated. Any rating differences will be flagged for resolution.",
+    "rv-comment-col": "Add your Reviewer or Supervisor comments for each competency assessed. You can see the Trainee's evidence presented in support of their rating and comment.",
+    "rv-submit-btn": "Click Submit to save your changes for the Essential Performance Objectives.",
+    "rv-technical-header": "Now review the Trainee's Technical Performance Objectives. The process is the same: you can update the Trainee's rating, rate unrated skills, add comments, and click Submit to save your changes.",
+    "rv-doc-complete-btn": "Once all skills have been reviewed, click Document Complete to proceed. Tick marks under both L and S indicate that skills have been rated and reviewed by both the Trainee and the Reviewer or Supervisor.",
+    "rv-finish-btn": "Click Finish to navigate to the ACCA Audit Units page. You can also use the Print hyperlink to view a detailed Skill Review report."
+  },
+
+  "reviewer-sr-acca-tour": {
+    "step-0": "Review the ACCA Audit Units completed by the Trainee. You can update values, agree or disagree with the Trainee, and add your Reviewer or Supervisor comment.",
+    "rv-acca-clients": "As a Reviewer or Supervisor, you can update the Number of Clients, the Audit class hours, Other work hours, Client sectors, and Client Size.",
+    "rv-agree-col": "Review the elements and Statement of Achievement submitted by the Trainee. You can Agree or Disagree with each element. If you disagree, you should provide a comment explaining why.",
+    "rv-acca-comment-col": "Add your Reviewer or Supervisor comment for each element. Your comments will be visible to the Trainee.",
+    "rv-acca-send-back": "If any amendments are required, you can send the Skill Review back to the Trainee for corrections. The Trainee will be notified and can make the necessary changes.",
+    "rv-acca-signoff-btn": "Click on Sign Off to finalise the skill review and proceed to the declaration page."
+  },
+
+  "reviewer-sr-signoff-tour": {
+    "step-0": "This is the final step. Read the declaration and agree to finalise the Skill Review.",
+    "rv-declaration": "Read the declaration carefully. By clicking Agree, you confirm that you have reviewed and assessed the Trainee's competencies and that your ratings and comments are a fair and accurate reflection of their performance.",
+    "rv-agree-btn": "Click Agree to finalise the Skill Review. Both the Trainee and the Reviewer or Supervisor will receive notification that the review has been completed."
   }
 }

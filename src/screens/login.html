@@ -8,58 +8,176 @@
   <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
 </head>
 <body>
-  <div class="login-wrapper">
-    <div class="login-box">
-      <div class="logo-text">LTS</div>
-      <div class="subtitle">Learner Tracking System</div>
 
-      <!-- Login Form -->
-      <div id="login-form">
-        <div class="form-group">
-          <label for="login-username">Username</label>
-          <input type="text" id="login-username" placeholder="Enter your username" />
-        </div>
-        <div class="form-group">
-          <label for="login-password">Password</label>
-          <input type="password" id="login-password" placeholder="Enter your temporary password" />
-        </div>
-        <button id="login-button" class="btn btn-primary" style="width:100%" onclick="showPasswordSetup()">
-          Log In
-        </button>
+  <!-- LTS Website Header (matches screenshot) -->
+  <div class="lts-site-header">
+    <div class="lts-site-header-inner">
+      <div class="lts-logo">
+        <div class="lts-logo-hexagon">LTS</div>
+        <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
       </div>
+      <div class="lts-header-right">
+        <span class="lts-forgot-password">Forgot your Password?</span>
+        <div id="login-bar" class="lts-login-bar">
+          <input type="text" id="top-username" placeholder="username" value="ReleTest1" />
+          <input type="password" id="top-password" placeholder="password" value="********" />
+          <button id="login-button" class="lts-login-btn" onclick="showCredentials()">LOGIN</button>
+        </div>
+      </div>
+    </div>
+    <nav id="site-nav" class="lts-site-nav">
+      <a href="#" class="active">HOME</a>
+      <a href="#">FEATURES</a>
+      <a href="#">PRICING</a>
+      <a href="#">FAQ</a>
+      <a href="#">ABOUT</a>
+      <a href="#">NEWS</a>
+      <a href="#">CONTACT</a>
+      <a href="#" class="signup-btn">SIGN UP</a>
+    </nav>
+  </div>
 
-      <!-- Password Setup (hidden initially) -->
-      <div id="password-setup" style="display:none">
-        <h2 style="margin-bottom:16px; color:#003366;">Set New Password</h2>
-        <div class="form-group">
-          <label for="password-new">New Password</label>
-          <input type="password" id="password-new" placeholder="Create a new password" />
+  <!-- Hero Section (matches screenshot - blue gradient with ACCA text and mockup) -->
+  <div class="login-hero">
+    <div class="login-hero-content">
+      <div class="login-hero-left">
+        <h2>LTS now also in collaboration with ACCA.</h2>
+        <p>
+          "We are excited to announce that LTS has worked with ACCA to develop a digital solution
+          to support ACCA members and future members in South Africa. This platform meets our
+          rigorous standards and will greatly benefit those pursuing both ACCA membership and
+          ACCA's South Africa Audit Qualification. Together, we are dedicated to providing
+          valuable support for their journey to success."
+        </p>
+        <div class="hero-attribution">Stefan Pegram, ACCA Director of Practice Regulation</div>
+        <div class="login-hero-buttons">
+          <a href="#" class="hero-btn primary">SIGN UP</a>
+          <a href="#" class="hero-btn secondary">FEATURES</a>
         </div>
-        <div class="form-group">
-          <label for="password-confirm">Confirm Password</label>
-          <input type="password" id="password-confirm" placeholder="Re-enter your new password" />
+      </div>
+      <div class="login-hero-right">
+        <div class="login-hero-mockup">
+          <div class="mockup-bar">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <div class="mockup-screen">
+            <div>
+              <div class="play-icon"></div>
+              <strong>VIDEO TOUR</strong>
+            </div>
+          </div>
         </div>
-        <div id="password-rules" class="password-rules">
-          <strong>Password Requirements:</strong>
-          &#8226; At least 8 characters<br />
-          &#8226; One uppercase letter (A-Z)<br />
-          &#8226; One lowercase letter (a-z)<br />
-          &#8226; One number (0-9)<br />
-          &#8226; One special character (!@#$%^&amp;*)
-        </div>
-        <br />
-        <button id="password-submit" class="btn btn-success" style="width:100%" onclick="goToUserDetails()">
-          Submit
-        </button>
       </div>
     </div>
   </div>
 
+  <!-- Login Credentials Panel + Password Dialog (shown after clicking LOGIN in tour) -->
+  <div class="login-split" id="credentials-section">
+
+    <!-- Left: Login Credentials -->
+    <div class="login-left">
+      <div id="credentials-panel" class="credentials-panel">
+        <div class="credentials-header">LOGIN CREDENTIALS</div>
+        <div class="credentials-body">
+          <div class="instructions">
+            Click on <strong>CREATE NEW PASSWORD</strong> to update your password (follow instructions and click on SAVE, then CONTINUE once new password created).<br />
+            OR<br />
+            Click on <strong>CONTINUE</strong> to proceed to the next screen "Edit/Update User Details".
+          </div>
+
+          <div class="credentials-row">
+            <label>UserName:</label>
+            <input type="text" id="cred-username" value="ReleTest1" readonly />
+          </div>
+          <div class="credentials-row">
+            <label>Password:</label>
+            <input type="password" id="cred-password" value="********" readonly />
+            <div class="btn-group">
+              <button id="create-password-btn" class="btn" onclick="showPasswordDialog()">Create New Password</button>
+              <button id="send-password-btn" class="btn">Send Password</button>
+            </div>
+          </div>
+
+          <div style="text-align: right; margin-top: 16px;">
+            <button id="continue-btn" class="btn-continue" onclick="goToUserDetails()">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Password Dialog (hidden initially) -->
+    <div class="login-right">
+      <div id="password-dialog" class="password-dialog" style="display:none;">
+        <div class="credentials-header">LOGIN CREDENTIALS</div>
+        <div class="credentials-body">
+          <div class="instructions">
+            Click on <strong>CREATE NEW PASSWORD</strong> to update your password (follow instructions and click on SAVE, then CONTINUE once new password created).<br />
+            OR<br />
+            Click on <strong>CONTINUE</strong> to proceed to the next screen "Edit/Update User Details".
+          </div>
+
+          <div class="credentials-row">
+            <label>UserName:</label>
+            <input type="text" value="Trooper2020" readonly />
+          </div>
+          <div class="credentials-row">
+            <label>Password:</label>
+            <input type="password" value="********" readonly />
+            <div class="btn-group">
+              <button class="btn">Create New Password</button>
+              <button class="btn">Send Password</button>
+            </div>
+          </div>
+
+          <div class="credentials-row">
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" class="mandatory" placeholder="" />
+          </div>
+          <div class="credentials-row">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" class="mandatory" placeholder="" />
+          </div>
+
+          <div id="password-rules" class="password-rules-text">
+            <strong>Password must contain:</strong><br />
+            Minimum 8 characters, maximum 15 characters,<br />
+            at least 1 alphabet character and at least 1 number.
+          </div>
+
+          <div class="password-dialog-footer">
+            <button id="cancel-btn" class="btn" onclick="hidePasswordDialog()">Cancel</button>
+            <button id="save-btn" class="btn-save" onclick="goToUserDetails()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation to next screen -->
+  <div class="screen-nav">
+    <a href="user-details.html" class="nav-btn">Continue to User Details &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
   <script type="module" src="../tours/login-tour.js"></script>
   <script>
-    function showPasswordSetup() {
-      document.getElementById("login-form").style.display = "none";
-      document.getElementById("password-setup").style.display = "block";
+    function showCredentials() {
+      document.getElementById("credentials-panel").style.display = "block";
+    }
+
+    function showPasswordDialog() {
+      document.getElementById("password-dialog").style.display = "block";
+    }
+
+    function hidePasswordDialog() {
+      document.getElementById("password-dialog").style.display = "none";
     }
 
     function goToUserDetails() {

@@ -3,6 +3,8 @@ import { narrate, stopNarration } from "../shared/narrate.js";
 
 const TOUR_NAME = "user-details-tour";
 
+let currentStepIndex = 0;
+
 const tourDriver = driver({
   showProgress: true,
   animate: true,
@@ -10,78 +12,88 @@ const tourDriver = driver({
   allowClose: true,
   overlayColor: "rgba(0, 0, 0, 0.6)",
   onHighlightStarted: (element, step) => {
-    const stepId = step.element?.replace("#", "");
-    if (stepId) narrate(TOUR_NAME, stepId);
+    const stepId = step.element ? step.element.replace("#", "") : `step-${currentStepIndex}`;
+    narrate(TOUR_NAME, stepId);
+  },
+  onNextClick: () => {
+    currentStepIndex++;
+    tourDriver.moveNext();
+  },
+  onPrevClick: () => {
+    currentStepIndex--;
+    tourDriver.movePrevious();
   },
   onDestroyStarted: () => {
     stopNarration();
+    currentStepIndex = 0;
   },
   steps: [
     {
-      element: "#user-first-name",
+      element: "#alert-banner",
       popover: {
-        title: "First Name",
-        description: "Verify your first name is correct. Update it if needed.",
+        title: "Important Notice",
+        description:
+          "Please ensure all your information is correct before proceeding.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#user-last-name",
+      element: "#personal-info",
       popover: {
-        title: "Last Name",
+        title: "Step 1: Personal Information",
         description:
-          "Verify your last name. This should match your official records.",
+          "Update your personal details here. Please take note of the mandatory fields marked with red asterisks (*). The yellow-highlighted fields are compulsory.",
+        side: "right",
+        align: "start",
+      },
+    },
+    {
+      element: "#contact-info",
+      popover: {
+        title: "Step 1b: Contact Information",
+        description:
+          "Email 1 must be your work email address. Email 2 may be updated with another personal address for additional notifications.",
+        side: "right",
+        align: "start",
+      },
+    },
+    {
+      element: "#training-info",
+      popover: {
+        title: "Step 1c: Training Program Information",
+        description:
+          "Contract information must always be accurate. If it needs to be updated, then your Training Officer or assistant can send an email to Support@LTSystems.co.za with the correct contract information.",
+        side: "right",
+        align: "start",
+      },
+    },
+    {
+      element: "#note-area",
+      popover: {
+        title: "Step 2: Verify Information",
+        description:
+          'Please verify that all information is accurate and up to date. If not, click on "Log Support Ticket" to inform the support team.',
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#user-email",
+      element: "#support-tabs",
       popover: {
-        title: "Email Address",
+        title: "Step 2b: Support Tickets",
         description:
-          "Enter or update your email. This is used for notifications and password resets.",
-        side: "bottom",
+          'If your information is incorrect and cannot be updated by you, click "Log Support Ticket" to notify the LTS support team.',
+        side: "top",
         align: "start",
       },
     },
     {
-      element: "#user-phone",
+      element: "#update-btn",
       popover: {
-        title: "Phone Number",
+        title: "Step 3: Click Update",
         description:
-          "Enter your phone number (optional). Helpful for account recovery.",
-        side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#user-department",
-      popover: {
-        title: "Department",
-        description:
-          "Select your department. This determines which modules and reports you can access.",
-        side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#user-role",
-      popover: {
-        title: "Role",
-        description:
-          "Your role is set by your administrator and controls your permissions. You cannot change this.",
-        side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#user-save",
-      popover: {
-        title: "Save Changes",
-        description:
-          'Click "Save Changes" once all details are correct. You will be redirected to the LTS Home page.',
+          'Click the "Update" button to save all changes and move on to your LTS User Home Page.',
         side: "top",
         align: "start",
       },

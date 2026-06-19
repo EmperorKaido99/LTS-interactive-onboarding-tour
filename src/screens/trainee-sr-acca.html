@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — ACCA Audit Units (Step 4)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — ACCA Audit Units</span>
+    <a class="back-link" href="trainee-sr-rate.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="trainee-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">ACCA AUDIT UNITS</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:16px 20px;">
+
+        <!-- Audit Type Selection -->
+        <div style="margin-bottom:16px;">
+          <div style="font-weight:700; font-size:0.85rem; margin-bottom:8px;">Select Audit Type:</div>
+          <div id="acca-audit-type" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-type" value="not-applicable" checked /> Not Applicable
+            </label>
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-type" value="high-risk" /> High-risk audits and related assurance work
+            </label>
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-type" value="low-risk" /> Low-risk assurance work
+            </label>
+          </div>
+        </div>
+
+        <!-- Other Work Hours -->
+        <div class="form-row" id="acca-other-hours">
+          <label style="width:220px;">Other Work Hours:</label>
+          <input type="number" value="0" style="max-width:100px;" />
+          <span style="font-size:0.7rem; color:#888; margin-left:8px;">Hours not included in any Audit Class above</span>
+        </div>
+
+        <!-- High-Risk Section (shown when selected) -->
+        <div id="acca-high-risk-section" style="margin-top:16px; border-top:1px solid #eee; padding-top:16px;">
+          <div class="form-row" id="acca-num-clients">
+            <label style="width:220px;">Number of Clients:</label>
+            <input type="number" value="1" style="max-width:100px;" />
+          </div>
+          <div class="form-row" id="acca-audit-hours">
+            <label style="width:220px;">Audit Class Hours:</label>
+            <input type="number" value="0" style="max-width:100px;" />
+          </div>
+          <div class="form-row" id="acca-client-sector">
+            <label style="width:220px;">Client Sector:</label>
+            <select style="max-width:240px;">
+              <option>-- Select Sector --</option>
+              <option>Financial Services</option>
+              <option>Mining</option>
+              <option>Manufacturing</option>
+              <option>Retail</option>
+              <option>Public Sector</option>
+            </select>
+          </div>
+          <div class="form-row" id="acca-client-size">
+            <label style="width:220px;">Client Size:</label>
+            <select style="max-width:240px;">
+              <option>-- Select Size --</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+
+          <!-- Elements -->
+          <div style="margin-top:12px;">
+            <div style="font-weight:700; font-size:0.82rem; margin-bottom:8px; color:#2b6da3;">Elements</div>
+            <table id="acca-elements-table">
+              <thead>
+                <tr>
+                  <th style="width:30px;">&#10003;</th>
+                  <th>Element</th>
+                  <th style="width:120px;">Date of Achievement</th>
+                  <th>Statement of Achievement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:center;"><input type="checkbox" /></td>
+                  <td>Planning and risk assessment</td>
+                  <td><input type="text" placeholder="YYYY/MM/DD" style="width:100%; font-size:0.75rem;" /></td>
+                  <td><input type="text" placeholder="Statement..." style="width:100%; font-size:0.75rem;" /></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><input type="checkbox" /></td>
+                  <td>Internal controls evaluation</td>
+                  <td><input type="text" placeholder="YYYY/MM/DD" style="width:100%; font-size:0.75rem;" /></td>
+                  <td><input type="text" placeholder="Statement..." style="width:100%; font-size:0.75rem;" /></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><input type="checkbox" /></td>
+                  <td>Gathering audit evidence</td>
+                  <td><input type="text" placeholder="YYYY/MM/DD" style="width:100%; font-size:0.75rem;" /></td>
+                  <td><input type="text" placeholder="Statement..." style="width:100%; font-size:0.75rem;" /></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><input type="checkbox" /></td>
+                  <td>Review and reporting</td>
+                  <td><input type="text" placeholder="YYYY/MM/DD" style="width:100%; font-size:0.75rem;" /></td>
+                  <td><input type="text" placeholder="Statement..." style="width:100%; font-size:0.75rem;" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Sign Off Button -->
+        <div style="text-align:right; margin-top:20px;">
+          <button id="acca-signoff-btn" class="btn-primary btn" onclick="window.location.href='trainee-sr-signoff.html'">Sign Off Skill Review</button>
+        </div>
+
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="trainee-sr-rate.html" class="nav-btn green">&larr; Back to Rate Skills</a>
+    <a href="trainee-sr-signoff.html" class="nav-btn">Continue to Sign Off &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script>
+    // Show/hide high-risk section based on radio selection
+    document.querySelectorAll('input[name="audit-type"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        document.getElementById('acca-high-risk-section').style.display =
+          this.value === 'high-risk' ? 'block' : 'none';
+      });
+    });
+  </script>
+  <script type="module" src="../tours/trainee-sr-acca-tour.js"></script>
+</body>
+</html>

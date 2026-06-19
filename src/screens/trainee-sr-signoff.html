@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Trainee Sign Off Skill Review (Step 5)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — Sign Off</span>
+    <a class="back-link" href="trainee-sr-acca.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="trainee-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">SIGN OFF SKILL REVIEW</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:24px 20px;">
+
+        <!-- Declaration -->
+        <div id="sr-declaration" style="background:#d6eaf8; border:1px solid #aed6f1; padding:16px; margin-bottom:20px; font-size:0.85rem; line-height:1.7;">
+          <strong style="font-size:0.95rem;">Declaration</strong><br/><br/>
+          I, <strong>Trainee A-LTS</strong>, hereby confirm that the information provided in this Skill Review is a true and accurate representation of the work performed and the competencies demonstrated during the review period.<br/><br/>
+          I understand that this Skill Review will be submitted to my Reviewer/Supervisor for assessment and that any misrepresentation may result in the Skill Review being returned for amendment.<br/><br/>
+          By clicking "Agree" below, I confirm that I have reviewed all information and am ready to submit this Skill Review for assessment.
+        </div>
+
+        <!-- Agree / Print Buttons -->
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <button id="sr-agree-btn" class="btn-primary btn" style="padding:8px 32px; font-size:0.9rem;" onclick="showSignOffConfirmation()">Agree</button>
+          <a href="#" id="sr-print-link" style="font-size:0.8rem;">Print: View detailed Skill Review report</a>
+        </div>
+
+        <!-- Confirmation message (hidden initially) -->
+        <div id="sr-confirmation" style="display:none; margin-top:20px; background:#e8f5e9; border:1px solid #66bb6a; padding:16px; border-radius:4px;">
+          <div style="font-weight:700; color:#2e7d32; font-size:0.95rem; margin-bottom:8px;">
+            &#10003; Skill Review Successfully Signed Off
+          </div>
+          <div style="font-size:0.85rem; color:#333;">
+            Your Skill Review has been submitted and assigned to your Reviewer/Supervisor for assessment.
+            You will be notified once the review has been completed.
+          </div>
+          <div style="margin-top:16px;">
+            <a href="select.html" class="btn-primary btn">Return to Training Selection</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="trainee-sr-acca.html" class="nav-btn green">&larr; Back to ACCA Units</a>
+    <a href="select.html" class="nav-btn">Back to Training Selection &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script>
+    function showSignOffConfirmation() {
+      document.getElementById('sr-confirmation').style.display = 'block';
+    }
+  </script>
+  <script type="module" src="../tours/trainee-sr-signoff-tour.js"></script>
+</body>
+</html>

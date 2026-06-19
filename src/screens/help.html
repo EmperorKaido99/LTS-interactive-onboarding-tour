@@ -3,101 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LTS — Help &amp; Support</title>
+  <title>LTS — Need Help? / Documents</title>
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
 </head>
 <body>
-  <header class="lts-header">
-    <span class="logo">LTS</span>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="#">Reports</a>
-      <a href="#">Documents</a>
-      <a href="help.html">Help</a>
-    </nav>
-  </header>
 
-  <div class="lts-main">
-    <!-- Contact Information -->
-    <div id="help-contact" class="card">
-      <h2>Contact Support</h2>
-      <p style="margin-bottom:16px; color:#666;">
-        Need help? Reach out using any of the methods below.
-      </p>
-      <div class="contact-grid">
-        <div id="help-email" class="contact-item">
-          <div class="label">Email</div>
-          <p>lts-support@company.com</p>
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="login.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Documents</span>
+    <a class="back-link" href="home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
         </div>
-        <div id="help-phone" class="contact-item">
-          <div class="label">Phone</div>
-          <p>+1 (800) 555-0199</p>
-          <p style="font-size:0.8rem; color:#999;">Mon–Fri, 8 AM – 6 PM EST</p>
+        <div class="sidebar-links">
+          <a href="home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="user-details.html"><span class="dot grey"></span> Edit your details</a>
+          <a href="help.html"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+      <div class="sidebar-upcoming">
+        <h4>Upcoming</h4>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Mergers and acquisition - Part 1</div>
+            <div class="event-details">Thursday, July 9 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Mergers and acquisition - Part 2</div>
+            <div class="event-details">Thursday, July 16 - 9:00 – 11:00am (SAST)</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Documents -->
-    <div id="help-documents" class="card">
-      <h2>Documents &amp; Guides</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Document</th>
-            <th>Type</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>LTS User Guide v3.0</td>
-            <td>PDF</td>
-            <td><a href="#">Download</a></td>
-          </tr>
-          <tr>
-            <td>Service Request Handbook</td>
-            <td>PDF</td>
-            <td><a href="#">Download</a></td>
-          </tr>
-          <tr>
-            <td>6NA Compliance Checklist</td>
-            <td>Excel</td>
-            <td><a href="#">Download</a></td>
-          </tr>
-          <tr>
-            <td>Password Reset Instructions</td>
-            <td>PDF</td>
-            <td><a href="#">Download</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- Main Content -->
+    <div class="lts-content">
 
-    <!-- FAQ -->
-    <div id="help-faq" class="card">
-      <h2>Frequently Asked Questions</h2>
-      <details>
-        <summary><strong>How do I reset my password?</strong></summary>
-        <p style="padding:8px 0;">Click "Forgot Password" on the login page, or contact support at lts-support@company.com.</p>
-      </details>
-      <details>
-        <summary><strong>How do I submit a Service Request?</strong></summary>
-        <p style="padding:8px 0;">Navigate to Home &rarr; Quick Links &rarr; Service Requests, then fill out the form.</p>
-      </details>
-      <details>
-        <summary><strong>Who do I contact for access issues?</strong></summary>
-        <p style="padding:8px 0;">Contact your department administrator or call the support hotline.</p>
-      </details>
-      <details>
-        <summary><strong>Where can I find training materials?</strong></summary>
-        <p style="padding:8px 0;">Check the Documents &amp; Guides section above, or visit the Reports page for training completion records.</p>
-      </details>
-    </div>
+      <!-- Help / Contact Header -->
+      <div id="help-contact" class="help-header">
+        <strong style="font-size:1.1rem;">Need Help?</strong><br /><br />
+        Please Contact LTS Support on <a href="mailto:Support@LTSystems.co.za" id="help-email">Support@LTSystems.co.za</a><br />
+        OR<br />
+        View More LTS Training Material and FAQ on LTS Home under <strong>Documents</strong>.
+      </div>
 
-    <div style="text-align:center; margin-top:16px;">
-      <a href="../../index.html" class="btn btn-primary">Restart Tour</a>
-    </div>
+      <!-- ACCA TRAINING PROGRAMME -->
+      <div id="acca-docs" class="section-bar">ACCA TRAINING PROGRAMME</div>
+      <div class="documents-section">
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">ACCA Qualification - WHY WHAT and HOW</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">ACCA Approved Employer (AE) Programme Handbook</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">ACCA RPL Policy South Africa</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">PRACTISING CERTIFICATE EXPERIENCE FORMS (PCEF) guidance note K 18092019</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">PRACTISING CERTIFICATE EXPERIENCE FORMS (PCEF) Part 3 - audit units</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">SAAQ application form - 01.05.2024</a>
+        </div>
+      </div>
+
+      <!-- LTS TRAINING MATERIAL AND FAQ -->
+      <div id="training-docs" class="section-bar">LTS TRAINING MATERIAL AND FAQ</div>
+      <div id="training-docs-list" class="documents-section">
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">NEW FUNCTION: Reviewer/Supervisor to EDIT / SEND BACK Skill Review to Trainee</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">LTS Skill Review Quick Start Guide (3 009 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 1 - Logging in updating user details and basic navigation (740 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 2 - Five Easy Steps to create a Skill Review - Trainee (1 705 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 3 - Four Easy Steps to review a Skill Review - Reviewer/Supervisor (1 458 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 4 - Resolving differences in a Skill Review - Reviewer/Supervisor and Trainee (339 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 5 - Six Easy Steps for initiating Six Monthly Needs Analysis (6NA) - Trainee (1 072 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 6 - Easy Steps to review Six Monthly Needs Analysis (6NA) - Authorised Supervisor (1,340 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 7 - Trainee Reviewing Six Monthly Needs Analysis (6NA) - Trainee (609 KB)</a>
+        </div>
+        <div class="doc-item">
+          <span class="doc-icon">PDF</span>
+          <a href="#">Training slides 8 - Easy Steps for Finalise Six Monthly Needs Analysis (6NA) - Assessor (2 705 KB)</a>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="home.html" class="nav-btn green">&larr; Back to Home</a>
+    <a href="../../index.html" class="nav-btn">Restart Tour</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
   <script type="module" src="../tours/help-tour.js"></script>

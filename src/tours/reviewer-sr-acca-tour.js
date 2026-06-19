@@ -1,7 +1,7 @@
 import { driver } from "../../node_modules/driver.js/dist/driver.js.mjs";
 import { narrate, stopNarration } from "../shared/narrate.js";
 
-const TOUR_NAME = "help-tour";
+const TOUR_NAME = "reviewer-sr-acca-tour";
 
 let currentStepIndex = 0;
 
@@ -29,53 +29,62 @@ const tourDriver = driver({
   },
   steps: [
     {
-      element: "#help-contact",
       popover: {
-        title: "Need Help?",
+        title: "Step 3: Review ACCA Audit Units",
         description:
-          "If you need assistance, contact LTS Support at Support@LTSystems.co.za, or view training material and FAQ under Documents on the LTS Home page.",
+          "Review the ACCA Audit Units completed by the Trainee. You can update values and add your Reviewer/Supervisor comment.",
+        side: "bottom",
+        align: "center",
+      },
+    },
+    {
+      element: "#rv-acca-clients",
+      popover: {
+        title: "1. Review Audit Details",
+        description:
+          "Reviewer/Supervisor can update the Number of Clients, Audit class hours, Other work hours, Client sectors, and Client Size.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#help-email",
+      element: "#rv-agree-col",
       popover: {
-        title: "Support Email",
+        title: "2. Agree or Disagree",
         description:
-          "Email the LTS support team at Support@LTSystems.co.za for any assistance.",
+          "Review elements and Statement of Achievement. Reviewer/Supervisor can Agree or Disagree with the Trainee's submissions.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#acca-docs",
+      element: "#rv-acca-comment-col",
       popover: {
-        title: "ACCA Training Programme",
+        title: "3. Add Reviewer Comment",
         description:
-          "This section contains ACCA-related documents including qualification guides, programme handbooks, RPL policies, and PCEF forms.",
+          "Add your Reviewer/Supervisor comment for each element.",
         side: "bottom",
         align: "start",
       },
     },
     {
-      element: "#training-docs",
+      element: "#rv-acca-send-back",
       popover: {
-        title: "LTS Training Material and FAQ",
+        title: "Send Back (if needed)",
         description:
-          "Here you will find all LTS training slides covering Skill Reviews, 6NA processes, and system guides. Download these for reference.",
-        side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#training-docs-list",
-      popover: {
-        title: "Training Slides",
-        description:
-          "Browse and download training slides 1 through 8, covering everything from logging in to finalizing a 6NA assessment.",
+          "If any amendments are required, Reviewer/Supervisor can send back the Skill Review to the Trainee.",
         side: "top",
         align: "start",
+      },
+    },
+    {
+      element: "#rv-acca-signoff-btn",
+      popover: {
+        title: "4. Sign Off",
+        description:
+          "Click on 'Sign Off' to finalise the skill review and proceed to the declaration page.",
+        side: "top",
+        align: "end",
       },
     },
   ],

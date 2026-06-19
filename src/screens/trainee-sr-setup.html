@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Trainee Setup Skill Review (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — Setup</span>
+    <a class="back-link" href="trainee-sr-home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="trainee-sr-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">HOW TO INITIATE A SKILL REVIEW?</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:20px;">
+
+        <!-- Supervisor/Reviewer Selection -->
+        <div class="form-row" id="sr-reviewer-select">
+          <label style="width:220px;">Select Supervisor/Reviewer:</label>
+          <select style="max-width:240px;">
+            <option>-- Select Reviewer --</option>
+            <option>A-LTS, Manager</option>
+            <option>B-Smith, Senior</option>
+          </select>
+          <button class="btn" style="margin-left:8px; font-size:0.75rem;">Show All Users</button>
+        </div>
+
+        <!-- Client Description -->
+        <div class="form-row" id="sr-client-desc">
+          <label style="width:220px;">Client Description:</label>
+          <input type="text" placeholder="Assignment or engagement reference" style="max-width:300px;" />
+        </div>
+
+        <!-- Job Start / End Date -->
+        <div class="form-row" id="sr-job-dates">
+          <label style="width:220px;">Job Start Date:</label>
+          <input type="text" value="2025/06/01" style="max-width:140px;" />
+          <label style="width:100px; text-align:right;">Job End Date:</label>
+          <input type="text" value="2025/12/31" style="max-width:140px;" />
+        </div>
+
+        <!-- Assignment Description -->
+        <div class="form-row" id="sr-assignment-desc">
+          <label style="width:220px;">Assignment Description:</label>
+          <textarea style="flex:1; max-width:300px; min-height:60px; padding:4px 8px; border:1px solid #ccc; font-size:0.8rem; font-family:inherit;" placeholder="Assigned responsibility and important information related to the work reviewed in this SR"></textarea>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="form-row" id="sr-additional-notes">
+          <label style="width:220px;">Additional Notes:</label>
+          <textarea style="flex:1; max-width:300px; min-height:40px; padding:4px 8px; border:1px solid #ccc; font-size:0.8rem; font-family:inherit;" placeholder="Optional field"></textarea>
+        </div>
+
+        <!-- New Review Button -->
+        <div style="text-align:right; margin-top:16px;">
+          <button id="sr-new-review-btn" class="btn-primary btn" onclick="window.location.href='trainee-sr-rate.html'">New Review</button>
+        </div>
+
+      </div>
+
+      <!-- FAQ -->
+      <div style="background:#d6eaf8; border:1px solid #aed6f1; padding:12px 14px; margin-top:0; font-size:0.8rem; line-height:1.6;">
+        <strong>FAQ: My Reviewer/Supervisor is not on the drop-down list, how to proceed?</strong><br/>
+        A: If your Reviewer/Supervisor is not on the drop-down list, then;<br/>
+        &bull; Contact your office administrator and request that they inform LTS Support (Support@LTSystems.co.za) to create Supervisor/Reviewer's profile on LTS<br/>
+        &bull; We require the Supervisor/Reviewer's Name, Surname, and Email address
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="trainee-sr-home.html" class="nav-btn green">&larr; Back to Home</a>
+    <a href="trainee-sr-rate.html" class="nav-btn">Continue to Rate Skills &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/trainee-sr-setup-tour.js"></script>
+</body>
+</html>
