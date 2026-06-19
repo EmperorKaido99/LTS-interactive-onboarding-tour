@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — 6NA Supplementary Training (Step 4)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>6NA for Thato Trainee</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- 6NA Info Panel -->
+      <div style="background: #f5f5f5; border: 1px solid #ccc; padding: 12px 14px; margin-bottom: 12px; font-size: 0.85rem;">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div><strong>Started:</strong> 2023/01/15</div>
+          <div><strong>Trainee:</strong> Thato Trainee</div>
+          <div><strong>Supervisor:</strong> Manager, Thato</div>
+          <div><strong>Principal:</strong> Test, Obed</div>
+          <div><strong>Review Period:</strong> 2023/01/01 - 2023/06/30</div>
+        </div>
+      </div>
+
+      <!-- Section Links -->
+      <div style="background: #fff; border: 1px solid #ccc; margin-bottom: 12px;">
+        <div style="padding: 8px 14px; border-bottom: 1px solid #eee; font-size: 0.85rem;">
+          <a href="#" style="color: #2b6da3;">Section 1: Summary of Performance Evaluations</a>
+        </div>
+        <div style="padding: 8px 14px; border-bottom: 1px solid #eee; font-size: 0.85rem;">
+          <a href="#" style="color: #2b6da3;">Section 2: Self-Evaluation</a>
+          <span style="float: right; font-size: 0.75rem; color: #5cb85c;">Completed</span>
+        </div>
+        <div id="na-supp-training-link" style="padding: 8px 14px; border-bottom: 1px solid #eee; font-size: 0.85rem; background: #fff8e1; border-left: 3px solid #f0ad4e;">
+          <a href="#" style="color: #2b6da3; font-weight: 600;">Section 2: Record of Supplementary Training</a>
+          <span style="float: right; font-size: 0.75rem; color: #d9534f;">Not Completed</span>
+        </div>
+        <div style="padding: 8px 14px; border-bottom: 1px solid #eee; font-size: 0.85rem;">
+          <a href="#" style="color: #2b6da3;">Section 3 (1): Conclusion</a>
+        </div>
+        <div style="padding: 8px 14px; font-size: 0.85rem;">
+          <a href="#" style="color: #2b6da3;">Section 3 (2): Development Plan</a>
+        </div>
+      </div>
+
+      <!-- Status Indicator -->
+      <div style="background: #fcf8e3; border: 1px solid #faebcc; padding: 10px 14px; margin-bottom: 12px; font-size: 0.85rem; color: #8a6d3b;">
+        <strong>Status:</strong> With Trainee: Record of Supplementary Training Not Completed
+      </div>
+
+      <!-- Supplementary Training Form Panel -->
+      <div id="na-supp-form" style="border: 1px solid #ccc; background: #fff;">
+        <div class="section-bar" style="margin-bottom: 0;">SECTION 2: RECORD OF SUPPLEMENTARY TRAINING</div>
+        <div style="padding: 14px; font-size: 0.85rem;">
+          <p style="margin-bottom: 14px; color: #555;">
+            Capture all courses attended during the preceding six-month period. Include formal courses, workshops, seminars, and any other relevant training.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 4px;">Training Course</label>
+              <input id="na-training-course" type="text" value="Advance Excel" style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;" />
+            </div>
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 4px;">Learning Objectives</label>
+              <input id="na-learning-objectives" type="text" placeholder="Enter learning objectives..." style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;" />
+            </div>
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 4px;">Examples Of Transfer</label>
+              <select id="na-transfer-examples" style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;">
+                <option>-- Select --</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option selected>Not Applicable</option>
+              </select>
+            </div>
+            <div>
+              <label style="display: block; font-weight: 600; margin-bottom: 4px;">Result</label>
+              <select id="na-result" style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;">
+                <option>-- Select --</option>
+                <option selected>In Progress</option>
+                <option>Completed</option>
+                <option>Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="na-add-course-btn" style="background: #2b6da3; color: #fff; border: none; padding: 8px 20px; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-weight: 600; margin-bottom: 14px;">Add</button>
+
+          <!-- Added Courses Table -->
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 0.8rem;">
+            <thead>
+              <tr style="background: #f5f5f5;">
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Training Course</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Learning Objectives</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Transfer</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Result</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;">Advance Excel</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Advanced formulas and data analysis</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Not Applicable</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">In Progress</td>
+                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"><a href="#" style="color: #2b6da3;">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 4px;">Evaluator Comment on Section 2</label>
+            <textarea id="na-evaluator-comment" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem; resize: vertical;" placeholder="Add comments on the transfer of learning..."></textarea>
+          </div>
+
+          <button id="na-update-btn" style="background: #5cb85c; color: #fff; border: none; padding: 8px 20px; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">Update</button>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="trainee-6na-self-eval.html" class="nav-btn green">&larr; Back to Self-Evaluation</a>
+    <a href="trainee-6na-acca.html" class="nav-btn">Continue to ACCA Audit Units &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/trainee-6na-supp-training-tour.js"></script>
+</body>
+</html>

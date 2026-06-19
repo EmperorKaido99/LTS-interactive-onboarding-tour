@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Trainee Initiate 6NA (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Trainee A-LTS (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Learner Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        There are no firm news entries today.
+      </div>
+
+      <!-- DAYS SINCE LAST -->
+      <div class="section-bar">DAYS SINCE LAST</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Initiated</th>
+            <th>Worked On(In Progress)</th>
+            <th>Finalised</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SR</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 11:28:00 AM<br/>197 Days</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 10:56:00 AM<br/>197 Days</td>
+            <td style="color:#2b6da3; font-weight:600;">2025/12/03 10:57:00 AM<br/>197 Days</td>
+          </tr>
+          <tr>
+            <td>6NA</td>
+            <td>No 6NAs</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- OPEN ITEMS -->
+      <div class="section-bar">OPEN ITEMS</div>
+      <div class="open-items">
+        No Open SR's<br/>
+        No Open 6NA's
+      </div>
+
+      <!-- SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA -->
+      <div class="section-bar">SKILL REVIEWS / 6NA'S / STATUS REPORT / FINAL NA</div>
+      <div class="links-grid">
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Link to<br/>Skill Review</span>
+        </div>
+        <div id="na-link-6na" class="link-item" style="cursor:pointer; border: 2px solid #f0ad4e; background: #fff8e1;" onclick="document.getElementById('na-setup-panel').scrollIntoView({behavior:'smooth'})">
+          <span class="link-icon">&#128196;</span>
+          <span>Link to 6NA's</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Status Report</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Last 6NA</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>Training Office Defined<br/>Expected Levels</span>
+        </div>
+      </div>
+
+      <div style="padding: 10px 14px; background: #fff; border: 1px solid #ccc; border-top: none; font-size:0.8rem;">
+        <span class="link-icon">&#128196;</span>
+        Competence Report for ACCA 2023 According to Period : <strong>Current 6NA</strong> or <strong>Final 6NA</strong>
+      </div>
+      <div style="padding: 8px 14px; background: #fff; border: 1px solid #ccc; border-top: none; font-size:0.8rem;">
+        <span class="link-icon">&#128196;</span>
+        Completed SR CSV Export
+      </div>
+
+      <!-- 6NA SETUP PANEL -->
+      <div id="na-setup-panel" style="margin-top: 20px; border: 1px solid #ccc; background: #fff;">
+        <div class="section-bar" style="margin-bottom: 0;">6NA for Thato Trainee</div>
+        <div style="padding: 10px 14px; font-size: 0.85rem;">
+          <a href="#" style="color: #2b6da3;">Link to Signed Off 6NA's</a>
+        </div>
+        <div class="section-bar" style="background: #5cb85c; margin-bottom: 0;">OPEN 6NA'S</div>
+        <div style="padding: 14px; font-size: 0.85rem; color: #666;">
+          No open 6NA's found. Set up a new 6NA below.
+        </div>
+
+        <!-- Setup Form -->
+        <div style="padding: 14px; border-top: 1px solid #eee;">
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.85rem;">Authorised Supervisor</label>
+            <select id="na-supervisor-select" style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;">
+              <option>-- Select Supervisor --</option>
+              <option selected>Manager, Thato</option>
+            </select>
+            <a href="#" style="font-size: 0.75rem; color: #2b6da3; margin-top: 2px; display: inline-block;">Show All Users</a>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.85rem;">Principal</label>
+            <select id="na-principal-select" style="width: 100%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;">
+              <option>-- Select Principal --</option>
+              <option selected>Test, Obed</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.85rem;">6NA Number</label>
+            <input id="na-number" type="text" value="1" style="width: 80px; padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem;" />
+          </div>
+
+          <div id="na-review-period" style="margin-bottom: 12px;">
+            <label style="display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.85rem;">6NA Review Period</label>
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <div>
+                <label style="font-size: 0.75rem; color: #666;">Start Date</label>
+                <input type="text" value="2023/01/01" style="padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem; width: 120px;" />
+              </div>
+              <div>
+                <label style="font-size: 0.75rem; color: #666;">End Date</label>
+                <input type="text" value="2023/06/30" style="padding: 6px 8px; border: 1px solid #ccc; border-radius: 3px; font-size: 0.85rem; width: 120px;" />
+              </div>
+            </div>
+          </div>
+
+          <button id="na-add-btn" style="background: #2b6da3; color: #fff; border: none; padding: 8px 20px; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">Add 6NA</button>
+        </div>
+
+        <!-- Closed SRs -->
+        <div style="padding: 14px; border-top: 1px solid #eee;">
+          <div class="section-bar" style="background: #5bc0de; margin-bottom: 8px;">CLOSED SRS THAT WILL BE INCLUDED</div>
+          <div style="font-size: 0.8rem; color: #666; padding: 6px;">No closed Skill Reviews found for this period.</div>
+        </div>
+
+        <!-- Open SRs -->
+        <div style="padding: 0 14px 14px;">
+          <div class="section-bar" style="background: #f0ad4e; margin-bottom: 8px;">OPEN SRS THAT WILL NOT BE INCLUDED</div>
+          <div style="font-size: 0.8rem; color: #666; padding: 6px;">No open Skill Reviews found.</div>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="trainee-6na-self-eval.html" class="nav-btn">Continue to Self-Evaluation &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/trainee-6na-home-tour.js"></script>
+</body>
+</html>

@@ -157,5 +157,57 @@
     "rd-resolve-select": "Select Agree With Supervisor if you accept the revised rating, or Disagree With Supervisor if you do not agree. It is recommended to meet with your Supervisor to discuss any disagreements.",
     "rd-trainee-comment": "Add your comment explaining your position on the rating difference. Whether you agree or disagree, provide your reasoning.",
     "rd-trainee-accept-btn": "Click Accept to finalise the Skill Review. Please note that the skill review will be finalised even if you disagree with the Reviewer or Supervisor."
+  },
+
+  "trainee-6na-home-tour": {
+    "step-0": "Welcome to the LTS Home Page. From here you will initiate a Six Monthly Needs Analysis by clicking on the Link to 6 N A's hyperlink. Let's walk through the key sections on this page first.",
+    "na-link-6na": "Click on the hyperlink Link to 6 N A's to initiate a new Six Monthly Needs Analysis. This will take you to the 6 N A setup page.",
+    "na-setup-panel": "This is the 6 N A setup page. You need to fill in the required details to create your Six Monthly Needs Analysis.",
+    "na-supervisor-select": "Select your Authorised Supervisor from the dropdown list. If you cannot find your supervisor, click Show All Users.",
+    "na-principal-select": "Select the Principal from the dropdown list. The Principal is the person responsible for overseeing your training contract.",
+    "na-number": "Update the A N A Number if required. This is the sequence number for your Needs Analysis.",
+    "na-review-period": "Set the 6 N A Review Period Start Date and End Date. This defines the six-month period being assessed.",
+    "na-add-btn": "Click Add 6 N A to save the setup information and create your Six Monthly Needs Analysis. You will then proceed to complete the sections."
+  },
+
+  "trainee-6na-self-eval-tour": {
+    "step-0": "Now update Section 2: Self-Evaluation. Complete your self-evaluation by capturing your major assignments and academic record for this period.",
+    "na-self-eval-link": "Click on the hyperlink Section 2: Self-Evaluation to open the self-evaluation form. The indicator shows what needs to be done and by whom.",
+    "na-self-eval-panel": "This section is mainly concerned with self-evaluation by the Trainee. The Authorised Supervisor should review each section and provide input where necessary.",
+    "na-major-assignment": "Capture your Major Assignment for the next six-month period. Describe the work you are scheduled to undertake and provide details of expected tasks and responsibilities.",
+    "na-next-btn": "Click Next to proceed to the academic record section.",
+    "na-academic-record": "Capture your Academic record. If relevant, document the state of your academic progress during this six-month period. This should include whether your studies are on track to pass or not.",
+    "na-finish-btn": "Click Finish to save your self-evaluation and proceed to the next section."
+  },
+
+  "trainee-6na-supp-training-tour": {
+    "step-0": "Now update Section 2: Record of Supplementary Training. Capture all courses attended during the preceding six-month period.",
+    "na-supp-training-link": "Click on the hyperlink Section 2: Record of Supplementary Training to open the training record form.",
+    "na-training-course": "Enter the Training Course name. For example, Advance Excel or any other course you attended during this period.",
+    "na-learning-objectives": "Capture the Learning Objectives for the course. Describe what you learned and the skills gained.",
+    "na-transfer-examples": "Select Examples of Transfer to indicate whether the learning from this course was transferred to the workplace. Select Not Applicable if it was not transferred.",
+    "na-result": "Select the Result of the training. Options include In Progress, Completed, or Not Applicable.",
+    "na-add-course-btn": "Click Add to save the course information and create a new entry. You can add multiple courses attended during the period.",
+    "na-evaluator-comment": "The Trainee can add a comment on the action decided on the transfer of learning. If learning was transferred, describe how it was applied in the workplace.",
+    "na-update-btn": "Click Update to save all changes to the Record of Supplementary Training."
+  },
+
+  "trainee-6na-acca-tour": {
+    "step-0": "Complete the ACCA Audit Units and then proceed to sign off. First click Document Complete, then update all the audit information on this page.",
+    "na-doc-complete-btn": "Click Document Complete to navigate to the ACCA Audit Units page. This button indicates that you have completed all required sections of the 6 N A.",
+    "na-time-summary": "The Six Monthly Needs Analysis Time Summary shows the period dates and audit information. You can update the period start and end dates, hours, number of clients, and other work hours.",
+    "na-client-sectors": "Select one or more Client Sectors related to the work performed during this period. Options include Banking, Insurance, IT communications, Manufacturing, and others.",
+    "na-client-size": "Select the Client Size classification. Options are Small, Medium, or Large.",
+    "na-unit-section": "Review the audit unit details. This shows the unit, elements, date, and your statement of achievement for the audit process.",
+    "na-overall-statement": "Capture your Overall Statement of Achievement. ACCA can only consider client-specific examples where the member has worked or been personally involved. Please use the STAR format to describe your achievements.",
+    "na-complete-btn": "Click Complete Six Monthly Needs Analysis to assign the 6 N A to your Authorised Supervisor for review and sign-off."
+  },
+
+  "trainee-6na-signoff-tour": {
+    "step-0": "This is the final step. Read the declaration carefully before clicking Agree to finalise your Six Monthly Needs Analysis.",
+    "na-please-note": "Please Note: This is an important declaration. Read it carefully before proceeding with the sign-off.",
+    "na-declaration": "The declaration states: By clicking Agree, you confirm that the work submitted is a true and accurate reflection of your work experience. The information provided is genuine, and you acknowledge full responsibility for its authenticity.",
+    "na-next-steps": "Next Steps: Once you click Agree, no further changes can be made. The Authorised Supervisor will then be able to access and review the 6 N A.",
+    "na-agree-btn": "Click Agree to finalise and submit your Six Monthly Needs Analysis to the Authorised Supervisor. You will be notified once the review has been completed."
   }
 }
