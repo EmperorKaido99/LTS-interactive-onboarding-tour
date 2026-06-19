@@ -125,5 +125,37 @@
     "step-0": "This is the final step. Read the declaration and agree to finalise the Skill Review.",
     "rv-declaration": "Read the declaration carefully. By clicking Agree, you confirm that you have reviewed and assessed the Trainee's competencies and that your ratings and comments are a fair and accurate reflection of their performance.",
     "rv-agree-btn": "Click Agree to finalise the Skill Review. Both the Trainee and the Reviewer or Supervisor will receive notification that the review has been completed."
+  },
+
+  "reviewer-rd-email-tour": {
+    "step-0": "If there are any rating differences between the Trainee and Reviewer, they will appear on the Reviewer or Supervisor rating difference page. The Reviewer or Supervisor will receive an email notification of the assigned Skill Review with rating differences.",
+    "rd-email-panel": "This is the email notification you receive when there are rating differences. It lists the specific competencies where the Trainee and Reviewer ratings differ, along with the revised ratings and comments. Review these discrepancies before proceeding to resolve them."
+  },
+
+  "reviewer-rd-resolve-tour": {
+    "step-0": "As the Reviewer or Supervisor, you will now resolve the rating differences. Click on each competency to capture revised ratings and add your comments.",
+    "rd-warning-header": "The Rating Differences warning header shows all competencies where the Trainee and Reviewer or Supervisor ratings are different. These must be resolved before the Skill Review can be finalised.",
+    "rd-note": "Important note: If there are no ratings under Final, which is the blue column, the supervisor still needs to enter revised ratings. Only once the revised ratings have been entered will the Trainee be able to resolve the rating differences.",
+    "rd-essential-table": "Click on the Essential Performance Objective competency hyperlink to open the rating difference page. The T column shows the Trainee's rating and the S column shows the Supervisor's rating.",
+    "rd-technical-table": "Review the Technical Performance Objectives the same way. Click on each competency to open the rating difference detail page and enter your revised rating.",
+    "rd-trainee-evidence": "Review the Trainee's original rating and the evidence they presented in support of their self-assessment. This helps you understand the Trainee's perspective.",
+    "rd-revised-rating": "As the Reviewer or Supervisor, update the revised rating for this competency. Select the appropriate rating from the dropdown. This will become the final rating.",
+    "rd-comment": "A comment is required when there is a rating difference. Explain clearly why you have assigned this revised rating so the Trainee understands your assessment.",
+    "rd-accept-btn": "Click Accept to save your revised ratings and assign the Skill Review back to the Trainee. The Trainee will then review your revised ratings and agree or disagree."
+  },
+
+  "trainee-rd-email-tour": {
+    "step-0": "The Trainee receives an email notification when the Supervisor has indicated rating differences on their Skill Review. You must contact your Supervisor to discuss the discrepancies before finalising the document.",
+    "rd-trainee-email-panel": "This email notification lists the competencies with rating differences, the revised ratings from your Supervisor, and their comments. Contact your Supervisor as soon as possible to discuss these differences before you finalise."
+  },
+
+  "trainee-rd-resolve-tour": {
+    "step-0": "As the Trainee, you will now resolve the rating differences. Click on your assigned Skill Review, review the Supervisor's revised ratings, and agree or disagree with each one.",
+    "rd-open-items": "Click on the assigned Skill Review hyperlink. It will be marked as With Trainee, Rating Diff. This opens the rating differences page where you can see all the competencies with different ratings.",
+    "rd-differences-table": "The Rating Differences table shows the Trainee rating in green, the Supervisor rating in yellow, and the Final revised rating in blue for each competency where differences exist.",
+    "rd-supervisor-comment": "Review the Supervisor's revised rating and their comment explaining why they assigned a different rating. This information helps you understand their assessment.",
+    "rd-resolve-select": "Select Agree With Supervisor if you accept the revised rating, or Disagree With Supervisor if you do not agree. It is recommended to meet with your Supervisor to discuss any disagreements.",
+    "rd-trainee-comment": "Add your comment explaining your position on the rating difference. Whether you agree or disagree, provide your reasoning.",
+    "rd-trainee-accept-btn": "Click Accept to finalise the Skill Review. Please note that the skill review will be finalised even if you disagree with the Reviewer or Supervisor."
   }
 }

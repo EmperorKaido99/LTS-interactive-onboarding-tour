@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Reviewer: Resolve Rating Differences</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Reviewer) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Learner Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer/Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Rating Differences Warning Header -->
+      <div id="rd-warning-header" style="background:#fff3cd; border:2px solid #ffc107; padding:12px 16px; font-weight:700; color:#856404; font-size:1rem; margin-bottom:4px;">
+        &#9888; RATING DIFFERENCES
+      </div>
+
+      <!-- Important Note -->
+      <div id="rd-note" style="background:#fff; border:1px solid #ccc; padding:10px 14px; font-size:0.84rem; color:#c00; margin-bottom:12px;">
+        <strong>NB:</strong> If there are no ratings under Final (revised ratings) in the blue column, the supervisor still has to enter revised ratings before the Trainee can resolve the rating differences.
+      </div>
+
+      <!-- Essential Performance Objectives Table -->
+      <div id="rd-essential-table" style="margin-bottom:16px;">
+        <div class="section-bar" style="background:#2b6da3;">ESSENTIAL PERFORMANCE OBJECTIVES</div>
+        <table style="width:100%; border-collapse:collapse; font-size:0.84rem;">
+          <thead>
+            <tr style="background:#f5f5f5;">
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Outcome</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Competency</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#d4edda; color:#155724;">T</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#fff3cd; color:#856404;">S</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#cce5ff; color:#004085;">Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ccc; padding:6px 10px; font-weight:600;">PO1 - ETHICS AND PROFESSIONALISM</td>
+              <td style="border:1px solid #ccc; padding:6px 10px;"><a href="#" style="color:#2b6da3; text-decoration:underline;">PO1-a: Act honestly and with integrity, in accordance with ethical and professional standards</a></td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#d4edda;">2</td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#fff3cd;">1</td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#cce5ff;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Technical Performance Objectives Table -->
+      <div id="rd-technical-table" style="margin-bottom:16px;">
+        <div class="section-bar" style="background:#2b6da3;">TECHNICAL PERFORMANCE OBJECTIVES</div>
+        <table style="width:100%; border-collapse:collapse; font-size:0.84rem;">
+          <thead>
+            <tr style="background:#f5f5f5;">
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Outcome</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Competency</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#d4edda; color:#155724;">T</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#fff3cd; color:#856404;">S</th>
+              <th style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#cce5ff; color:#004085;">Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #ccc; padding:6px 10px; font-weight:600;">PO7 - PREPARE EXTERNAL FINANCIAL REPORTS</td>
+              <td style="border:1px solid #ccc; padding:6px 10px;"><a href="#" style="color:#2b6da3; text-decoration:underline;">PO7-a: Prepare or assist in the preparation of external financial reporting</a></td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#d4edda;">3</td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#fff3cd;">2</td>
+              <td style="border:1px solid #ccc; padding:6px 10px; text-align:center; background:#cce5ff;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Competency Detail Section -->
+      <div style="background:#f8f9fa; border:2px solid #2b6da3; padding:16px; margin-bottom:12px;">
+        <div style="background:#2b6da3; color:#fff; padding:8px 12px; font-weight:600; margin:-16px -16px 12px -16px;">
+          COMPETENCY DETAIL — ESSENTIAL PERFORMANCE OBJECTIVES
+        </div>
+        <p style="font-size:0.84rem; margin:0 0 4px;"><strong>SKILL:</strong> ESSENTIAL PERFORMANCE OBJECTIVES</p>
+        <p style="font-size:0.84rem; margin:0 0 4px;"><strong>Outcome:</strong> PO1 - ETHICS AND PROFESSIONALISM</p>
+        <p style="font-size:0.84rem; margin:0 0 12px;"><strong>Competency:</strong> PO1-a: Act honestly and with integrity, in accordance with ethical and professional standards</p>
+
+        <!-- Trainee Evidence -->
+        <div id="rd-trainee-evidence" style="background:#d4edda; border:1px solid #a3d9a5; padding:10px 14px; margin-bottom:10px; font-size:0.84rem;">
+          <p style="margin:0 0 4px;"><strong>Trainee Rating:</strong> (2) Demonstrated at a basic level</p>
+          <p style="margin:0;"><strong>Evidence:</strong> I assisted in preparing compliance documentation for the engagement. I ensured all ethical standards were followed during the review process and reported any concerns to my supervisor.</p>
+        </div>
+
+        <!-- Revised Rating -->
+        <div id="rd-revised-rating" style="background:#cce5ff; border:1px solid #99c2e6; padding:10px 14px; margin-bottom:10px; font-size:0.84rem;">
+          <p style="margin:0 0 6px;"><strong>Supervisor/Reviewer Revised Rating:</strong></p>
+          <select id="rd-rating-select" style="padding:4px 8px; font-size:0.84rem; width:280px;">
+            <option selected>1: Not demonstrated</option>
+            <option>2: Demonstrated at a basic level</option>
+            <option>3: Demonstrated at an intermediate level</option>
+            <option>4: Demonstrated at an advanced level</option>
+          </select>
+        </div>
+
+        <!-- Comment -->
+        <div style="margin-bottom:10px;">
+          <label style="font-size:0.84rem; font-weight:600; display:block; margin-bottom:4px;">Supervisor/Reviewer Comment:</label>
+          <textarea id="rd-comment" rows="3" style="width:100%; font-size:0.84rem; padding:8px; border:1px solid #ccc; box-sizing:border-box;">Trainee did not demonstrate this at a competent level</textarea>
+        </div>
+
+        <!-- Accept Button -->
+        <button id="rd-accept-btn" style="background:#2b6da3; color:#fff; border:none; padding:8px 24px; font-size:0.88rem; cursor:pointer; font-weight:600;">
+          Accept
+        </button>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="reviewer-rd-email.html" class="nav-btn green">&larr; Back to Email</a>
+    <a href="trainee-rd-email.html" class="nav-btn">Continue to Trainee Notification &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/reviewer-rd-resolve-tour.js"></script>
+</body>
+</html>

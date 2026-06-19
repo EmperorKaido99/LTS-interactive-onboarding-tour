@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Reviewer: Rating Difference Email Notification</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Reviewer) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Learner Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer/Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Email Notification Panel -->
+      <div id="rd-email-panel" style="background:#fff; border:1px solid #ccc; padding:20px; margin:10px 0;">
+        <div style="background:#2b6da3; color:#fff; padding:10px 14px; font-weight:600; font-size:0.95rem;">
+          Email Notification — Rating Differences
+        </div>
+        <div style="padding:14px; border:1px solid #ddd; border-top:none; font-size:0.85rem; line-height:1.7;">
+          <p style="margin:0 0 4px;"><strong>Subject:</strong> LTS SR ABC Company Test 01 in rating difference with Supervisor Obed Test</p>
+          <p style="margin:0 0 4px;"><strong>From:</strong> noreply@ltsystems.co.za</p>
+          <p style="margin:0 0 12px;"><strong>To:</strong> Obed Test</p>
+          <hr style="border:none; border-top:1px solid #ddd; margin:8px 0;" />
+          <p>Dear Obed Test,</p>
+          <p>Please note SR ABC Company Test 01 for Trainee <strong>Thato Trainee</strong> is currently assigned to you to finalise the rating difference step. Please discuss the discrepancies with Trainee before finalisation.</p>
+          <p style="margin-top:12px;"><strong>Discrepancies:</strong></p>
+          <table style="width:100%; border-collapse:collapse; margin:8px 0; font-size:0.84rem;">
+            <thead>
+              <tr style="background:#f5f5f5;">
+                <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Competency</th>
+                <th style="border:1px solid #ccc; padding:6px 10px; text-align:center;">Trainee Rating</th>
+                <th style="border:1px solid #ccc; padding:6px 10px; text-align:center;">Supervisor Rating</th>
+                <th style="border:1px solid #ccc; padding:6px 10px; text-align:left;">Supervisor Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border:1px solid #ccc; padding:6px 10px;">PO1-a</td>
+                <td style="border:1px solid #ccc; padding:6px 10px; text-align:center;">2</td>
+                <td style="border:1px solid #ccc; padding:6px 10px; text-align:center;">1</td>
+                <td style="border:1px solid #ccc; padding:6px 10px;">Trainee did not demonstrate this at a competent level</td>
+              </tr>
+              <tr>
+                <td style="border:1px solid #ccc; padding:6px 10px;">PO7-a</td>
+                <td style="border:1px solid #ccc; padding:6px 10px; text-align:center;">3</td>
+                <td style="border:1px solid #ccc; padding:6px 10px; text-align:center;">2</td>
+                <td style="border:1px solid #ccc; padding:6px 10px;">Trainee needs more experience in this area</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr style="border:none; border-top:1px solid #ddd; margin:12px 0;" />
+          <p style="font-size:0.82rem; color:#555;">Contact the Support team on <a href="mailto:Support@LTSystems.co.za">Support@LTSystems.co.za</a></p>
+          <p style="font-size:0.78rem; color:#999; font-style:italic; margin-top:8px;">THIS IS A SYSTEM GENERATED E-MAIL. PLEASE DO NOT REPLY</p>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="reviewer-rd-resolve.html" class="nav-btn">Continue to Resolve Differences &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/reviewer-rd-email-tour.js"></script>
+</body>
+</html>
