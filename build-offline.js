@@ -3,7 +3,7 @@
  * that works when opened directly from the filesystem (file:// protocol).
  *
  * Converts ES modules to regular scripts, inlines dependencies,
- * and embeds narration scripts.
+ * and embeds pre-recorded audio as base64 data URIs.
  *
  * Usage: node build-offline.js
  */
@@ -26,28 +26,39 @@ const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/d
 const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
 const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
 const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
-const scriptsJSON = fs.readFileSync(path.join(SRC, "narration/scripts.json"), "utf-8");
 
-// 2. Convert narrate.js from ES module to plain script
-//    - Remove export keywords
-//    - Embed scripts.json as a variable instead of fetch()
+// 2. Build embedded audio map (base64 data URIs)
+const audioDir = path.join(SRC, "audio");
+const audioMap = {};
+let audioCount = 0;
+
+if (fs.existsSync(audioDir)) {
+  const tourDirs = fs.readdirSync(audioDir).filter(d =>
+    fs.statSync(path.join(audioDir, d)).isDirectory()
+  );
+
+  for (const tourName of tourDirs) {
+    audioMap[tourName] = {};
+    const tourAudioDir = path.join(audioDir, tourName);
+    const mp3Files = fs.readdirSync(tourAudioDir).filter(f => f.endsWith(".mp3"));
+
+    for (const mp3 of mp3Files) {
+      const stepId = mp3.replace(".mp3", "");
+      const mp3Data = fs.readFileSync(path.join(tourAudioDir, mp3));
+      const base64 = mp3Data.toString("base64");
+      audioMap[tourName][stepId] = `data:audio/mpeg;base64,${base64}`;
+      audioCount++;
+    }
+  }
+}
+
+console.log(`Embedded ${audioCount} audio files as base64`);
+
+// 3. Convert narrate.js from ES module to plain script
 const narrateConverted = narrateJS
-  .replace(/export\s+/g, "")
-  .replace(
-    /async function loadScripts\(\)[\s\S]*?return narrationScripts;\s*\}/,
-    `function loadScripts() {
-  if (!narrationScripts) narrationScripts = window.__LTS_NARRATION_SCRIPTS;
-  return narrationScripts;
-}`
-  )
-  .replace(
-    "const scripts = await loadScripts();",
-    "const scripts = loadScripts();"
-  )
-  .replace("export async function narrate", "async function narrate")
-  .replace("export function stopNarration", "function stopNarration");
+  .replace(/export\s+/g, "");
 
-// 3. Process each tour JS file — convert from ES module to plain script
+// 4. Process each tour JS file — convert from ES module to plain script
 const toursDir = path.join(SRC, "tours");
 const tourFiles = fs.readdirSync(toursDir).filter(f => f.endsWith(".js"));
 const tourScripts = {};
@@ -67,15 +78,20 @@ for (const file of tourFiles) {
   tourScripts[file] = content;
 }
 
-// 4. Build the inline script block for tour pages
+// 5. Build the inline script block for tour pages
 function buildInlineScripts(tourFileName) {
   const tourCode = tourScripts[tourFileName];
   if (!tourCode) return "";
 
+  // Determine which tour this is to only embed its audio
+  const tourName = tourFileName.replace("-tour.js", "-tour");
+  const tourAudio = audioMap[tourName] || {};
+
   return `
-<!-- Narration Scripts (embedded) -->
+<!-- Embedded Audio -->
 <script>
-window.__LTS_NARRATION_SCRIPTS = ${scriptsJSON};
+window.__LTS_AUDIO = window.__LTS_AUDIO || {};
+window.__LTS_AUDIO["${tourName}"] = ${JSON.stringify(tourAudio)};
 </script>
 
 <!-- Driver.js (IIFE) -->
@@ -92,7 +108,7 @@ ${tourCode}
 </script>`;
 }
 
-// 5. Process HTML files
+// 6. Process HTML files
 function processHTML(filePath, isScreen) {
   let html = fs.readFileSync(filePath, "utf-8");
   const fileName = path.basename(filePath);
@@ -127,13 +143,12 @@ function processHTML(filePath, isScreen) {
   if (isScreen) {
     // ../../index.html -> ../index.html
     html = html.replace(/\.\.\/\.\.\/index\.html/g, "../index.html");
-    // ../../node_modules/... links already replaced above
   }
 
   return html;
 }
 
-// 6. Process and write index.html
+// 7. Process and write index.html
 let indexHTML = fs.readFileSync(path.join(ROOT, "index.html"), "utf-8");
 indexHTML = indexHTML.replace(
   /<link[^>]*main\.css[^>]*>/,
@@ -143,7 +158,7 @@ indexHTML = indexHTML.replace(
 indexHTML = indexHTML.replace(/src\/screens\//g, "screens/");
 fs.writeFileSync(path.join(DIST, "index.html"), indexHTML);
 
-// 7. Process and write all screen HTML files
+// 8. Process and write all screen HTML files
 const screensDir = path.join(SRC, "screens");
 const screenFiles = fs.readdirSync(screensDir).filter(f => f.endsWith(".html"));
 
@@ -152,11 +167,17 @@ for (const file of screenFiles) {
   fs.writeFileSync(path.join(DIST, "screens", file), processed);
 }
 
-// 8. Copy main.css (for any pages that might reference it directly)
+// 9. Copy main.css (for any pages that might reference it directly)
 fs.writeFileSync(path.join(DIST, "styles", "main.css"), mainCSS);
+
+// 10. Summary
+const distSize = fs.readdirSync(path.join(DIST, "screens"))
+  .reduce((sum, f) => sum + fs.statSync(path.join(DIST, "screens", f)).size, 0);
+const totalSizeMB = ((distSize + fs.statSync(path.join(DIST, "index.html")).size) / 1024 / 1024).toFixed(1);
 
 console.log("=== Offline build complete! ===");
 console.log(`Output: ${DIST}`);
+console.log(`Total size: ~${totalSizeMB} MB (with embedded audio)`);
 console.log(`Files:`);
 console.log(`  - index.html`);
 screenFiles.forEach(f => console.log(`  - screens/${f}`));
