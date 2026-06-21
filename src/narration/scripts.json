@@ -209,5 +209,134 @@
     "na-declaration": "The declaration states: By clicking Agree, you confirm that the work submitted is a true and accurate reflection of your work experience. The information provided is genuine, and you acknowledge full responsibility for its authenticity.",
     "na-next-steps": "Next Steps: Once you click Agree, no further changes can be made. The Authorised Supervisor will then be able to access and review the 6 N A.",
     "na-agree-btn": "Click Agree to finalise and submit your Six Monthly Needs Analysis to the Authorised Supervisor. You will be notified once the review has been completed."
+  },
+
+  "supervisor-6na-home-tour": {
+    "step-0": "Welcome to the Authorised Supervisor Home Page. From here you will review and complete Stage 2 of a Six Monthly Needs Analysis assigned to you by a Trainee.",
+    "as-profile-select": "Select Authorised Supervisor if you have multiple permissions linked to your profile. This ensures you access the system with the correct role.",
+    "as-continue-btn": "Click Continue to navigate to the Home Page with your Authorised Supervisor permissions active.",
+    "as-6na-link": "Click on the Six Monthly Needs Analysis hyperlink to review the 6 N A. The status shows the current stage and who needs to take action."
+  },
+
+  "supervisor-6na-review-tour": {
+    "step-0": "As the Authorised Supervisor, you will now review the 6 N A. This includes reviewing the Trainee's self-evaluation, supplementary training, updating the Summary of Performance Evaluations, and completing the Conclusion.",
+    "as-6na-info": "Review the 6 N A details including the Trainee name, review period, and current status. You can also edit user information or the 6 N A details by clicking the edit link.",
+    "as-section1-link": "Click on Section 1: Summary of Performance Evaluations to review and update the overall rating level achieved by the Trainee to date. The indicators show what needs to be done and by whom.",
+    "as-srs-included": "You can link or delink Skill Reviews to this 6 N A. Linked Skill Reviews will be included in the assessment. Click the Hyperlink Link or Delink button to manage the S Rs.",
+    "as-perf-eval-panel": "Click on each Topic to open all competencies linked to that topic. Tick marks indicate competencies that were rated in the Skill Review. Review each performance objective area.",
+    "as-extended-view": "In the Extended View, you can mark competencies as Ready for Final Sign Off, mark Development Required if major intervention is needed, mark competencies for Discussion, and add your Authorised Supervisor Comment.",
+    "as-ready-signoff-col": "Mark competencies as Ready for Final Sign Off if the Trainee has met the expected level and needs to be signed off.",
+    "as-dev-required-col": "Mark Development Required only when major intervention is needed, or if the Trainee performs below the expected level. This flags areas needing attention.",
+    "as-marked-discussion-col": "Mark specific competencies that should be discussed during the one-on-one meeting with the Trainee.",
+    "as-comment-col": "Add your comments or supporting notes for specific competencies. These comments provide feedback to the Trainee.",
+    "as-submit-btn": "Click Submit to save your changes. You can also use Hide Unrated S Rs to focus only on rated competencies.",
+    "as-doc-complete-btn": "Once all competencies have been reviewed and updated, click Document Complete to proceed.",
+    "as-conclusion-panel": "Click on the Conclusion section to update. This should be completed by the Authorised Supervisor with the input of the trainee accountant. Comment on the effectiveness of the previous period's developmental plan.",
+    "as-conclusion-update-btn": "Once done, click Update to save your conclusion comments and proceed.",
+    "as-finish-btn": "Once all sections have been reviewed, click Finish to navigate to the ACCA Audit Units page."
+  },
+
+  "supervisor-6na-acca-tour": {
+    "step-0": "As the Authorised Supervisor, review the ACCA Audit Units page. You can update values, review the Trainee's statement of achievement, and add your Authorised Supervisor comment before signing off.",
+    "as-time-summary": "Review and update the Period Start and End Dates, Number of Clients on High-risk and Low-risk work, Hours, and Other Work Hours. You can click Reload values from S Rs to refresh values from the linked Skill Reviews.",
+    "as-client-sectors": "Review and update the Client Sectors related to the work performed during this period.",
+    "as-client-size": "Review and update the Client Size classification. Hover over the information icon for more details about size classifications.",
+    "as-unit-section": "Review the audit unit, elements, date of achievement, and the Trainee's statement of achievement. Verify that the information is accurate and complete.",
+    "as-overall-statement": "Review the Trainee's Overall Statement of Achievement. ACCA can only consider client-specific examples where the member has worked or been personally involved.",
+    "as-principal-review": "Review and update the Principal Review section. This includes a summary of work performance, evaluation against previous targets, future development needs, and performance targets for the next period.",
+    "as-supervisor-comment": "Add your Authorised Supervisor comment. This is your assessment and feedback for the Trainee's development during this review period.",
+    "as-signoff-btn": "Once everything has been reviewed and updated, click Sign Off Six Monthly Needs Analysis to proceed to the sign-off declaration page."
+  },
+
+  "supervisor-6na-signoff-tour": {
+    "step-0": "This is the final step. As the Authorised Supervisor, you will now sign off the Six Monthly Needs Analysis to complete Stage 2.",
+    "as-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
+    "as-signoff-btn": "Click Sign Off to finalise and complete Stage 2 of the Six Monthly Needs Analysis. The Trainee will be notified, and the 6 N A will move to the next stage."
+  },
+
+  "trainee-s3-home-tour": {
+    "step-0": "Login to L T Systems dot co dot za with your Trainee profile. You will review the assigned Six Monthly Needs Analysis to complete Stage 3.",
+    "s3-6na-link": "Click on the Six Monthly Needs Analysis hyperlink to open the 6 N A. The status shows Stage 5: With Trainee, meaning it is ready for your review and sign-off."
+  },
+
+  "trainee-s3-review-tour": {
+    "step-0": "Review the Six Monthly Needs Analysis and check if all sections are updated as discussed with the Authorised Supervisor. You can view ratings, comments, and competencies but cannot update Authorised Supervisor comments.",
+    "s3-6na-info": "Review the 6 N A details including the Trainee name, Authorised Supervisor, review period, and sign-off dates. The status shows With Trainee: Awaiting Trainee Sign-Off.",
+    "s3-section-links": "Click on each section to review the content. The coloured indicators show the completion status. Click on Summary of Performance Evaluations, Self-Evaluation, and Conclusion to review the Authorised Supervisor's updates.",
+    "s3-validate-panel": "Click on Validate to view the validation report with ratings and Authorised Supervisor comments, and competencies that are marked as Ready for final sign off. Tick marks indicate that competencies related to the outcomes have been rated in the Six Monthly Needs Analysis.",
+    "s3-self-eval-panel": "Click on Self-Evaluation to view Authorised Supervisor Comments. Read the comments on major assignments and academic record. Once you are done, click Next, then read comments on Academic Record and click Close. Please note: Authorised Supervisor comments cannot be updated.",
+    "s3-conclusion-panel": "Click on Conclusion to review the Authorised Supervisor's comments on the effectiveness of the developmental plan, technical skills, and professional skills. Once done, click Close. Please note: Authorised Supervisor comments cannot be updated.",
+    "s3-finish-btn": "Once you have reviewed all sections, click Finish to navigate to the ACCA Audit Units page."
+  },
+
+  "trainee-s3-acca-tour": {
+    "step-0": "Review the ACCA Audit Units page. As a Trainee, you can only review the information on this page. You cannot update anything. If all is in order, click Signoff Six Monthly Needs Analysis.",
+    "s3-readonly-notice": "Please Note: As the Trainee, you cannot update anything on this page. This page is for review purposes only.",
+    "s3-time-summary": "Review the Six Monthly Needs Analysis Time Summary. This includes Period Start and End Dates, Number of Clients on High-risk and Low-risk work, Hours, and Other Work Hours.",
+    "s3-client-sectors": "Review the Client Sectors related to the work performed during this period. These have been set by the Authorised Supervisor.",
+    "s3-client-size": "Review the Client Size classification. This has been set by the Authorised Supervisor.",
+    "s3-signoff-6na-btn": "If all information is in order, click Signoff Six Monthly Needs Analysis to proceed to the sign-off page."
+  },
+
+  "trainee-s3-signoff-tour": {
+    "step-0": "This is the final step. Review the ACCA Audit Unit details and Principal Review, then sign off the Six Monthly Needs Analysis to complete Stage 3.",
+    "s3-unit-section": "Review the audit unit details including the Client Description, Elements, date of achievement, and your Statement. Verify that the information is accurate and complete.",
+    "s3-overall-statement": "Review the Overall Statement of Achievement. ACCA can only consider client-specific examples where the member has worked or been personally involved.",
+    "s3-principal-review": "Review the Principal Review section including summary of work performance, evaluation against previous targets, future development needs, and performance targets for the next period.",
+    "s3-signoff-nav-btn": "Once you have reviewed everything and all is in order, click Signoff Six Monthly Needs Analysis to proceed to the sign-off declaration.",
+    "s3-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
+    "s3-signoff-btn": "Click Sign Off to finalise and complete Stage 3 of the Six Monthly Needs Analysis. The 6 N A will then move to the Principal for the final quality check."
+  },
+
+  "principal-6na-home-tour": {
+    "step-0": "As the Principal, you will review the 6 N A in respect of the overall ratings and the integrity of the assessment process. Click on the assigned 6 N A hyperlink to begin.",
+    "pr-6na-link": "Click on the assigned 6 N A hyperlink to review the A N A. You can also use Print to display the detail report, Extended Score Grid to view ratings, and Reverse To Not Competent to reverse a signed off competency.",
+    "pr-prepare-info": "Before reviewing, familiarise yourself with the available reports: Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract.",
+    "pr-report-links": "Access the Six Monthly Needs Analysis Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract Report from these links.",
+    "pr-signoff-btn": "Click Sign Off to proceed with reviewing and signing off the Six Monthly Needs Analysis."
+  },
+
+  "principal-6na-review-tour": {
+    "step-0": "Review the closed Six Monthly Needs Analysis. The Principal reviews Section 1 Summary of Performance Evaluations, Self-Evaluation, Record of Supplementary Training, and Conclusion. Note: The Principal cannot edit any of the sections on this page.",
+    "pr-6na-info": "Review the 6 N A details including Trainee name, Authorised Supervisor, review period, and sign-off dates.",
+    "pr-send-back": "If amendments are required, click this hyperlink to reverse the 6 N A back to Stage 2 with the Authorised Supervisor for amendments.",
+    "pr-section-links": "Review the Summary of Performance Evaluations, Self-Evaluation, Record of Supplementary Training, and Conclusion. Note: Principal cannot edit any of these sections.",
+    "pr-continue-btn": "Click Continue to proceed to the Performance Evaluations view where you can review and update ratings.",
+    "pr-perf-eval-panel": "The tick under A S indicates competencies the Authorised Supervisor marked as Ready for final sign off. Click on a Topic Hyperlink to open the Extended View to review and update the A N A.",
+    "pr-extended-view": "In the Extended View, the Principal can update ratings, mark competencies as Ready for Final Sign Off, add comments, decide on the Overall Rating from Not Yet Competent to Competent, and add a Principal Sign Off Comment.",
+    "pr-rating-col": "The Principal can update the 6 N A rating if necessary.",
+    "pr-ready-signoff-col": "The Principal can mark a competency as Ready for Final Sign Off if the Authorised Supervisor missed it.",
+    "pr-as-comment-col": "The Principal can add comments if relevant in the Principal or Authorised Supervisor comment text box.",
+    "pr-overall-rating-col": "Where relevant, the Principal should decide if the Overall Rating should change from Not Yet Competent to Competent.",
+    "pr-signoff-comment-col": "The Principal can give a Principal Sign Off Comment for competencies marked as Ready for Final Sign Off.",
+    "pr-submit-btn": "Click Submit to save your changes and proceed.",
+    "pr-continue-acca-btn": "Once all competencies have been reviewed, click Continue to navigate to the ACCA Audit Units page."
+  },
+
+  "principal-6na-acca-tour": {
+    "step-0": "As the Principal, you can update the Time Summary, review the Overall Statement of Achievement, update the Principal Review and Comments, and then click Signoff Six Monthly Needs Analysis.",
+    "pr-time-summary": "The Principal can update the Period Start and End Dates, Number of Clients, Hours, Other Work Hours, Client Sectors, and Client Size. Click Reload values from S Rs to refresh values.",
+    "pr-client-sectors": "Review and update the Client Sectors related to the work performed during this period.",
+    "pr-client-size": "Review and update the Client Size classification.",
+    "pr-unit-section": "Review the audit unit details including Client Description, Elements, date, and Statement.",
+    "pr-overall-statement": "Review the Overall Statement of Achievement. ACCA can only consider client-specific examples where the member has worked or been personally involved.",
+    "pr-principal-review": "Update the Principal Review including summary of work performance, evaluation against previous targets, future development needs, performance targets, and Principal comments.",
+    "pr-declaration": "Read the declaration carefully. By signing off, you confirm agreement with the summary of work performance and targets.",
+    "pr-signoff-6na-btn": "Click Signoff Six Monthly Needs Analysis to proceed to the sign-off page."
+  },
+
+  "principal-6na-signoff-tour": {
+    "step-0": "This is the final step. Add your Principal Comment and sign off the Six Monthly Needs Analysis to complete the process.",
+    "pr-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
+    "pr-review-declaration": "This sign off indicates that the Principal reviewed and is in agreement with the integrity of ratings, overall competence assessment, adequacy of the developmental plan, and credibility of the assessment process.",
+    "pr-comment-area": "Add your Principal comment on the trainee's overall rating. Principal comments will automatically appear here and can be updated.",
+    "pr-signoff-btn": "Click Sign Off to finalise the Six Monthly Needs Analysis. The 6 N A will be completed and the Trainee will receive an email notification."
+  },
+
+  "principal-6na-reports-tour": {
+    "step-0": "As the Principal, you can access various reports for each Trainee. Click on Signoff A N A's under the Learner's section to view reports for a specific Trainee.",
+    "pr-report-nav": "Access the Six Monthly Needs Analysis Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract Report.",
+    "pr-time-summary-report": "The ACCA Time Summary Report returns the High-risk audits and related assurance work and Low-risk assurance work hours for the Six Monthly Needs Analysis period. You can export to PDF.",
+    "pr-principal-extract": "The ACCA Principal Review Extract Report returns the Principal Review data extract. Click Generate Report to create the report, which shows summary of work performance, evaluation of targets, development needs, and Principal comments."
   }
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Supervisor: Select 6NA (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon">LTS</div>
+      <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
+    </div>
+    <div class="acca-think-ahead">
+      <span class="acca-logo">ACCA</span>
+      <span class="think-ahead-text">Think Ahead</span>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS ACCA Training Demo Firm</span>
+    <span class="user-info">Manager A-LTS (Authorised Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Authorised Supervisor Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Authorised Supervisor Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select" id="as-profile-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Authorised Supervisor</option>
+            <option>Principal</option>
+          </select>
+        </div>
+        <button id="as-continue-btn" class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        There are no firm news entries today.
+      </div>
+
+      <!-- AUTHORISED SUPERVISOR LINKS -->
+      <div class="section-bar">AUTHORISED SUPERVISOR LINKS</div>
+      <div class="links-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>REPORTS</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">&#128196;</span>
+          <span>STATUS REPORT</span>
+        </div>
+      </div>
+
+      <!-- OPEN SIX MONTHLY NEEDS ANALYSIS -->
+      <div class="section-bar">OPEN SIX MONTHLY NEEDS ANALYSIS</div>
+      <div class="open-items" id="as-6na-link">
+        <div style="margin-bottom: 6px;">
+          <a href="supervisor-6na-review.html" style="font-weight:600; color: #2b6da3;">
+            &#128196; SMNA 1/6 Started: 14 October 2024 (2023/01/01 - 2023/06/30) (Trainee, Thato) (Test, Obed)
+          </a>
+          <span style="float:right; font-size:0.78rem;">Stage 4: With Authorised Supervisor &nbsp; <a href="#">Print</a></span>
+        </div>
+      </div>
+
+      <!-- HOW TO CREATE DOCUMENTS ON LTS -->
+      <div class="section-bar">HOW TO CREATE DOCUMENTS ON LTS</div>
+      <div style="padding: 10px 14px; background: #fff; border: 1px solid #ccc; border-top: none; font-size: 0.85rem;">
+        <a href="#" style="color: #2b6da3;">Click here for more LTS training material...</a>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="supervisor-6na-review.html" class="nav-btn">Continue to Review 6NA &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/supervisor-6na-home-tour.js"></script>
+</body>
+</html>
