@@ -1,5 +1,6 @@
 import { driver } from "../../node_modules/driver.js/dist/driver.js.mjs";
 import { narrate, stopNarration } from "../shared/narrate.js";
+import { blurExcept, clearBlur } from "../shared/blur-overlay.js";
 
 const TOUR_NAME = "login-tour";
 
@@ -14,6 +15,10 @@ const tourDriver = driver({
   onHighlightStarted: (element, step) => {
     const stepId = step.element ? step.element.replace("#", "") : `step-${currentStepIndex}`;
     narrate(TOUR_NAME, stepId);
+
+    // Blur all sections except the one containing the highlighted element
+    const activeEl = step.element ? document.querySelector(step.element) : null;
+    blurExcept(activeEl);
   },
   onNextClick: () => {
     currentStepIndex++;
@@ -25,6 +30,7 @@ const tourDriver = driver({
   },
   onDestroyStarted: () => {
     stopNarration();
+    clearBlur();
     currentStepIndex = 0;
   },
   steps: [

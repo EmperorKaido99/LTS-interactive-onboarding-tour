@@ -25,7 +25,7 @@ a:hover {
 
 /* ===== LTS Top Header Bar (website header) ===== */
 .lts-site-header {
-  background: linear-gradient(135deg, #003366 0%, #004d80 30%, #0066aa 60%, #00897b 100%);
+  background: linear-gradient(135deg, #0a1a3d 0%, #0d2a5c 40%, #103a7a 100%);
   padding: 0;
 }
 
@@ -46,7 +46,7 @@ a:hover {
 .lts-logo-hexagon {
   width: 50px;
   height: 50px;
-  background: #00897b;
+  background: linear-gradient(135deg, #1a8a7a 0%, #2ab8a0 50%, #30d4b8 100%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   align-items: center;
@@ -113,9 +113,9 @@ a:hover {
 }
 
 .lts-login-btn {
-  background: #2b6da3;
+  background: #1560d4;
   color: #fff;
-  border: 1px solid #1f5580;
+  border: 1px solid #0a4abf;
   padding: 5px 18px;
   font-weight: 700;
   cursor: pointer;
@@ -125,11 +125,11 @@ a:hover {
 }
 
 .lts-login-btn:hover {
-  background: #245d8e;
+  background: #0a4abf;
 }
 
 .lts-site-nav {
-  background: #1a4d7a;
+  background: #0d2650;
   display: flex;
   justify-content: center;
   gap: 0;
@@ -194,7 +194,7 @@ a:hover {
 
 /* ===== Internal Page Header (after login) ===== */
 .lts-internal-header {
-  background: linear-gradient(135deg, #003366 0%, #004d80 30%, #0066aa 60%, #00897b 100%);
+  background: linear-gradient(135deg, #0a1a3d 0%, #0d2a5c 40%, #103a7a 100%);
   padding: 8px 16px;
   display: flex;
   align-items: center;
@@ -212,7 +212,7 @@ a:hover {
 }
 
 .lts-firm-bar {
-  background: #2b6da3;
+  background: #0d3b8a;
   color: #fff;
   padding: 4px 16px;
   display: flex;
@@ -237,7 +237,7 @@ a:hover {
 
 /* ===== LTS Internal Page Header (blue bar with page title) ===== */
 .lts-page-header {
-  background: linear-gradient(to bottom, #3a8ec9, #2a6fa0);
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
   color: #fff;
   padding: 6px 16px;
   display: flex;
@@ -291,7 +291,7 @@ a:hover {
 }
 
 .sidebar-section-header.blue {
-  background: #2b6da3;
+  background: #1560d4;
 }
 
 .sidebar-section-header .chevron {
@@ -379,7 +379,7 @@ a:hover {
 .sidebar-calendar {
   margin: 4px 10px;
   padding: 6px 8px;
-  background: #2b6da3;
+  background: #1560d4;
   color: #fff;
   font-size: 0.7rem;
   border-radius: 3px;
@@ -435,7 +435,7 @@ a:hover {
 
 /* ===== Section Headers (blue bars - matching LTS system) ===== */
 .section-bar {
-  background: linear-gradient(to bottom, #2b8ed6, #1a6fb5);
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
   color: #fff;
   padding: 6px 14px;
   font-weight: 700;
@@ -450,13 +450,13 @@ a:hover {
 }
 
 .section-bar.blue {
-  background: linear-gradient(to bottom, #2b8ed6, #1a6fb5);
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
 }
 
 /* ===== Login Page - Hero Section ===== */
 .login-hero {
-  background: linear-gradient(135deg, #003366 0%, #004d80 30%, #0066aa 60%, #00897b 100%);
-  min-height: calc(100vh - 90px);
+  background: linear-gradient(135deg, #0038cc 0%, #0050dd 40%, #0060ee 100%);
+  min-height: 320px;
   display: flex;
   align-items: center;
   padding: 40px 60px;
@@ -472,8 +472,20 @@ a:hover {
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(0,137,123,0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 30%, rgba(0,102,170,0.3) 0%, transparent 50%);
+    linear-gradient(130deg, rgba(0,80,200,0.4) 0%, transparent 40%),
+    linear-gradient(220deg, rgba(0,180,160,0.15) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+.login-hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60%;
+  height: 140%;
+  background: linear-gradient(160deg, rgba(0,60,180,0.3) 0%, rgba(0,100,220,0.15) 50%, transparent 100%);
+  transform: skewX(-15deg);
   pointer-events: none;
 }
 
@@ -564,7 +576,7 @@ a:hover {
 .login-hero-mockup {
   width: 100%;
   max-width: 400px;
-  background: #1a3a5c;
+  background: #0a2050;
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.3);
@@ -572,7 +584,7 @@ a:hover {
 }
 
 .login-hero-mockup .mockup-bar {
-  background: #0d2137;
+  background: #061535;
   border-radius: 4px 4px 0 0;
   padding: 6px 12px;
   display: flex;
@@ -601,7 +613,7 @@ a:hover {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(0,137,123,0.8);
+  background: rgba(26,138,122,0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,7 +639,7 @@ a:hover {
 }
 
 .credentials-header {
-  background: linear-gradient(to bottom, #4a9fd4, #2e7ab8);
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
   color: #fff;
   padding: 8px 14px;
   font-weight: 700;
@@ -690,13 +702,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: #2b6da3;
+  background: #1560d4;
   color: #fff;
-  border-color: #1f5580;
+  border-color: #0a4abf;
 }
 
 .btn-primary:hover {
-  background: #245d8e;
+  background: #0a4abf;
 }
 
 .btn-success {
@@ -719,9 +731,9 @@ a:hover {
 }
 
 .btn-save {
-  background: #2b6da3;
+  background: #1560d4;
   color: #fff;
-  border: 1px solid #1f5580;
+  border: 1px solid #0a4abf;
   padding: 5px 20px;
   font-size: 0.8rem;
   cursor: pointer;
@@ -807,7 +819,7 @@ a:hover {
 
 /* ===== Forms (User Details) ===== */
 .form-section-header {
-  background: linear-gradient(to bottom, #4a9fd4, #2e7ab8);
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
   color: #fff;
   padding: 5px 14px;
   font-weight: 700;
@@ -895,7 +907,7 @@ table th {
 .news-banner {
   display: flex;
   align-items: center;
-  background: #1a3a5c;
+  background: #0a1a3d;
   color: #fff;
   padding: 12px 16px;
   margin: 8px 0;
@@ -1016,12 +1028,12 @@ table th {
 
 /* ===== Footer ===== */
 .lts-footer {
-  background: #1a3a5c;
+  background: #0a1a3d;
   color: #aac;
   padding: 10px 24px;
   text-align: center;
   font-size: 0.75rem;
-  border-top: 2px solid #00897b;
+  border-top: 2px solid #1a8a7a;
 }
 
 /* ===== Landing / Index ===== */
@@ -1030,7 +1042,7 @@ table th {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #003366 0%, #004d80 30%, #0066aa 60%, #00897b 100%);
+  background: linear-gradient(135deg, #0038cc 0%, #0050dd 40%, #0060ee 100%);
   text-align: center;
   padding: 24px;
   position: relative;
@@ -1045,9 +1057,8 @@ table th {
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 15% 50%, rgba(0,137,123,0.25) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, rgba(0,102,170,0.25) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(0,77,128,0.2) 0%, transparent 40%);
+    linear-gradient(130deg, rgba(0,80,200,0.4) 0%, transparent 40%),
+    linear-gradient(220deg, rgba(0,180,160,0.15) 0%, transparent 35%);
   pointer-events: none;
 }
 
@@ -1223,13 +1234,16 @@ table th {
   display: flex;
   gap: 24px;
   padding: 20px;
-  align-items: flex-start;
   flex-wrap: wrap;
+  min-height: calc(100vh - 90px);
+  justify-content: center;
+  align-items: center;
 }
 
 .login-left {
   flex: 1;
   min-width: 420px;
+  max-width: 520px;
 }
 
 .login-right {
@@ -1239,6 +1253,12 @@ table th {
 /* ===== Tour Override Styles ===== */
 .driver-popover {
   max-width: 380px;
+}
+
+/* ===== Background Blur when Tour is Active ===== */
+.tour-section-blur {
+  filter: blur(3px) brightness(0.7);
+  transition: filter 0.3s ease;
 }
 
 /* ===== Help Page ===== */
@@ -1264,7 +1284,7 @@ table th {
 .screen-nav .nav-btn {
   display: inline-block;
   padding: 10px 28px;
-  background: #2b6da3;
+  background: #1560d4;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -1274,7 +1294,7 @@ table th {
 }
 
 .screen-nav .nav-btn:hover {
-  background: #245d8e;
+  background: #0a4abf;
   text-decoration: none;
 }
 
