@@ -9,35 +9,42 @@
 </head>
 <body>
 
-  <!-- LTS Website Header (matches screenshot) -->
+  <!-- Top Bar (dark gradient with login fields) -->
+  <div class="lts-topbar">
+    <div class="lts-topbar-inner">
+      <span class="lts-forgot-link">Forgot your Password?</span>
+      <div id="login-bar" class="lts-login-bar">
+        <input type="text" id="top-username" placeholder="username" value="ReleTest1" />
+        <input type="password" id="top-password" placeholder="password" value="********" />
+        <button id="login-button" class="lts-login-btn" onclick="showCredentials()">LOGIN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with Logo + Nav -->
   <div class="lts-site-header">
     <div class="lts-site-header-inner">
       <div class="lts-logo">
-        <div class="lts-logo-hexagon">LTS</div>
-        <span class="lts-logo-subtitle">Developed by LTS<br/>in collaboration with ACCA</span>
-      </div>
-      <div class="lts-header-right">
-        <span class="lts-forgot-password">Forgot your Password?</span>
-        <div id="login-bar" class="lts-login-bar">
-          <input type="text" id="top-username" placeholder="username" value="ReleTest1" />
-          <input type="password" id="top-password" placeholder="password" value="********" />
-          <button id="login-button" class="lts-login-btn" onclick="showCredentials()">LOGIN</button>
+        <div class="lts-logo-hex-wrapper">
+          <img src="../../lts elements/logobg.png" alt="" class="lts-logo-hex" />
+          <span class="lts-logo-hex-text">LTS</span>
         </div>
+        <img src="../../lts elements/logotext.png" alt="LTS" class="lts-logo-text-img" />
       </div>
+      <nav id="site-nav" class="lts-site-nav">
+        <a href="#" class="active">HOME</a>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">FAQ</a>
+        <a href="#">ABOUT</a>
+        <a href="#">NEWS</a>
+        <a href="#">CONTACT</a>
+        <a href="#" class="signup-btn">SIGN UP</a>
+      </nav>
     </div>
-    <nav id="site-nav" class="lts-site-nav">
-      <a href="#" class="active">HOME</a>
-      <a href="#">FEATURES</a>
-      <a href="#">PRICING</a>
-      <a href="#">FAQ</a>
-      <a href="#">ABOUT</a>
-      <a href="#">NEWS</a>
-      <a href="#">CONTACT</a>
-      <a href="#" class="signup-btn">SIGN UP</a>
-    </nav>
   </div>
 
-  <!-- Hero Section (matches screenshot - blue gradient with ACCA text and mockup) -->
+  <!-- Hero Section (banner_bg with ACCA text + iPad mockup) -->
   <div class="login-hero">
     <div class="login-hero-content">
       <div class="login-hero-left">
@@ -56,21 +63,30 @@
         </div>
       </div>
       <div class="login-hero-right">
-        <div class="login-hero-mockup">
-          <div class="mockup-bar">
-            <span class="dot-r"></span>
-            <span class="dot-y"></span>
-            <span class="dot-g"></span>
-          </div>
-          <div class="mockup-screen">
-            <div>
-              <div class="play-icon"></div>
-              <strong>VIDEO TOUR</strong>
-            </div>
+        <div class="ipad-wrapper">
+          <img src="../../lts elements/ipad.png" alt="LTS System Preview" class="ipad-img" />
+          <div class="video-tour-overlay">
+            <div class="play-circle"></div>
+            <span class="video-label">VIDEO TOUR</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Partner Logos Bar -->
+  <div class="partner-bar">
+    <div class="partner-bar-inner">
+      <span class="partner-tagline">LTS, the preferred online<br/>assessment service<br/>provider since 2005.</span>
+      <img src="../../lts elements/accalogo-400x139.png" alt="ACCA Think Ahead" class="partner-logo acca" />
+      <span class="partner-text-logo sait">sait</span>
+      <span class="partner-text-logo saiga"><strong>SAIGA</strong> <small>Advancing<br/>Auditing &amp; Accountability</small></span>
+    </div>
+  </div>
+
+  <!-- Switch to LTS Banner -->
+  <div class="switch-banner">
+    <img src="../../lts elements/signup_bar.png" alt="Switch to LTS in one click" class="switch-banner-img" />
   </div>
 
   <!-- Login Credentials Panel + Password Dialog (shown after clicking LOGIN in tour) -->
