@@ -93,7 +93,7 @@
   <div class="login-split" id="credentials-section">
 
     <!-- Left: Login Credentials -->
-    <div class="login-left">
+    <div class="login-left" id="login-left-panel">
       <div id="credentials-panel" class="credentials-panel">
         <div class="credentials-header">LOGIN CREDENTIALS</div>
         <div class="credentials-body">
@@ -111,8 +111,8 @@
             <label>Password:</label>
             <input type="password" id="cred-password" value="********" readonly />
             <div class="btn-group">
-              <button id="create-password-btn" class="btn" onclick="showPasswordDialog()">Create New Password</button>
-              <button id="send-password-btn" class="btn">Send Password</button>
+              <button id="create-password-btn" class="btn btn-primary" onclick="showPasswordDialog()">Create New Password</button>
+              <button id="send-password-btn" class="btn btn-primary">Send Password</button>
             </div>
           </div>
 
@@ -123,9 +123,9 @@
       </div>
     </div>
 
-    <!-- Right: Password Dialog (hidden initially) -->
-    <div class="login-right">
-      <div id="password-dialog" class="password-dialog" style="display:none;">
+    <!-- Right: Password Dialog (visible but blurred initially) -->
+    <div class="login-right" id="login-right-panel">
+      <div id="password-dialog" class="password-dialog credential-panel-blurred">
         <div class="credentials-header">LOGIN CREDENTIALS</div>
         <div class="credentials-body">
           <div class="instructions">
@@ -142,8 +142,8 @@
             <label>Password:</label>
             <input type="password" value="********" readonly />
             <div class="btn-group">
-              <button class="btn">Create New Password</button>
-              <button class="btn">Send Password</button>
+              <button class="btn btn-primary">Create New Password</button>
+              <button class="btn btn-primary">Send Password</button>
             </div>
           </div>
 
@@ -164,7 +164,7 @@
 
           <div class="password-dialog-footer">
             <button id="cancel-btn" class="btn" onclick="hidePasswordDialog()">Cancel</button>
-            <button id="save-btn" class="btn-save" onclick="goToUserDetails()">Save</button>
+            <button id="save-btn" class="btn-save" onclick="savePassword()">Save</button>
           </div>
         </div>
       </div>
@@ -189,11 +189,27 @@
     }
 
     function showPasswordDialog() {
-      document.getElementById("password-dialog").style.display = "block";
+      // Blur the left panel, un-blur the right panel
+      var leftPanel = document.getElementById("credentials-panel");
+      var rightPanel = document.getElementById("password-dialog");
+      leftPanel.classList.add("credential-panel-blurred");
+      rightPanel.classList.remove("credential-panel-blurred");
     }
 
     function hidePasswordDialog() {
-      document.getElementById("password-dialog").style.display = "none";
+      // Blur the right panel, un-blur the left panel
+      var leftPanel = document.getElementById("credentials-panel");
+      var rightPanel = document.getElementById("password-dialog");
+      rightPanel.classList.add("credential-panel-blurred");
+      leftPanel.classList.remove("credential-panel-blurred");
+    }
+
+    function savePassword() {
+      // Blur the right panel, un-blur the left panel (password saved)
+      var leftPanel = document.getElementById("credentials-panel");
+      var rightPanel = document.getElementById("password-dialog");
+      rightPanel.classList.add("credential-panel-blurred");
+      leftPanel.classList.remove("credential-panel-blurred");
     }
 
     function goToUserDetails() {
