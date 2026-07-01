@@ -732,6 +732,7 @@ a:hover {
   font-size: 0.8rem;
   line-height: 1.5;
   margin-bottom: 16px;
+  color: #cc0000;
 }
 
 .credentials-row {
@@ -777,13 +778,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: #1560d4;
-  color: #fff;
-  border-color: #0a4abf;
+  background: #fff;
+  color: #1560d4;
+  border: 1px solid #1560d4;
 }
 
 .btn-primary:hover {
-  background: #0a4abf;
+  background: #e8f0fe;
 }
 
 .btn-success {
@@ -798,11 +799,16 @@ a:hover {
 }
 
 .btn-continue {
-  background: #e8e8e8;
-  border: 1px solid #aaa;
+  background: #1560d4;
+  color: #fff;
+  border: 1px solid #0a4abf;
   padding: 5px 20px;
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+.btn-continue:hover {
+  background: #0a4abf;
 }
 
 .btn-save {
@@ -848,16 +854,43 @@ a:hover {
 
 .password-rules-text {
   font-size: 0.75rem;
-  color: #cc0000;
+  color: #333;
   margin-top: 8px;
   line-height: 1.5;
   padding-left: 142px;
+}
+
+.password-case-note {
+  font-size: 0.8rem;
+  color: #cc0000;
+  font-weight: 700;
+  margin-top: 12px;
+  padding-left: 142px;
+}
+
+.btn-cancel {
+  background: #333;
+  color: #fff;
+  border-color: #222;
+}
+
+.btn-cancel:hover {
+  background: #444;
 }
 
 .password-dialog-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 14px;
+}
+
+/* Bottom bar matching LTS system */
+.credentials-panel::after,
+.password-dialog::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: linear-gradient(to right, #b0c4de, #d0dce8);
 }
 
 /* ===== Credential Panel Blur (when one panel is done, blur it out) ===== */
@@ -943,7 +976,8 @@ a:hover {
   max-width: 260px;
 }
 
-.form-row input.mandatory {
+.form-row input.mandatory,
+input.mandatory {
   background: #fffde7;
   border-color: #fdd835;
 }
