@@ -5,8 +5,6 @@ const PAGE_SECTIONS = [
   '.lts-site-header',
   '.login-hero',
   '.login-split',
-  '.login-left',
-  '.login-right',
   '.screen-nav',
   '.lts-footer',
   '.lts-internal-header',

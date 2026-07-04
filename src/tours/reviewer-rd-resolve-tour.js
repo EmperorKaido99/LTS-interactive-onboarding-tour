@@ -25,6 +25,7 @@ const tourDriver = driver({
   onDestroyStarted: () => {
     stopNarration();
     currentStepIndex = 0;
+    tourDriver.destroy();
   },
   steps: [
     {

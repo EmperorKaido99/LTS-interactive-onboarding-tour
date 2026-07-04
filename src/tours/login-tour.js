@@ -32,6 +32,7 @@ const tourDriver = driver({
     stopNarration();
     clearBlur();
     currentStepIndex = 0;
+    tourDriver.destroy();
   },
   steps: [
     {
