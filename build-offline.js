@@ -139,6 +139,16 @@ function processHTML(filePath, isScreen) {
     html = html.replace("</body>", `${inlineBlock}\n</body>`);
   }
 
+  // Inline images from the "lts elements" folder as data URIs so the
+  // dist build works standalone (zipped/emailed without the repo)
+  html = html.replace(/src="\.\.\/\.\.\/lts elements\/([^"]+)"/g, (match, name) => {
+    const imgPath = path.join(ROOT, "lts elements", name);
+    if (!fs.existsSync(imgPath)) return match;
+    const ext = path.extname(name).slice(1).toLowerCase();
+    const mime = ext === "jpg" ? "image/jpeg" : `image/${ext}`;
+    return `src="data:${mime};base64,${fs.readFileSync(imgPath).toString("base64")}"`;
+  });
+
   // Fix relative links for screen-to-screen navigation
   if (isScreen) {
     // ../../index.html -> ../index.html
