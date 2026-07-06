@@ -8,12 +8,10 @@
 </head>
 <body>
 
-  <!-- LTS Website Header -->
-  <div class="lts-site-header">
-    <div class="lts-site-header-inner">
-      <div class="lts-logo">
-        <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
-      </div>
+  <!-- LTS Banner Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
     </div>
   </div>
 
@@ -33,6 +31,14 @@
             Logging in, updating user details, and basic navigation through the LTS system.
           </div>
           <div class="card-steps">Training Slide 1 — 5 Steps</div>
+          <div class="card-view-picker" id="view-picker">
+            <label for="view-select">View:</label>
+            <select id="view-select">
+              <option value="standard">Standard (ACCA)</option>
+              <option value="sait">SAIT</option>
+              <option value="saiga">SAIGA</option>
+            </select>
+          </div>
         </a>
 
         <!-- Card 2: Trainee Initiate Skill Review -->
@@ -118,5 +124,23 @@
     Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
+  <script>
+    (function () {
+      var picker = document.getElementById("view-picker");
+      var select = document.getElementById("view-select");
+      var stored = localStorage.getItem("lts-view");
+      if (stored && select.querySelector('option[value="' + stored + '"]')) {
+        select.value = stored;
+      }
+      // The picker sits inside the card link — keep clicks on it from navigating
+      picker.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      select.addEventListener("change", function () {
+        localStorage.setItem("lts-view", select.value);
+      });
+    })();
+  </script>
 </body>
 </html>

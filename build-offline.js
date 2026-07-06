@@ -26,6 +26,7 @@ const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/d
 const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
 const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
 const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
+const viewJS = fs.readFileSync(path.join(SRC, "shared/view.js"), "utf-8");
 
 // 2. Build embedded audio map (base64 data URIs)
 const audioDir = path.join(SRC, "audio");
@@ -138,6 +139,12 @@ function processHTML(filePath, isScreen) {
     const inlineBlock = buildInlineScripts(tourFileName);
     html = html.replace("</body>", `${inlineBlock}\n</body>`);
   }
+
+  // Inline the view switcher (plain script) so dist works without src/shared
+  html = html.replace(
+    /<script\s+src="\.\.\/shared\/view\.js"><\/script>/,
+    `<script>${viewJS}</script>`
+  );
 
   // Inline images from the "lts elements" folder as data URIs so the
   // dist build works standalone (zipped/emailed without the repo)

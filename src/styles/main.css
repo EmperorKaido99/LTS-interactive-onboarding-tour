@@ -201,6 +201,70 @@ a:hover {
   gap: 10px;
 }
 
+/* ===== Partner logo box in banner header (SAIT / SAIGA views) ===== */
+.header-partner {
+  background: #fff;
+  border-radius: 4px;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sait-logo-word {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1c2749;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.sait-logo-word .gold {
+  color: #e8b820;
+}
+
+.sait-logo-text {
+  font-size: 0.7rem;
+  line-height: 1.25;
+  color: #1c2749;
+  font-weight: 600;
+}
+
+.sait-logo-text .gold {
+  color: #e8b820;
+  font-weight: 700;
+}
+
+.saiga-logo-word {
+  color: #2e9e4f;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.saiga-logo-divider {
+  width: 1px;
+  height: 32px;
+  background: #2e9e4f;
+}
+
+.saiga-logo-text {
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.saiga-logo-text .adv {
+  display: block;
+  color: #2e9e4f;
+  font-weight: 800;
+}
+
+.saiga-logo-text .rest {
+  color: #7a7a7a;
+}
+
 
 .lts-firm-bar {
   background: #0d3b8a;
@@ -1275,6 +1339,29 @@ table th {
   font-size: 0.75rem;
   opacity: 0.6;
   margin-top: auto;
+}
+
+/* View picker inside the How to Login card */
+.card-view-picker {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+.card-view-picker select {
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #fff;
+  color: #222;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .select-back {
