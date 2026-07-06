@@ -226,7 +226,8 @@ a:hover {
 
 /* ===== Internal Page Header (after login) ===== */
 .lts-internal-header {
-  background: linear-gradient(135deg, #0a1a3d 0%, #0d2a5c 40%, #103a7a 100%);
+  background: url('../../lts elements/header.png') no-repeat center center;
+  background-size: cover;
   padding: 8px 16px;
   display: flex;
   align-items: center;
@@ -235,6 +236,42 @@ a:hover {
 
 .lts-internal-header .lts-logo {
   gap: 10px;
+}
+
+.lts-internal-header .lts-logo-hex-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lts-internal-header .lts-logo-hex {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.lts-internal-header .lts-logo-hex-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.lts-internal-header .lts-logo-text-img {
+  height: 16px;
+  object-fit: contain;
+}
+
+.lts-internal-header .acca-logo-img {
+  height: 30px;
+  object-fit: contain;
 }
 
 .lts-internal-header .acca-think-ahead {
