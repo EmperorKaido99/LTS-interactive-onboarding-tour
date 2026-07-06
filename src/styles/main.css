@@ -265,6 +265,26 @@ a:hover {
   color: #7a7a7a;
 }
 
+.acca-logo-think {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.acca-logo-box {
+  background: #ce0e2d;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .lts-firm-bar {
   background: #0d3b8a;

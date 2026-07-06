@@ -1,5 +1,5 @@
 /**
- * View/perspective switcher — Standard (ACCA), SAIT, SAIGA.
+ * View/perspective switcher — Normal, ACCA, SAIT, SAIGA.
  *
  * The view is chosen in the dropdown on the Select Training Module screen
  * and stored in localStorage (a ?view= query parameter also works).
@@ -8,9 +8,32 @@
  */
 (function () {
   var VIEWS = {
-    standard: {
+    normal: {
+      firm: "Firm: LTS Training Demo Firm",
+      user: "Trainee A-LTS (Trainee)",
+      details: {
+        surname: "A-Mostert",
+        firstName: "Susan",
+        dob: "2000/02/08",
+        staffNumber: "",
+        email1: "Susan@LTSystems.co.zaa",
+        membershipLabel: "Membership Number:",
+        membershipValue: "",
+        electiveLabel: "Elective:",
+        electiveValue: "LTS Objectives 2023",
+        contractStart: "2024/01/01",
+        contractEnd: "2026/12/31",
+        trainingBStart: "2025/01/01",
+        trainingCStart: "2026/01/01",
+        trainingPeriod: "A",
+      },
+    },
+    acca: {
       firm: "Firm: LTS ACCA Training Demo Firm",
       user: "Trainee A-LTS (Trainee)",
+      logo:
+        '<span class="acca-logo-think">Think Ahead</span>' +
+        '<span class="acca-logo-box">ACCA</span>',
     },
     sait: {
       firm: "Firm: LTS - SAIT Demo Pty Ltd",
@@ -33,6 +56,7 @@
         trainingBStart: "2022/01/01",
         trainingCStart: "2023/01/01",
         trainingPeriod: "C",
+        hideMapped: true,
       },
     },
     saiga: {
@@ -58,22 +82,29 @@
         trainingBStart: "2025/10/01",
         trainingCStart: "2026/10/01",
         trainingPeriod: "B",
+        hideMapped: true,
         showSeta: true,
       },
     },
   };
 
+  function normalize(name) {
+    // "standard" was the old name for the ACCA view
+    if (name === "standard") return "acca";
+    return name;
+  }
+
   function getView() {
     try {
-      var q = new URLSearchParams(window.location.search).get("view");
+      var q = normalize(new URLSearchParams(window.location.search).get("view"));
       if (q && VIEWS[q]) {
         localStorage.setItem("lts-view", q);
         return q;
       }
-      var stored = localStorage.getItem("lts-view");
-      return VIEWS[stored] ? stored : "standard";
+      var stored = normalize(localStorage.getItem("lts-view"));
+      return VIEWS[stored] ? stored : "acca";
     } catch (e) {
-      return "standard";
+      return "acca";
     }
   }
 
@@ -90,7 +121,7 @@
   function apply() {
     var cfg = VIEWS[getView()];
 
-    // Partner logo in the banner header (SAIT / SAIGA only)
+    // Partner logo in the banner header (ACCA / SAIT / SAIGA)
     var header = document.querySelector(".lts-internal-header");
     if (header && cfg.logo && !header.querySelector(".header-partner")) {
       var box = document.createElement("div");
@@ -128,9 +159,9 @@
     setValue("training-c-start", d.trainingCStart);
     setValue("training-period", d.trainingPeriod);
 
-    // Mapped Group only exists on the standard (ACCA) view
+    // Mapped Group only exists on the Normal and ACCA views
     var mappedGroup = document.getElementById("mapped-group");
-    if (mappedGroup && mappedGroup.closest(".form-row")) {
+    if (mappedGroup && d.hideMapped && mappedGroup.closest(".form-row")) {
       mappedGroup.closest(".form-row").style.display = "none";
     }
 
