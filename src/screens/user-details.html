@@ -12,14 +12,7 @@
   <!-- LTS Internal Header -->
   <div class="lts-internal-header">
     <div class="lts-logo">
-      <div class="lts-logo-hex-wrapper">
-        <img src="../../lts elements/logobg.png" alt="" class="lts-logo-hex" />
-        <span class="lts-logo-hex-text">LTS</span>
-      </div>
-      <img src="../../lts elements/logotext.png" alt="LTS" class="lts-logo-text-img" />
-    </div>
-    <div class="acca-think-ahead">
-      <img src="../../lts elements/accalogo-400x139.png" alt="ACCA Think Ahead" class="acca-logo-img" />
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
     </div>
   </div>
 
@@ -208,17 +201,19 @@
           </select>
           <span style="font-size:0.7rem; color:#888; margin-left:6px;">&#9432; To change period, please amend training period dates above.</span>
         </div>
+        <div class="form-row" id="seta-row" style="display:none;">
+          <label for="seta-select">SETA Appointed at:</label>
+          <select id="seta-select" style="min-width:320px;">
+            <option selected>LGSETA</option>
+            <option>FASSET</option>
+            <option>Not Selected</option>
+          </select>
+        </div>
       </div>
 
       <!-- Update Button -->
       <div class="button-row">
         <button id="update-btn" class="btn-primary btn" onclick="goToHome()">Update</button>
-      </div>
-
-      <!-- Support Ticket Tabs -->
-      <div id="support-tabs" style="display:flex; gap:0; margin-top:12px;">
-        <div style="background:#2b6da3; color:#fff; padding:6px 16px; font-size:0.8rem; font-weight:600; cursor:pointer;">Log Support Ticket</div>
-        <div style="background:#e0e0e0; color:#333; padding:6px 16px; font-size:0.8rem; font-weight:600; cursor:pointer; border:1px solid #ccc;">Support Tickets</div>
       </div>
 
     </div><!-- end lts-content -->
@@ -240,5 +235,6 @@
       window.location.href = "home.html";
     }
   </script>
+  <script src="../shared/view.js"></script>
 </body>
 </html>

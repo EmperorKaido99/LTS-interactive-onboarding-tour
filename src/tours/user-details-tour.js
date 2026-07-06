@@ -26,6 +26,7 @@ const tourDriver = driver({
   onDestroyStarted: () => {
     stopNarration();
     currentStepIndex = 0;
+    tourDriver.destroy();
   },
   steps: [
     {
@@ -73,18 +74,8 @@ const tourDriver = driver({
       popover: {
         title: "Step 2: Verify Information",
         description:
-          'Please verify that all information is accurate and up to date. If not, click on "Log Support Ticket" to inform the support team.',
+          "Please verify that all information is accurate and up to date.",
         side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#support-tabs",
-      popover: {
-        title: "Step 2b: Support Tickets",
-        description:
-          'If your information is incorrect and cannot be updated by you, click "Log Support Ticket" to notify the LTS support team.',
-        side: "top",
         align: "start",
       },
     },

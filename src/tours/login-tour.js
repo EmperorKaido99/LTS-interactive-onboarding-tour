@@ -32,6 +32,7 @@ const tourDriver = driver({
     stopNarration();
     clearBlur();
     currentStepIndex = 0;
+    tourDriver.destroy();
   },
   steps: [
     {
@@ -94,9 +95,7 @@ const tourDriver = driver({
         align: "start",
       },
       onDeselected: () => {
-        // Blur left panel, un-blur right panel (password dialog)
-        document.getElementById("credentials-panel").classList.add("credential-panel-blurred");
-        document.getElementById("password-dialog").classList.remove("credential-panel-blurred");
+        document.getElementById("password-dialog").style.display = "block";
       },
     },
     {
@@ -147,11 +146,6 @@ const tourDriver = driver({
           'Click "Save" to save your new password.',
         side: "left",
         align: "start",
-      },
-      onDeselected: () => {
-        // Blur right panel, un-blur left panel (back to credentials)
-        document.getElementById("password-dialog").classList.add("credential-panel-blurred");
-        document.getElementById("credentials-panel").classList.remove("credential-panel-blurred");
       },
     },
     {

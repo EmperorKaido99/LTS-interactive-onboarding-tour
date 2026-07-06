@@ -18,8 +18,7 @@
     "personal-info": "Update your personal details here. Please take note of the mandatory fields marked with red asterisks. The yellow highlighted fields are compulsory.",
     "contact-info": "Email 1 must be your work email address. Email 2 may be updated with another personal address for additional notifications.",
     "training-info": "Contract information must always be accurate. If it needs to be updated, then your Training Officer or assistant can send an email to Support at LT Systems dot co dot za with the correct contract information.",
-    "note-area": "Please verify that all information is accurate and up to date. If not, click on Log Support Ticket to inform the support team.",
-    "support-tabs": "If your information is incorrect and cannot be updated by you, click Log Support Ticket to notify the LTS support team.",
+    "note-area": "Please verify that all information is accurate and up to date.",
     "update-btn": "Click the Update button to save all changes and move on to your LTS User Home Page."
   },
   "home-tour": {
@@ -40,7 +39,6 @@
     "training-docs": "Here you will find all LTS training slides covering Skill Reviews, 6NA processes, and system guides.",
     "training-docs-list": "Browse and download training slides 1 through 8, covering everything from logging in to finalizing a 6NA assessment."
   },
-
   "trainee-sr-home-tour": {
     "step-0": "Welcome to the LTS Home Page. From here you will initiate a Skill Review by clicking on the Link to Skill Review hyperlink. Let's walk through the key sections on this page first.",
     "sr-news": "The NEWS section is used to update trainees about document deadlines and important information.",
@@ -48,7 +46,6 @@
     "sr-open-items": "Open documents will be listed under Open Items. Any Skill Reviews or 6NAs currently in progress will appear here.",
     "sr-link-skill-review": "Click on the hyperlink Link to Skill Review to initiate a new skill review. This will take you to the Skill Review setup page where you can fill in the details."
   },
-
   "trainee-sr-setup-tour": {
     "step-0": "Now you need to fill in the details to set up your Skill Review. Follow the steps below to complete the setup.",
     "sr-reviewer-select": "Select your Supervisor or Reviewer from the drop-down list. If you can't find your Reviewer or Supervisor, click on Show All Users. If they are still not listed, contact your office administrator to request that LTS Support create their profile.",
@@ -58,7 +55,6 @@
     "sr-additional-notes": "Add Additional Notes if necessary. This is an optional field for any extra information you want to include.",
     "sr-new-review-btn": "Click New Review to save the information and create your Skill Review. You will then proceed to rating your skills."
   },
-
   "trainee-sr-rate-tour": {
     "step-0": "Now you will rate your skills, provide evidence, and add comments for both Essential and Technical Performance Objectives.",
     "sr-essential-header": "This section contains the Essential Performance Objectives. You will rate each competency under the relevant outcome topics.",
@@ -71,7 +67,6 @@
     "sr-doc-complete-btn": "Once you have rated the competencies for this review period, click Document Complete to proceed. The tick marks under L will show which outcomes you have completed self-assessment on.",
     "sr-finish-btn": "Click Finish to open the ACCA Audit Units page. You can also use the Print hyperlink to view a detailed Skill Review report before proceeding."
   },
-
   "trainee-sr-acca-tour": {
     "step-0": "Complete the ACCA Audit Units section before signing off your Skill Review. Select the appropriate audit type and fill in the required details.",
     "acca-audit-type": "Select the audit type. Choose Not Applicable if the skill review does not fall under High-risk audits and related work assurance, or Low-risk assurance work. Select High-risk audits if the work performed involves high-risk audits. Select Low-risk assurance if the work performed involves low-risk assurance work.",
@@ -84,21 +79,18 @@
     "acca-elements-table": "Select one or more elements related to the work performed. For each element selected, capture the Date of achievement and a Statement of achievement describing what was accomplished.",
     "acca-signoff-btn": "Click on Sign Off Skill Review to proceed to the sign-off declaration page where you will formally submit your Skill Review."
   },
-
   "trainee-sr-signoff-tour": {
     "step-0": "This is the final step. Read the declaration carefully and agree to submit your Skill Review to your Reviewer or Supervisor for assessment.",
     "sr-declaration": "Read the declaration carefully before clicking on Agree. This confirms that the information you provided in this Skill Review is a true and accurate representation of the work performed and the competencies demonstrated.",
     "sr-agree-btn": "Click Agree to sign off and submit your Skill Review to your Reviewer or Supervisor for assessment. You will be notified once the review has been completed.",
     "sr-print-link": "Use the Print hyperlink to view and print a detailed Skill Review report. You can review this report before or after signing off."
   },
-
   "reviewer-sr-home-tour": {
     "step-0": "Welcome to the Reviewer and Supervisor Home Page. You will review Skill Reviews that have been assigned to you by trainees.",
     "rv-profile-select": "Select Reviewer or Supervisor permission if you have multiple permissions linked to your profile. This ensures you access the system with the correct role.",
     "rv-continue-btn": "Click on Continue to navigate to the Home Page with your Reviewer permissions active.",
     "rv-sr-link": "On the Home page, click on the assigned Skill Review hyperlink to begin your review. Skill Reviews awaiting your review will appear under Open Items."
   },
-
   "reviewer-sr-review-tour": {
     "step-0": "Review the Trainee's Essential and Technical Performance Objectives. You can update ratings, rate unrated skills, and add your comments.",
     "rv-actions-bar": "As a Reviewer or Supervisor, you have the option to Edit the Skill Review setup, or Send the Skill Review back to the Trainee for amendments if changes are needed.",
@@ -111,7 +103,6 @@
     "rv-doc-complete-btn": "Once all skills have been reviewed, click Document Complete to proceed. Tick marks under both L and S indicate that skills have been rated and reviewed by both the Trainee and the Reviewer or Supervisor.",
     "rv-finish-btn": "Click Finish to navigate to the ACCA Audit Units page. You can also use the Print hyperlink to view a detailed Skill Review report."
   },
-
   "reviewer-sr-acca-tour": {
     "step-0": "Review the ACCA Audit Units completed by the Trainee. You can update values, agree or disagree with the Trainee, and add your Reviewer or Supervisor comment.",
     "rv-acca-clients": "As a Reviewer or Supervisor, you can update the Number of Clients, the Audit class hours, Other work hours, Client sectors, and Client Size.",
@@ -120,18 +111,15 @@
     "rv-acca-send-back": "If any amendments are required, you can send the Skill Review back to the Trainee for corrections. The Trainee will be notified and can make the necessary changes.",
     "rv-acca-signoff-btn": "Click on Sign Off to finalise the skill review and proceed to the declaration page."
   },
-
   "reviewer-sr-signoff-tour": {
     "step-0": "This is the final step. Read the declaration and agree to finalise the Skill Review.",
     "rv-declaration": "Read the declaration carefully. By clicking Agree, you confirm that you have reviewed and assessed the Trainee's competencies and that your ratings and comments are a fair and accurate reflection of their performance.",
     "rv-agree-btn": "Click Agree to finalise the Skill Review. Both the Trainee and the Reviewer or Supervisor will receive notification that the review has been completed."
   },
-
   "reviewer-rd-email-tour": {
     "step-0": "If there are any rating differences between the Trainee and Reviewer, they will appear on the Reviewer or Supervisor rating difference page. The Reviewer or Supervisor will receive an email notification of the assigned Skill Review with rating differences.",
     "rd-email-panel": "This is the email notification you receive when there are rating differences. It lists the specific competencies where the Trainee and Reviewer ratings differ, along with the revised ratings and comments. Review these discrepancies before proceeding to resolve them."
   },
-
   "reviewer-rd-resolve-tour": {
     "step-0": "As the Reviewer or Supervisor, you will now resolve the rating differences. Click on each competency to capture revised ratings and add your comments.",
     "rd-warning-header": "The Rating Differences warning header shows all competencies where the Trainee and Reviewer or Supervisor ratings are different. These must be resolved before the Skill Review can be finalised.",
@@ -143,12 +131,10 @@
     "rd-comment": "A comment is required when there is a rating difference. Explain clearly why you have assigned this revised rating so the Trainee understands your assessment.",
     "rd-accept-btn": "Click Accept to save your revised ratings and assign the Skill Review back to the Trainee. The Trainee will then review your revised ratings and agree or disagree."
   },
-
   "trainee-rd-email-tour": {
     "step-0": "The Trainee receives an email notification when the Supervisor has indicated rating differences on their Skill Review. You must contact your Supervisor to discuss the discrepancies before finalising the document.",
     "rd-trainee-email-panel": "This email notification lists the competencies with rating differences, the revised ratings from your Supervisor, and their comments. Contact your Supervisor as soon as possible to discuss these differences before you finalise."
   },
-
   "trainee-rd-resolve-tour": {
     "step-0": "As the Trainee, you will now resolve the rating differences. Click on your assigned Skill Review, review the Supervisor's revised ratings, and agree or disagree with each one.",
     "rd-open-items": "Click on the assigned Skill Review hyperlink. It will be marked as With Trainee, Rating Diff. This opens the rating differences page where you can see all the competencies with different ratings.",
@@ -158,7 +144,6 @@
     "rd-trainee-comment": "Add your comment explaining your position on the rating difference. Whether you agree or disagree, provide your reasoning.",
     "rd-trainee-accept-btn": "Click Accept to finalise the Skill Review. Please note that the skill review will be finalised even if you disagree with the Reviewer or Supervisor."
   },
-
   "trainee-6na-home-tour": {
     "step-0": "Welcome to the LTS Home Page. From here you will initiate a Six Monthly Needs Analysis by clicking on the Link to 6 N A's hyperlink. Let's walk through the key sections on this page first.",
     "na-link-6na": "Click on the hyperlink Link to 6 N A's to initiate a new Six Monthly Needs Analysis. This will take you to the 6 N A setup page.",
@@ -169,7 +154,6 @@
     "na-review-period": "Set the 6 N A Review Period Start Date and End Date. This defines the six-month period being assessed.",
     "na-add-btn": "Click Add 6 N A to save the setup information and create your Six Monthly Needs Analysis. You will then proceed to complete the sections."
   },
-
   "trainee-6na-self-eval-tour": {
     "step-0": "Now update Section 2: Self-Evaluation. Complete your self-evaluation by capturing your major assignments and academic record for this period.",
     "na-self-eval-link": "Click on the hyperlink Section 2: Self-Evaluation to open the self-evaluation form. The indicator shows what needs to be done and by whom.",
@@ -179,7 +163,6 @@
     "na-academic-record": "Capture your Academic record. If relevant, document the state of your academic progress during this six-month period. This should include whether your studies are on track to pass or not.",
     "na-finish-btn": "Click Finish to save your self-evaluation and proceed to the next section."
   },
-
   "trainee-6na-supp-training-tour": {
     "step-0": "Now update Section 2: Record of Supplementary Training. Capture all courses attended during the preceding six-month period.",
     "na-supp-training-link": "Click on the hyperlink Section 2: Record of Supplementary Training to open the training record form.",
@@ -191,7 +174,6 @@
     "na-evaluator-comment": "The Trainee can add a comment on the action decided on the transfer of learning. If learning was transferred, describe how it was applied in the workplace.",
     "na-update-btn": "Click Update to save all changes to the Record of Supplementary Training."
   },
-
   "trainee-6na-acca-tour": {
     "step-0": "Complete the ACCA Audit Units and then proceed to sign off. First click Document Complete, then update all the audit information on this page.",
     "na-doc-complete-btn": "Click Document Complete to navigate to the ACCA Audit Units page. This button indicates that you have completed all required sections of the 6 N A.",
@@ -202,7 +184,6 @@
     "na-overall-statement": "Capture your Overall Statement of Achievement. ACCA can only consider client-specific examples where the member has worked or been personally involved. Please use the STAR format to describe your achievements.",
     "na-complete-btn": "Click Complete Six Monthly Needs Analysis to assign the 6 N A to your Authorised Supervisor for review and sign-off."
   },
-
   "trainee-6na-signoff-tour": {
     "step-0": "This is the final step. Read the declaration carefully before clicking Agree to finalise your Six Monthly Needs Analysis.",
     "na-please-note": "Please Note: This is an important declaration. Read it carefully before proceeding with the sign-off.",
@@ -210,14 +191,12 @@
     "na-next-steps": "Next Steps: Once you click Agree, no further changes can be made. The Authorised Supervisor will then be able to access and review the 6 N A.",
     "na-agree-btn": "Click Agree to finalise and submit your Six Monthly Needs Analysis to the Authorised Supervisor. You will be notified once the review has been completed."
   },
-
   "supervisor-6na-home-tour": {
     "step-0": "Welcome to the Authorised Supervisor Home Page. From here you will review and complete Stage 2 of a Six Monthly Needs Analysis assigned to you by a Trainee.",
     "as-profile-select": "Select Authorised Supervisor if you have multiple permissions linked to your profile. This ensures you access the system with the correct role.",
     "as-continue-btn": "Click Continue to navigate to the Home Page with your Authorised Supervisor permissions active.",
     "as-6na-link": "Click on the Six Monthly Needs Analysis hyperlink to review the 6 N A. The status shows the current stage and who needs to take action."
   },
-
   "supervisor-6na-review-tour": {
     "step-0": "As the Authorised Supervisor, you will now review the 6 N A. This includes reviewing the Trainee's self-evaluation, supplementary training, updating the Summary of Performance Evaluations, and completing the Conclusion.",
     "as-6na-info": "Review the 6 N A details including the Trainee name, review period, and current status. You can also edit user information or the 6 N A details by clicking the edit link.",
@@ -235,7 +214,6 @@
     "as-conclusion-update-btn": "Once done, click Update to save your conclusion comments and proceed.",
     "as-finish-btn": "Once all sections have been reviewed, click Finish to navigate to the ACCA Audit Units page."
   },
-
   "supervisor-6na-acca-tour": {
     "step-0": "As the Authorised Supervisor, review the ACCA Audit Units page. You can update values, review the Trainee's statement of achievement, and add your Authorised Supervisor comment before signing off.",
     "as-time-summary": "Review and update the Period Start and End Dates, Number of Clients on High-risk and Low-risk work, Hours, and Other Work Hours. You can click Reload values from S Rs to refresh values from the linked Skill Reviews.",
@@ -247,18 +225,15 @@
     "as-supervisor-comment": "Add your Authorised Supervisor comment. This is your assessment and feedback for the Trainee's development during this review period.",
     "as-signoff-btn": "Once everything has been reviewed and updated, click Sign Off Six Monthly Needs Analysis to proceed to the sign-off declaration page."
   },
-
   "supervisor-6na-signoff-tour": {
     "step-0": "This is the final step. As the Authorised Supervisor, you will now sign off the Six Monthly Needs Analysis to complete Stage 2.",
     "as-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
     "as-signoff-btn": "Click Sign Off to finalise and complete Stage 2 of the Six Monthly Needs Analysis. The Trainee will be notified, and the 6 N A will move to the next stage."
   },
-
   "trainee-s3-home-tour": {
     "step-0": "Login to L T Systems dot co dot za with your Trainee profile. You will review the assigned Six Monthly Needs Analysis to complete Stage 3.",
     "s3-6na-link": "Click on the Six Monthly Needs Analysis hyperlink to open the 6 N A. The status shows Stage 5: With Trainee, meaning it is ready for your review and sign-off."
   },
-
   "trainee-s3-review-tour": {
     "step-0": "Review the Six Monthly Needs Analysis and check if all sections are updated as discussed with the Authorised Supervisor. You can view ratings, comments, and competencies but cannot update Authorised Supervisor comments.",
     "s3-6na-info": "Review the 6 N A details including the Trainee name, Authorised Supervisor, review period, and sign-off dates. The status shows With Trainee: Awaiting Trainee Sign-Off.",
@@ -268,7 +243,6 @@
     "s3-conclusion-panel": "Click on Conclusion to review the Authorised Supervisor's comments on the effectiveness of the developmental plan, technical skills, and professional skills. Once done, click Close. Please note: Authorised Supervisor comments cannot be updated.",
     "s3-finish-btn": "Once you have reviewed all sections, click Finish to navigate to the ACCA Audit Units page."
   },
-
   "trainee-s3-acca-tour": {
     "step-0": "Review the ACCA Audit Units page. As a Trainee, you can only review the information on this page. You cannot update anything. If all is in order, click Signoff Six Monthly Needs Analysis.",
     "s3-readonly-notice": "Please Note: As the Trainee, you cannot update anything on this page. This page is for review purposes only.",
@@ -277,7 +251,6 @@
     "s3-client-size": "Review the Client Size classification. This has been set by the Authorised Supervisor.",
     "s3-signoff-6na-btn": "If all information is in order, click Signoff Six Monthly Needs Analysis to proceed to the sign-off page."
   },
-
   "trainee-s3-signoff-tour": {
     "step-0": "This is the final step. Review the ACCA Audit Unit details and Principal Review, then sign off the Six Monthly Needs Analysis to complete Stage 3.",
     "s3-unit-section": "Review the audit unit details including the Client Description, Elements, date of achievement, and your Statement. Verify that the information is accurate and complete.",
@@ -287,7 +260,6 @@
     "s3-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
     "s3-signoff-btn": "Click Sign Off to finalise and complete Stage 3 of the Six Monthly Needs Analysis. The 6 N A will then move to the Principal for the final quality check."
   },
-
   "principal-6na-home-tour": {
     "step-0": "As the Principal, you will review the 6 N A in respect of the overall ratings and the integrity of the assessment process. Click on the assigned 6 N A hyperlink to begin.",
     "pr-6na-link": "Click on the assigned 6 N A hyperlink to review the A N A. You can also use Print to display the detail report, Extended Score Grid to view ratings, and Reverse To Not Competent to reverse a signed off competency.",
@@ -295,7 +267,6 @@
     "pr-report-links": "Access the Six Monthly Needs Analysis Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract Report from these links.",
     "pr-signoff-btn": "Click Sign Off to proceed with reviewing and signing off the Six Monthly Needs Analysis."
   },
-
   "principal-6na-review-tour": {
     "step-0": "Review the closed Six Monthly Needs Analysis. The Principal reviews Section 1 Summary of Performance Evaluations, Self-Evaluation, Record of Supplementary Training, and Conclusion. Note: The Principal cannot edit any of the sections on this page.",
     "pr-6na-info": "Review the 6 N A details including Trainee name, Authorised Supervisor, review period, and sign-off dates.",
@@ -312,7 +283,6 @@
     "pr-submit-btn": "Click Submit to save your changes and proceed.",
     "pr-continue-acca-btn": "Once all competencies have been reviewed, click Continue to navigate to the ACCA Audit Units page."
   },
-
   "principal-6na-acca-tour": {
     "step-0": "As the Principal, you can update the Time Summary, review the Overall Statement of Achievement, update the Principal Review and Comments, and then click Signoff Six Monthly Needs Analysis.",
     "pr-time-summary": "The Principal can update the Period Start and End Dates, Number of Clients, Hours, Other Work Hours, Client Sectors, and Client Size. Click Reload values from S Rs to refresh values.",
@@ -324,7 +294,6 @@
     "pr-declaration": "Read the declaration carefully. By signing off, you confirm agreement with the summary of work performance and targets.",
     "pr-signoff-6na-btn": "Click Signoff Six Monthly Needs Analysis to proceed to the sign-off page."
   },
-
   "principal-6na-signoff-tour": {
     "step-0": "This is the final step. Add your Principal Comment and sign off the Six Monthly Needs Analysis to complete the process.",
     "pr-signoff-notice": "This sign off indicates that both the Trainee and the Authorised Supervisor, after having met and discussed this 6 N A, agree with the contents of this document.",
@@ -332,7 +301,6 @@
     "pr-comment-area": "Add your Principal comment on the trainee's overall rating. Principal comments will automatically appear here and can be updated.",
     "pr-signoff-btn": "Click Sign Off to finalise the Six Monthly Needs Analysis. The 6 N A will be completed and the Trainee will receive an email notification."
   },
-
   "principal-6na-reports-tour": {
     "step-0": "As the Principal, you can access various reports for each Trainee. Click on Signoff A N A's under the Learner's section to view reports for a specific Trainee.",
     "pr-report-nav": "Access the Six Monthly Needs Analysis Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract Report.",
