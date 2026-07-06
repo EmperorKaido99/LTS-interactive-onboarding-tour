@@ -912,8 +912,8 @@ a:hover {
 
 /* ===== Alert Banner ===== */
 .alert-banner {
-  background: #ffeb3b;
-  color: #333;
+  background: linear-gradient(to bottom, #1560d4, #0a4abf);
+  color: #fff;
   padding: 8px 14px;
   font-weight: 700;
   font-size: 0.8rem;
