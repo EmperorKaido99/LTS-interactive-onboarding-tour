@@ -26,6 +26,7 @@ const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/d
 const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
 const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
 const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
+const blurOverlayJS = fs.readFileSync(path.join(SRC, "shared/blur-overlay.js"), "utf-8");
 const viewJS = fs.readFileSync(path.join(SRC, "shared/view.js"), "utf-8");
 
 // 2. Build embedded audio map (base64 data URIs)
@@ -55,8 +56,10 @@ if (fs.existsSync(audioDir)) {
 
 console.log(`Embedded ${audioCount} audio files as base64`);
 
-// 3. Convert narrate.js from ES module to plain script
+// 3. Convert narrate.js and blur-overlay.js from ES modules to plain scripts
 const narrateConverted = narrateJS
+  .replace(/export\s+/g, "");
+const blurOverlayConverted = blurOverlayJS
   .replace(/export\s+/g, "");
 
 // 4. Process each tour JS file — convert from ES module to plain script
@@ -101,6 +104,11 @@ window.__LTS_AUDIO["${tourName}"] = ${JSON.stringify(tourAudio)};
 <!-- Narration Engine -->
 <script>
 ${narrateConverted}
+</script>
+
+<!-- Blur Overlay -->
+<script>
+${blurOverlayConverted}
 </script>
 
 <!-- Tour -->

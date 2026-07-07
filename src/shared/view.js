@@ -11,6 +11,11 @@
     normal: {
       firm: "Firm: LTS Training Demo Firm",
       user: "Trainee A-LTS (Trainee)",
+      heroTitle: "Welcome to the LTS Learner Tracking System.",
+      heroText:
+        "“LTS helps trainees and their firms track training records, skills reviews, " +
+        "and sign-offs in one place.”",
+      heroAttribution: "",
       details: {
         surname: "A-Mostert",
         firstName: "Susan",
@@ -34,6 +39,15 @@
       logo:
         '<span class="acca-logo-think">Think Ahead</span>' +
         '<span class="acca-logo-box">ACCA</span>',
+      partnerKey: "acca",
+      heroTitle: "LTS now also in collaboration with ACCA.",
+      heroText:
+        "“We are excited to announce that LTS has worked with ACCA to develop a digital solution " +
+        "to support ACCA members and future members in South Africa. This platform meets our " +
+        "rigorous standards and will greatly benefit those pursuing both ACCA membership and " +
+        "ACCA's South Africa Audit Qualification. Together, we are dedicated to providing " +
+        "valuable support for their journey to success.”",
+      heroAttribution: "Stefan Pegram, ACCA Director of Practice Regulation",
     },
     sait: {
       firm: "Firm: LTS - SAIT Demo Pty Ltd",
@@ -41,6 +55,12 @@
       logo:
         '<span class="sait-logo-word">s<span class="gold">a</span>it</span>' +
         '<span class="sait-logo-text"><span class="gold">South African</span><br>Institute of<br>Taxation</span>',
+      partnerKey: "sait",
+      heroTitle: "LTS now also in collaboration with SAIT.",
+      heroText:
+        "“We are proud to work with LTS to give SAIT trainees a modern, reliable way to track " +
+        "their tax professional training records — from registration through to sign-off.”",
+      heroAttribution: "SAIT Learnership Support Team",
       details: {
         surname: "Kekana",
         firstName: "Susan",
@@ -67,6 +87,12 @@
         '<span class="saiga-logo-divider"></span>' +
         '<span class="saiga-logo-text"><span class="adv">Advancing</span>' +
         '<span class="rest">Auditing &amp; Accountability</span></span>',
+      partnerKey: "saiga",
+      heroTitle: "LTS now also in collaboration with SAIGA.",
+      heroText:
+        "“LTS gives SAIGA trainee accountants a clear, structured way to record their training " +
+        "hours and competencies throughout their SAIGA programme.”",
+      heroAttribution: "SAIGA Training Support Team",
       details: {
         surname: "A-Trainee",
         firstName: "Demo-EA",
@@ -121,13 +147,36 @@
   function apply() {
     var cfg = VIEWS[getView()];
 
-    // Partner logo in the banner header (ACCA / SAIT / SAIGA)
-    var header = document.querySelector(".lts-internal-header");
+    // Partner logo in the banner header (internal screens) or the public
+    // site header (login page) — ACCA / SAIT / SAIGA only, Normal shows none
+    var header = document.querySelector(".lts-internal-header") || document.querySelector(".lts-header-right");
     if (header && cfg.logo && !header.querySelector(".header-partner")) {
       var box = document.createElement("div");
       box.className = "header-partner";
       box.innerHTML = cfg.logo;
       header.appendChild(box);
+    }
+
+    // Login page hero copy + partner bar (login.html only)
+    var heroTitle = document.querySelector(".login-hero-left h2");
+    if (heroTitle && cfg.heroTitle) heroTitle.textContent = cfg.heroTitle;
+    var heroText = document.querySelector(".login-hero-left p");
+    if (heroText && cfg.heroText) heroText.innerHTML = cfg.heroText;
+    var heroAttribution = document.querySelector(".hero-attribution");
+    if (heroAttribution) {
+      if (cfg.heroAttribution) {
+        heroAttribution.textContent = cfg.heroAttribution;
+        heroAttribution.style.display = "";
+      } else {
+        heroAttribution.style.display = "none";
+      }
+    }
+    var partnerItems = document.querySelectorAll(".partner-bar .acca, .partner-bar .sait, .partner-bar .saiga");
+    if (partnerItems.length) {
+      partnerItems.forEach(function (el) {
+        var isActive = cfg.partnerKey && el.classList.contains(cfg.partnerKey);
+        el.style.opacity = isActive ? "1" : "0.35";
+      });
     }
 
     // Firm bar
