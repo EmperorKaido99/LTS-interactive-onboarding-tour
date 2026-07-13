@@ -306,5 +306,55 @@
     "pr-report-nav": "Access the Six Monthly Needs Analysis Score Grid, Extended Score Grid, ACCA Time Summary Report, and ACCA Principal Review Extract Report.",
     "pr-time-summary-report": "The ACCA Time Summary Report returns the High-risk audits and related assurance work and Low-risk assurance work hours for the Six Monthly Needs Analysis period. You can export to PDF.",
     "pr-principal-extract": "The ACCA Principal Review Extract Report returns the Principal Review data extract. Click Generate Report to create the report, which shows summary of work performance, evaluation of targets, development needs, and Principal comments."
+  },
+  "sendback-email-tour": {
+    "step-0": "Welcome to the Edit or Send Back Skill Review tour. In this tour you will learn how a Reviewer or Supervisor can edit Skill Review setup information, or send a Skill Review back to the Trainee for amendments.",
+    "sb-email-panel": "The Reviewer or Supervisor receives an email notification of the assigned Skill Review. It shows the Trainee's name and the client the Skill Review was created for.",
+    "sb-email-logon": "Log in to www dot L T Systems dot co dot za with your Supervisor permission to review the Skill Review.",
+    "sb-profile-select": "If you have multiple permissions linked to your profile, select the Reviewer or Supervisor profile before continuing."
+  },
+  "sendback-home-tour": {
+    "step-0": "After logging in with the Reviewer or Supervisor profile, you land on the Supervisor Home page, where your open Skill Reviews are listed.",
+    "sb-open-reviews": "Open Reviews lists all documents in progress where the Reviewer or Supervisor is selected. The status on the right indicates to whom the Skill Review is currently assigned, and what to do.",
+    "sb-sr-status": "This Skill Review shows Supervisor not complete, which means it is currently assigned to you. Print gives a view of the document as it is currently updated.",
+    "sb-sr-link": "Click on the document type hyperlink to open the assigned Skill Review where the status is with the Supervisor or Reviewer."
+  },
+  "sendback-review-tour": {
+    "step-0": "The Skill Review opens, showing the setup information and the performance objectives rated by the Trainee.",
+    "sb-setup-info": "Check the Skill Review setup information. This includes the Supervisor, client description, dates, days worked, assignment description, and additional notes.",
+    "sb-sendback-link": "Click on the Send Back S R or Edit Setup Information hyperlink to send the Skill Review back to the Trainee, or to edit the setup information.",
+    "sb-essential-header": "Below the setup information you can see the Essential and Technical Performance Objectives. Highlighted sections indicate outcomes not yet rated and signed off."
+  },
+  "sendback-reset-tour": {
+    "step-0": "On the Reset Skill Review page you can update the setup information, or send the Skill Review back to the Trainee to make all necessary changes.",
+    "sb-client-desc": "Change the description of the client if it needs correcting.",
+    "sb-job-dates": "Update the job start date, job end date, and the days worked on the job. The calculated work days are shown for reference.",
+    "sb-assignment-desc": "Update the assignment description and any additional notes for the Skill Review.",
+    "sb-update-btn": "Click Update to save your changes to the setup information without sending the Skill Review back.",
+    "sb-sendback-btn": "Click Send Back to Trainee if the Trainee needs to make the amendments themselves. You will be asked to add a comment for the Trainee on the next screen."
+  },
+  "sendback-reversal-tour": {
+    "step-0": "This page confirms the reversal of the Skill Review back to the Trainee.",
+    "sb-reversal-note": "Read the notes carefully. The Trainee's initial sign off date will be cleared, and the document reverts to step one, with the status With Trainee. Once the Trainee finalises the amendments, the document is re-assigned to the Supervisor.",
+    "sb-reversal-comment": "Add a comment or instructions for the Trainee, so they know exactly which amendments to make. This comment is included in the Trainee's email notification.",
+    "sb-reversal-actions": "Click Send Back to Trainee to send the Skill Review back, or Cancel to return without sending it back."
+  },
+  "sendback-trainee-email-tour": {
+    "step-0": "The Trainee receives an email notification that the Skill Review has been sent back, with instructions from the Reviewer or Supervisor.",
+    "sb-sendback-notice": "The email confirms that the Skill Review has been sent back to the Trainee profile to make the required amendments.",
+    "sb-instruction-block": "The Supervisor's reversal comment appears here, so the Trainee knows exactly what to amend before assigning the Skill Review back."
+  },
+  "sendback-trainee-home-tour": {
+    "step-0": "The Trainee logs on to L T S with the Trainee profile. The sent back Skill Review appears under Open Items on the Learner Home page.",
+    "sb-days-since": "The Days Since Last table shows when the Skill Review was initiated, last worked on, and finalised.",
+    "sb-open-sr-link": "The Trainee opens the Skill Review to make the amendments as the Reviewer or Supervisor has instructed.",
+    "sb-finish-btn": "After all amendments are made, the Trainee clicks Finish to assign the Skill Review back to the Reviewer or Supervisor for them to review."
+  },
+  "sendback-signoff-tour": {
+    "step-0": "After making the amendments, the Trainee completes the Audit Units page and signs off the Skill Review to assign it back to the Reviewer or Supervisor.",
+    "sb-instruction-reminder": "The Supervisor's instruction is shown as a reminder of the amendments required before signing off.",
+    "sb-audit-class": "Select the audit class if relevant, and complete all the audit class sections.",
+    "sb-other-hours": "Capture any hours not included in the audit class selected above.",
+    "sb-signoff-btn": "Click Sign Off Skill Review to assign it to the Reviewer or Supervisor. A declaration will appear. Read it carefully before clicking Agree."
   }
 }

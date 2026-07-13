@@ -26,6 +26,43 @@ const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/dr
 const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
 const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
 const narrateConverted = narrateJS.replace(/export\s+/g, "");
+const narrationScripts = JSON.parse(
+  fs.readFileSync(path.join(SRC, "narration/scripts.json"), "utf-8")
+);
+
+// Fallback narration: when a step has no pre-recorded edge-tts MP3, speak the
+// narration script with the browser's built-in speech engine (Web Speech API),
+// so the standalone file always has voice — offline, no downloads.
+const speechFallbackJS = `
+(function () {
+  var baseNarrate = narrate;
+  var baseStop = stopNarration;
+  function speak(text) {
+    if (!window.speechSynthesis) return;
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.95;
+    var voices = speechSynthesis.getVoices().filter(function (v) { return /^en([-_]|$)/i.test(v.lang); });
+    var preferred = voices.filter(function (v) { return /female|zira|hazel|sonia|libby|susan|serena/i.test(v.name); })[0] || voices[0];
+    if (preferred) u.voice = preferred;
+    speechSynthesis.speak(u);
+  }
+  window.stopNarration = function () {
+    if (window.speechSynthesis) speechSynthesis.cancel();
+    baseStop();
+  };
+  window.narrate = function (tourName, stepId) {
+    window.stopNarration();
+    if (!stepId) return;
+    var hasMp3 = window.__LTS_AUDIO && window.__LTS_AUDIO[tourName] && window.__LTS_AUDIO[tourName][stepId];
+    if (hasMp3) return baseNarrate(tourName, stepId);
+    var text = window.__LTS_NARRATION && window.__LTS_NARRATION[tourName] && window.__LTS_NARRATION[tourName][stepId];
+    if (text) speak(text);
+  };
+  if (window.speechSynthesis && speechSynthesis.getVoices().length === 0) {
+    speechSynthesis.onvoiceschanged = function () {};
+  }
+})();
+`;
 
 const SCREENS = [
   { file: "sendback-email", label: "1. Reviewer Email" },
@@ -37,6 +74,21 @@ const SCREENS = [
   { file: "sendback-trainee-home", label: "7. Trainee Home" },
   { file: "sendback-signoff", label: "8. Amend & Sign Off" },
 ];
+
+// Embed the tour's edge-tts narration as base64 data URIs (same mechanism
+// as build-login-export.js) — narrate.js picks them up via window.__LTS_AUDIO
+function loadTourAudio(tourName) {
+  const audioDir = path.join(SRC, "audio", tourName);
+  const tourAudio = {};
+  if (fs.existsSync(audioDir)) {
+    for (const mp3 of fs.readdirSync(audioDir).filter((f) => f.endsWith(".mp3"))) {
+      const stepId = mp3.replace(".mp3", "");
+      const base64 = fs.readFileSync(path.join(audioDir, mp3)).toString("base64");
+      tourAudio[stepId] = `data:audio/mpeg;base64,${base64}`;
+    }
+  }
+  return tourAudio;
+}
 
 function buildScreen(name) {
   let html = fs.readFileSync(path.join(SRC, "screens", `${name}.html`), "utf-8");
@@ -56,11 +108,24 @@ function buildScreen(name) {
   tourCode = tourCode.replace(/\bdriver\(\{/g, "window.driver.js.driver({");
   tourCode = `(function() {\n${tourCode}\n})();`;
 
+  const tourAudio = loadTourAudio(`${name}-tour`);
+  const audioCount = Object.keys(tourAudio).length;
+  console.log(`  ${name}: embedded ${audioCount} narration clip(s)${audioCount === 0 ? " — run 'python generate-audio.py' first for voice narration" : ""}`);
+
   html = html.replace(/<script\s+type="module"\s+src="[^"]*"><\/script>/, "");
   const inlineBlock = `
+<script>
+window.__LTS_AUDIO = window.__LTS_AUDIO || {};
+window.__LTS_AUDIO[${JSON.stringify(`${name}-tour`)}] = ${JSON.stringify(tourAudio)};
+window.__LTS_NARRATION = window.__LTS_NARRATION || {};
+window.__LTS_NARRATION[${JSON.stringify(`${name}-tour`)}] = ${JSON.stringify(narrationScripts[`${name}-tour`] || {})};
+</script>
 <script>${driverJS}</script>
 <script>
 ${narrateConverted}
+</script>
+<script>
+${speechFallbackJS}
 </script>
 <script>
 ${tourCode}
