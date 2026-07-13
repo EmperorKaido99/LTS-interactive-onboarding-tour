@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Trainee Email Notification (Step 3)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Sylvia Trainee (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review Sent Back — Email Notification</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="sendback-trainee-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Email Notification Panel -->
+      <div id="sb-trainee-email-panel" style="background:#fff; border:1px solid #ccc; padding:20px; margin:10px 0;">
+        <div style="background:#2b6da3; color:#fff; padding:10px 14px; font-weight:600; font-size:0.95rem;">
+          Email Notification — SR ABC Company Test 1 sent back to Trainee
+        </div>
+        <div style="padding:14px; border:1px solid #ddd; border-top:none; font-size:0.85rem; line-height:1.7;">
+          <p style="margin:0 0 4px;"><strong>From:</strong> noreply@ltsystems.co.za</p>
+          <p style="margin:0 0 12px;"><strong>To:</strong> Sylvia Trainee</p>
+          <hr style="border:none; border-top:1px solid #ddd; margin:8px 0;" />
+          <p>Dear Sylvia Trainee,</p>
+          <p>Please note SR ABC Company Test 1 was created on 2024/07/30 15:43.</p>
+          <p>This document was assigned to Supervisor Thato Supervisor on 2024/07/30 15:43.</p>
+          <p id="sb-sendback-notice"><strong>The SR has been sent back to your trainee profile to make the required amendments.</strong></p>
+          <div id="sb-instruction-block" style="background:#f5f5f5; border:1px solid #ddd; padding:10px 14px; margin:12px 0;">
+            <p style="margin:0;">***** INSTRUCTION FROM SUPERVISOR *****</p>
+            <p style="margin:6px 0;">Please update rating before assigning it back to me</p>
+            <p style="margin:0;">***** END *****</p>
+          </div>
+          <p>Logon to <a href="#" onclick="return false;">www.LTSystems.co.za</a> with Trainee permission to make amendments on the SR.</p>
+          <p>For any further questions, please contact your Supervisor Thato Supervisor on <a href="mailto:thato@LTSystems.co.za">thato@LTSystems.co.za</a>.</p>
+          <p>Contact the Support team on <a href="mailto:Support@LTSystems.co.za">Support@LTSystems.co.za</a> for all LTS related enquiries.</p>
+          <p style="font-size:0.78rem; color:#999; font-style:italic; margin-top:8px;">***** THIS IS A SYSTEM GENERATED E-MAIL. PLEASE DO NOT REPLY *****</p>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-reversal.html" class="nav-btn green">&larr; Back to Skill Review Reversal</a>
+    <a href="sendback-trainee-home.html" class="nav-btn">Continue to Trainee Home &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-trainee-email-tour.js"></script>
+</body>
+</html>

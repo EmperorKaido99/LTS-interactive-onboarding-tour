@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Supervisor Home (Step 1)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Thato Supervisor (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Supervisor Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Supervisor Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select" id="sb-profile-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Supervisor</option>
+            <option>Authorised Supervisor</option>
+            <option>Principal</option>
+            <option>Training Officer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        There are no firm news entries today.
+      </div>
+
+      <!-- OPEN SKILL REVIEWS -->
+      <div class="section-bar">OPEN SKILL REVIEWS</div>
+      <div class="open-items" id="sb-open-reviews">
+        <div style="margin-bottom: 6px;">
+          <a href="#" onclick="return false;" style="font-weight:600;">
+            &#128196; SR Started: 13 May 2024 (LTS, test) &nbsp; ABC Company Inc 09
+          </a>
+          <span style="float:right; font-size:0.78rem;">With Trainee. &nbsp; <a href="#">Print</a></span>
+        </div>
+        <div style="margin-bottom: 6px;">
+          <a href="#" onclick="return false;" style="font-weight:600;">
+            &#128196; SR Started: 19 July 2024 (Mouse, Mickey) &nbsp; Testing examples
+          </a>
+          <span style="float:right; font-size:0.78rem;">With Trainee. &nbsp; <a href="#">Print</a></span>
+        </div>
+        <div style="margin-bottom: 6px;">
+          <a href="sendback-review.html" id="sb-sr-link" style="font-weight:600;">
+            &#128196; SR Started: 18 October 2024 (Trainee, Sylvia) &nbsp; ABC Company Test 1
+          </a>
+          <span id="sb-sr-status" style="float:right; font-size:0.78rem;">Supervisor not complete. &nbsp; <a href="#">Print</a></span>
+        </div>
+        <div id="sb-status-report" style="text-align:right; margin-top:8px; font-size:0.8rem;">
+          <a href="#" onclick="return false;">&#128196; STATUS REPORT</a>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-email.html" class="nav-btn green">&larr; Back to Email Notification</a>
+    <a href="sendback-review.html" class="nav-btn">Continue to Skill Review Items &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-home-tour.js"></script>
+</body>
+</html>

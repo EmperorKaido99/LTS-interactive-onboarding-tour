@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Trainee Amend &amp; Sign Off (Step 4)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Sylvia Trainee (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review — Amend &amp; Sign Off</span>
+    <a class="back-link" href="sendback-trainee-home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="sendback-trainee-home.html"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Supervisor Instruction Reminder -->
+      <div id="sb-instruction-reminder" style="background:#fdebd0; border:1px solid #f5cba7; padding:10px 14px; font-size:0.8rem; margin:10px 0;">
+        <strong>Instruction from Supervisor:</strong> Please update rating before assigning it back to me
+      </div>
+
+      <!-- Skill Review Information -->
+      <div class="section-bar">SKILL REVIEW INFORMATION</div>
+      <div id="sb-sr-info" style="background:#fff; border:1px solid #ccc; padding:16px 20px;">
+        <div class="form-row">
+          <label style="width:220px;">Client Description:</label>
+          <span style="font-size:0.82rem;">ABC Company Test 1</span>
+        </div>
+        <div style="margin:12px 0;">
+          <div style="font-weight:700; font-size:0.85rem; margin-bottom:8px;">Audit Class:</div>
+          <div id="sb-audit-class" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-class" value="not-applicable" checked /> Not Applicable
+            </label>
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-class" value="high-risk" /> High-risk audits and related assurance work
+            </label>
+            <label style="font-size:0.8rem; display:flex; align-items:center; gap:4px;">
+              <input type="radio" name="audit-class" value="low-risk" /> Low-risk assurance work
+            </label>
+          </div>
+        </div>
+        <div class="form-row" id="sb-other-hours">
+          <label style="width:220px;">Other Work Hours:</label>
+          <input type="number" value="0.00" style="max-width:100px;" />
+          <span style="font-size:0.7rem; color:#888; margin-left:8px;">Hours not included in any Audit Class above</span>
+        </div>
+
+        <!-- Sign Off Button -->
+        <div style="text-align:right; margin-top:20px;">
+          <button id="sb-signoff-btn" class="btn-primary btn" onclick="showDeclaration()">Signoff Skill Review</button>
+        </div>
+      </div>
+
+      <!-- Declaration (hidden until Signoff is clicked) -->
+      <div id="sb-declaration-wrap" style="display:none; margin-top:16px;">
+        <div class="section-bar">&#9432; PLEASE NOTE !</div>
+        <div id="sb-declaration" style="background:#d6eaf8; border:1px solid #aed6f1; padding:16px; font-size:0.85rem; line-height:1.7;">
+          <strong>DECLARATION:</strong><br/>
+          By clicking <strong>Agree</strong>, you confirm that the work submitted is a true and accurate reflection of your work experience.
+          The information provided is genuine, and you acknowledge full responsibility for its authenticity.<br/><br/>
+          <strong>Next Steps:</strong><br/>
+          Once you click <strong>Agree</strong>, no further changes can be made. The document will proceed to your Supervisor for review.
+          <div style="text-align:center; margin-top:16px;">
+            <button id="sb-agree-btn" class="btn-primary btn" style="padding:6px 32px;" onclick="showConfirmation()">Agree</button>
+            <button class="btn" style="padding:6px 24px;" onclick="hideDeclaration()">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmation (hidden initially) -->
+      <div id="sb-confirmation" style="display:none; margin-top:16px; background:#e8f5e9; border:1px solid #66bb6a; padding:16px; border-radius:4px;">
+        <div style="font-weight:700; color:#2e7d32; font-size:0.95rem; margin-bottom:8px;">
+          &#10003; Skill Review Successfully Signed Off
+        </div>
+        <div style="font-size:0.85rem; color:#333;">
+          Your amendments have been submitted and the Skill Review is now assigned back to your
+          Reviewer/Supervisor to proceed with the review.
+        </div>
+        <div style="margin-top:16px;">
+          <a href="select.html" class="btn-primary btn">Return to Training Selection</a>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-trainee-home.html" class="nav-btn green">&larr; Back to Trainee Home</a>
+    <a href="select.html" class="nav-btn">Back to Training Selection &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script>
+    function showDeclaration() {
+      document.getElementById('sb-declaration-wrap').style.display = 'block';
+      document.getElementById('sb-declaration-wrap').scrollIntoView({ behavior: 'smooth' });
+    }
+    function hideDeclaration() {
+      document.getElementById('sb-declaration-wrap').style.display = 'none';
+    }
+    function showConfirmation() {
+      document.getElementById('sb-confirmation').style.display = 'block';
+      document.getElementById('sb-confirmation').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+  <script type="module" src="../tours/sendback-signoff-tour.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Reset Skill Review (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Thato Supervisor (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Reset Skill Review</span>
+    <a class="back-link" href="sendback-review.html">&#9664; CANCEL</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">RESET SKILL REVIEW</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:20px;">
+        <div style="text-align:center; font-size:0.82rem; margin-bottom:16px;">
+          Change the description of the client and click "Change Skill Review"
+        </div>
+
+        <!-- Client Description -->
+        <div id="sb-client-desc" style="max-width:520px; margin:0 auto 14px;">
+          <label style="display:block; text-align:center; font-weight:700; font-size:0.8rem; margin-bottom:4px;">Client Description:</label>
+          <input type="text" value="ABC Company Test 1" style="width:100%; font-size:0.82rem; padding:5px;" />
+        </div>
+
+        <!-- Dates and Days Worked -->
+        <div id="sb-job-dates" style="display:flex; gap:20px; justify-content:center; margin-bottom:14px; flex-wrap:wrap;">
+          <div>
+            <label style="font-weight:700; font-size:0.8rem;">Job Start Date:</label>
+            <input type="text" value="2024/09/01" style="font-size:0.82rem; padding:5px; width:110px;" />
+          </div>
+          <div>
+            <label style="font-weight:700; font-size:0.8rem;">Job End Date:</label>
+            <input type="text" value="2024/09/30" style="font-size:0.82rem; padding:5px; width:110px;" />
+          </div>
+        </div>
+        <div id="sb-days-worked" style="display:flex; gap:8px; align-items:center; justify-content:center; margin-bottom:14px;">
+          <label style="font-weight:700; font-size:0.8rem;">Days Worked on Job:</label>
+          <input type="text" value="20" style="font-size:0.82rem; padding:5px; width:60px;" />
+          <span style="font-size:0.75rem; color:#888;">21 calculated work days</span>
+        </div>
+
+        <!-- Assignment Description -->
+        <div id="sb-assignment-desc" style="max-width:520px; margin:0 auto 14px;">
+          <label style="display:block; text-align:center; font-weight:700; font-size:0.8rem; margin-bottom:4px;">Assignment Description:</label>
+          <textarea style="width:100%; min-height:70px; font-size:0.82rem; padding:5px; border:1px solid #ccc;"></textarea>
+        </div>
+
+        <!-- Additional Notes -->
+        <div id="sb-additional-notes" style="max-width:520px; margin:0 auto 20px;">
+          <label style="display:block; text-align:center; font-weight:700; font-size:0.8rem; margin-bottom:4px;">Additional Notes:</label>
+          <textarea style="width:100%; min-height:70px; font-size:0.82rem; padding:5px; border:1px solid #ccc;"></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="sb-reset-actions" style="display:flex; gap:8px; justify-content:center;">
+          <button id="sb-update-btn" class="btn-primary btn">Update</button>
+          <button id="sb-sendback-btn" class="btn-primary btn" onclick="window.location.href='sendback-reversal.html'">Send Back to Trainee</button>
+          <button class="btn" onclick="window.location.href='sendback-review.html'">Cancel</button>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-review.html" class="nav-btn green">&larr; Back to Skill Review Items</a>
+    <a href="sendback-reversal.html" class="nav-btn">Continue to Skill Review Reversal &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-reset-tour.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Skill Review Reversal (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Thato Supervisor (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review Reversal</span>
+    <a class="back-link" href="sendback-reset.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">SKILL REVIEW REVERSAL</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:20px;">
+
+        <!-- Reversal Notes -->
+        <div id="sb-reversal-note" style="font-size:0.8rem; line-height:1.8; margin-bottom:16px;">
+          <strong>Note the following when clicking on the "Send Back to Trainee" button:</strong>
+          <ul style="margin:6px 0 0 20px;">
+            <li>The trainee's initial sign off date will be cleared from all reports.</li>
+            <li>The document will be reverted to the previous step, which is "Step 1" and status = "With Trainee".</li>
+            <li>Once received, the trainee should make the required amendments to the document as indicated by the Supervisor in the comment column added below.</li>
+            <li>Once finalised by trainee, then as usual, the document should be re-assigned to the Supervisor.</li>
+          </ul>
+        </div>
+
+        <!-- Reversal Comment -->
+        <div id="sb-reversal-comment" style="max-width:600px; margin:0 auto 20px;">
+          <label style="display:block; text-align:center; font-weight:700; font-size:0.8rem; margin-bottom:4px;">Supervisor Reversal Comment:</label>
+          <textarea style="width:100%; min-height:90px; font-size:0.82rem; padding:5px; border:1px solid #ccc;" placeholder="Add comment or instructions for the trainee to make amendments...">Please update rating before assigning it back to me</textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="sb-reversal-actions" style="display:flex; gap:8px; justify-content:center;">
+          <button id="sb-reversal-sendback-btn" class="btn-primary btn" onclick="window.location.href='sendback-trainee-email.html'">Send Back to Trainee</button>
+          <button class="btn" onclick="window.location.href='sendback-review.html'">Cancel</button>
+        </div>
+
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-reset.html" class="nav-btn green">&larr; Back to Reset Skill Review</a>
+    <a href="sendback-trainee-email.html" class="nav-btn">Continue to Trainee Notification &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-reversal-tour.js"></script>
+</body>
+</html>

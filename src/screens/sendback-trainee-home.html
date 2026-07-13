@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Trainee Home (Step 3)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Sylvia Trainee (Trainee) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Learner Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Trainee Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        There are no firm news entries today.
+      </div>
+
+      <!-- DAYS SINCE LAST -->
+      <div class="section-bar">DAYS SINCE LAST</div>
+      <table id="sb-days-since">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Initiated</th>
+            <th>Worked On(In Progress)</th>
+            <th>Finalised</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SR</td>
+            <td style="color:#c0392b; font-weight:600;">2024/07/30 15:43:00 PM<br/>90 Days</td>
+            <td style="color:#2b6da3; font-weight:600;">2024/09/02 12:41:00 PM<br/>56 Days</td>
+            <td style="color:#c0392b; font-weight:600;">2024/04/11 12:41:00 PM<br/>200 Days</td>
+          </tr>
+          <tr>
+            <td>6NA</td>
+            <td>No 6NAs</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- OPEN ITEMS -->
+      <div class="section-bar">OPEN ITEMS</div>
+      <div class="open-items" id="sb-open-items">
+        <div style="margin-bottom: 6px;">
+          <a href="#" onclick="return false;" id="sb-open-sr-link" style="font-weight:600;">
+            &#128196; SR Started: 30 July 2024 (Trainee, Sylvia) &nbsp; ABC Company Test 1
+          </a>
+          <span style="float:right; font-size:0.78rem;">
+            <button id="sb-finish-btn" class="btn-primary btn" style="font-size:0.72rem; padding:2px 14px;" onclick="window.location.href='sendback-signoff.html'">Finish</button>
+            &nbsp; <a href="#">Print</a>
+          </span>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-trainee-email.html" class="nav-btn green">&larr; Back to Email Notification</a>
+    <a href="sendback-signoff.html" class="nav-btn">Continue to Amend &amp; Sign Off &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-trainee-home-tour.js"></script>
+</body>
+</html>

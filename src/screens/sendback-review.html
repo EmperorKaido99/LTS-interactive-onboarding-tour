@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Send Back SR: Skill Review Items (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Thato Supervisor (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Skill Review Items</span>
+    <a class="back-link" href="sendback-home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Supervisor</option>
+            <option>Trainee</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar">SKILL REVIEW ITEMS</div>
+
+      <!-- Setup Information Summary -->
+      <div id="sb-setup-info" style="background:#fff; border:1px solid #ccc; padding:12px 14px; font-size:0.8rem; line-height:1.8; position:relative;">
+        <div style="float:right; text-align:right;">
+          <div style="font-size:0.75rem; color:#555;">Period of Training Contract: A</div>
+          <a href="sendback-reset.html" id="sb-sendback-link" style="font-weight:700; color:#c0392b; border:2px solid #c0392b; padding:4px 8px; display:inline-block; margin-top:4px; font-size:0.78rem;">
+            Send Back SR/Edit Setup Information
+          </a>
+        </div>
+        <div><strong>Supervisor:</strong> Thato Supervisor</div>
+        <div><strong>Client Description:</strong> ABC Company Test 1</div>
+        <div><strong>From:</strong> 2024/09/01 &nbsp; <strong>To:</strong> 2024/09/30</div>
+        <div><strong>Days Worked:</strong> 20 &nbsp; <span style="color:#888;">(21 calculated work days)</span></div>
+        <div><strong>Assignment Description:</strong> —</div>
+        <div><strong>Additional Notes:</strong> —</div>
+        <div style="clear:both;"></div>
+      </div>
+
+      <div style="background:#fdebd0; border:1px solid #f5cba7; padding:8px 14px; font-size:0.78rem; margin-top:8px;">
+        Highlighted sections indicate outcomes not yet rated and signed off.
+      </div>
+
+      <!-- Essential Performance Objectives -->
+      <div class="section-bar" id="sb-essential-header" style="margin-top:12px;">ESSENTIAL PERFORMANCE OBJECTIVES</div>
+      <div style="background:#fff; border:1px solid #ccc;">
+        <table id="sb-essential-table">
+          <thead>
+            <tr>
+              <th>Outcome</th>
+              <th style="width:30px;">L</th>
+              <th style="width:30px;">S</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#" onclick="return false;">EP1 - Ethics and Professionalism</a></td>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">EP2 - Stakeholder Relationship Management</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">EP3 - Strategy, Innovation and Sustainable Value Creation</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">EP4 - Governance, Risk and Control</a></td>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">EP5 - Leadership and Management</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Technical Performance Objectives -->
+      <div class="section-bar" id="sb-technical-header" style="margin-top:16px;">TECHNICAL PERFORMANCE OBJECTIVES</div>
+      <div style="background:#fff; border:1px solid #ccc;">
+        <table>
+          <thead>
+            <tr>
+              <th>Outcome</th>
+              <th style="width:30px;">L</th>
+              <th style="width:30px;">S</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#" onclick="return false;">TP1 - Record and Process Transactions and Events</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">TP2 - Prepare External Financial Reports</a></td>
+              <td style="text-align:center; color:green; font-weight:700;">&#10003;</td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">TP3 - Analyse and Interpret Financial Reports</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">TP4 - Evaluate Investment and Financing Decisions</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+            <tr>
+              <td><a href="#" onclick="return false;">TP5 - Manage and Control Working Capital</a></td>
+              <td style="text-align:center;"></td>
+              <td style="text-align:center;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="sendback-home.html" class="nav-btn green">&larr; Back to Supervisor Home</a>
+    <a href="sendback-reset.html" class="nav-btn">Continue to Reset Skill Review &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/sendback-review-tour.js"></script>
+</body>
+</html>
