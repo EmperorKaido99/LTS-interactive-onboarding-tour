@@ -16,8 +16,16 @@ const tourDriver = driver({
     const stepId = step.element ? step.element.replace("#", "") : `step-${currentStepIndex}`;
     narrate(TOUR_NAME, stepId);
 
-    // Blur all sections except the one containing the highlighted element
     const activeEl = step.element ? document.querySelector(step.element) : null;
+
+    // Show password dialog only when the active step is inside it
+    const pwDialog = document.getElementById("password-dialog");
+    if (pwDialog) {
+      const isPasswordStep = activeEl && (pwDialog === activeEl || pwDialog.contains(activeEl));
+      pwDialog.style.display = isPasswordStep ? "block" : "none";
+    }
+
+    // Blur all sections except the one containing the highlighted element
     blurExcept(activeEl);
   },
   onNextClick: () => {
@@ -81,7 +89,7 @@ const tourDriver = driver({
         title: "Step 2: Login Credentials",
         description:
           "This is the Login Credentials panel. From here you can create a new password or continue to edit your user details.",
-        side: "right",
+        side: "left",
         align: "start",
       },
     },
@@ -90,12 +98,9 @@ const tourDriver = driver({
       popover: {
         title: "Step 2a: Create New Password",
         description:
-          'Click "Create New Password" to set up your own password. Follow the instructions, then click Save.',
+          'Click "Create New Password" to set up your own password.',
         side: "bottom",
         align: "start",
-      },
-      onDeselected: () => {
-        document.getElementById("password-dialog").style.display = "block";
       },
     },
     {
@@ -103,8 +108,8 @@ const tourDriver = driver({
       popover: {
         title: "Step 3: Password Setup",
         description:
-          "This dialog appears when you click Create New Password. Enter your new password and confirm it.",
-        side: "left",
+          "This dialog appears when you click Create New Password. Enter your new password and confirm it. Follow the instructions, then click Save.",
+        side: "right",
         align: "start",
       },
     },

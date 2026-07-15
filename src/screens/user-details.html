@@ -153,20 +153,15 @@
       <!-- Training Program Information -->
       <div id="training-info" class="details-form">
         <div class="form-section-header">Training Program Information</div>
-        <div class="form-row">
-          <label for="acca-number">ACCA Membership Number:</label>
+        <div id="membership-row" class="form-row">
+          <label for="acca-number">Membership Number:</label>
           <input type="text" id="acca-number" value="" class="mandatory" />
           <span class="asterisk">*</span>
         </div>
+        <div id="contract-info" class="contract-info-group">
         <div class="form-row">
           <label for="elective">Elective:</label>
           <input type="text" id="elective" value="ACCA Objectives 2023" readonly />
-        </div>
-        <div class="form-row">
-          <label for="mapped-group">Mapped Group:</label>
-          <select id="mapped-group">
-            <option>Not Selected</option>
-          </select>
         </div>
         <div class="form-row">
           <label for="contract-start">Contract Start Date:</label>
@@ -184,12 +179,12 @@
         </div>
         <div class="form-row">
           <label for="training-b-start">Training Period B Start Date:</label>
-          <input type="text" id="training-b-start" value="2025/01/01" />
+          <input type="text" id="training-b-start" value="2026/01/01" />
           <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
         </div>
         <div class="form-row">
           <label for="training-c-start">Training Period C Start Date:</label>
-          <input type="text" id="training-c-start" value="2026/01/01" />
+          <input type="text" id="training-c-start" value="2028/12/31" />
           <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
         </div>
         <div class="form-row">
@@ -197,7 +192,7 @@
           <select id="training-period">
             <option>A</option>
             <option>B</option>
-            <option>C</option>
+            <option selected>C</option>
           </select>
           <span style="font-size:0.7rem; color:#888; margin-left:6px;">&#9432; To change period, please amend training period dates above.</span>
         </div>
@@ -209,6 +204,7 @@
             <option>Not Selected</option>
           </select>
         </div>
+        </div><!-- end contract-info -->
       </div>
 
       <!-- Update Button -->

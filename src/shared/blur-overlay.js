@@ -2,9 +2,13 @@
 // This avoids the backdrop-filter issue where everything gets blurred.
 
 const PAGE_SECTIONS = [
+  '.lts-topbar',
   '.lts-site-header',
   '.login-hero',
-  '.login-split',
+  '.partner-bar',
+  '.switch-banner',
+  '#credentials-panel',
+  '#password-dialog',
   '.screen-nav',
   '.lts-footer',
   '.lts-internal-header',

@@ -30,6 +30,15 @@ const tourDriver = driver({
   },
   steps: [
     {
+      popover: {
+        title: "Trainee Home Page",
+        description:
+          "Welcome, you are now on your LTS trainee home page. You will notice you have a quick access menu bar on your left of the screen and workspace on the right of the screen.",
+        side: "bottom",
+        align: "center",
+      },
+    },
+    {
       element: "#home-news",
       popover: {
         title: "NEWS Section",
@@ -44,17 +53,7 @@ const tourDriver = driver({
       popover: {
         title: "DAYS SINCE LAST",
         description:
-          "This section indicates the last day a document on LTS was created, worked on, and finalized. It tracks both SR (Skill Review) and 6NA documents.",
-        side: "bottom",
-        align: "start",
-      },
-    },
-    {
-      element: "#days-since-table",
-      popover: {
-        title: "Document Tracking Table",
-        description:
-          "View when your SR and 6NA documents were last Initiated, Worked On (In Progress), and Finalised.",
+          "This section indicates the last day a document on LTS was created, worked on, and finalized. It tracks both SR (Skill Review) and 6NA documents. View when your SR and 6NA documents were last Initiated, Worked On (In Progress), and Finalised.",
         side: "bottom",
         align: "start",
       },
@@ -116,6 +115,16 @@ const tourDriver = driver({
         description:
           "Click here to view detail reports of the last finalized 6NA.",
         side: "bottom",
+        align: "start",
+      },
+    },
+    {
+      element: "#home-help-section",
+      popover: {
+        title: "Additional Help & Training Guides",
+        description:
+          "This section provides access to additional help and training guides. Click the link to view LTS training material. You can also see upcoming birthdays for the next 7 days.",
+        side: "top",
         align: "start",
       },
     },

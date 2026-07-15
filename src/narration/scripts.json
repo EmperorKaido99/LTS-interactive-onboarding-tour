@@ -5,8 +5,8 @@
     "top-password": "Enter the password provided in your welcome email.",
     "login-button": "Click the LOGIN button to access the system. You will be taken to the Login Credentials screen.",
     "credentials-panel": "This is the Login Credentials panel. From here you can create a new password or continue to edit your user details.",
-    "create-password-btn": "Click Create New Password to set up your own password. Follow the instructions, then click Save.",
-    "password-dialog": "This dialog appears when you click Create New Password. Enter your new password and confirm it.",
+    "create-password-btn": "Click Create New Password to set up your own password.",
+    "password-dialog": "This dialog appears when you click Create New Password. Enter your new password and confirm it. Follow the instructions, then click Save.",
     "new-password": "Enter your new password here.",
     "confirm-password": "Re-enter your new password to confirm it matches.",
     "password-rules": "Your password must contain: minimum 8 characters, maximum 15 characters, at least 1 alphabet character and at least 1 number.",
@@ -14,23 +14,26 @@
     "continue-btn": "Click Continue to proceed to the next screen: Edit and Update User Details."
   },
   "user-details-tour": {
-    "alert-banner": "Please ensure all your information is correct before proceeding.",
-    "personal-info": "Update your personal details here. Please take note of the mandatory fields marked with red asterisks. The yellow highlighted fields are compulsory.",
-    "contact-info": "Email 1 must be your work email address. Email 2 may be updated with another personal address for additional notifications.",
-    "training-info": "Contract information must always be accurate. If it needs to be updated, then your Training Officer or assistant can send an email to Support at LT Systems dot co dot za with the correct contract information.",
+    "alert-banner": "You are now on your user details page. Please ensure all your information is correct before proceeding.",
+    "personal-info": "Update your personal details here. Please take note of the mandatory fields marked with red asterisks, these fields are compulsory.",
+    "contact-info": "Email 1 must be your work email address, it should be accurate and is compulsory. Note: Email 2 is optional and only required if you also want to receive LTS workflow notifications on an additional email address, other than your work email.",
+    "training-info": "The final section is your Training Programme Information. You need to ensure this is always accurate and as registered with your workplace and professional body.",
+    "membership-row": "Enter your membership number or trainee registration number. This field is compulsory and should be accurate. If you still wait for confirmation regarding your registered number, please enter To be confirmed and update this field as soon as you received the relevant information.",
+    "contract-info": "The next part is your training contract information. The elective or programme should be accurate as well as your training contract start and end dates and the training contract period. If this section needs to be updated, then your Training Officer or Programme Administrator should contact Support at LT Systems dot co dot za.",
     "note-area": "Please verify that all information is accurate and up to date.",
     "update-btn": "Click the Update button to save all changes and move on to your LTS User Home Page."
   },
   "home-tour": {
+    "step-0": "Welcome, you are now on your LTS trainee home page. You will notice you have a quick access menu bar on your left of the screen and workspace on the right of the screen.",
     "home-news": "The NEWS section shows the latest updates on document deadlines and other information related to your programme.",
-    "home-days-since": "This section indicates the last day a document on LTS was created, worked on, and finalized.",
-    "days-since-table": "View when your Skill Review and 6NA documents were last Initiated, Worked On, and Finalised.",
+    "home-days-since": "This section indicates the last day a document on LTS was created, worked on, and finalized. It tracks both Skill Review and 6NA documents. View when your documents were last Initiated, Worked On, and Finalised.",
     "home-open-items": "This shows any Skill Reviews or 6NAs currently open and in progress.",
     "home-skills-section": "This section gives you access to initiate new documents and view reports. Use the hyperlinks below to navigate.",
     "link-skill-review": "Click Link to Skill Review to start a new Skill Review.",
     "link-6na": "Click Link to 6NAs to start a new Six-Monthly Needs Analysis.",
     "link-status-report": "Click here to view your Status Reports.",
-    "link-last-6na": "Click here to view detail reports of the last finalized 6NA."
+    "link-last-6na": "Click here to view detail reports of the last finalized 6NA.",
+    "home-help-section": "This section provides access to additional help and training guides. Click the link to view LTS training material. You can also see upcoming birthdays for the next 7 days."
   },
   "help-tour": {
     "help-contact": "If you need assistance, contact LTS Support at Support at LT Systems dot co dot za, or view training material and FAQ under Documents.",
