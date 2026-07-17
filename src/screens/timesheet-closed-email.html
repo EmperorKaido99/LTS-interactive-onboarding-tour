@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Closed Timesheet Notification (Step 9)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheet Closed — Email Notification</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Email Notification Panel -->
+      <div id="ts-final-email" style="background:#fff; border:1px solid #ccc; padding:20px; margin:10px 0;">
+        <div style="background:#2b6da3; color:#fff; padding:10px 14px; font-weight:600; font-size:0.95rem;">
+          LTS Timesheet Finalised (2025/01/06 - 2025/01/12)
+        </div>
+        <div style="padding:14px; border:1px solid #ddd; border-top:none; font-size:0.85rem; line-height:1.7;">
+          <p style="margin:0 0 4px;"><strong>From:</strong> noreply@ltsystems.co.za</p>
+          <p style="margin:0 0 12px;"><strong>To:</strong> Duffy Duck</p>
+          <hr style="border:none; border-top:1px solid #ddd; margin:8px 0;" />
+          <p>Dear Duck Duffy,</p>
+          <p id="ts-final-body">Reviewer <strong>Doo Scooby</strong> finalised your Timesheet (2025/01/06 - 2025/01/12) on 2025/03/25 09:23:47.</p>
+          <div id="ts-final-howto">
+            <p style="margin-bottom:2px;"><strong>HOW TO VIEW, SAVE OR PRINT A COPY OF YOUR DOCUMENT?</strong></p>
+            <p style="margin:0;">* Logon to <a href="#" onclick="return false;">www.LTSystems.co.za</a> with your trainee permission.</p>
+            <p style="margin:0;">* Open your STATUS REPORT from your LTS home page.</p>
+            <p style="margin:0 0 12px;">* Click on the document's STATUS hyperlink to view, print or save a copy to PDF.</p>
+          </div>
+          <p>Contact the Support team on <a href="mailto:Support@LTSystems.co.za">Support@LTSystems.co.za</a> for all LTS related enquiries.</p>
+          <p style="font-size:0.78rem; color:#999; font-style:italic; margin-top:8px;">***** THIS IS A SYSTEM GENERATED E-MAIL. PLEASE DO NOT REPLY *****</p>
+        </div>
+      </div>
+
+      <!-- Home page links after closure -->
+      <div id="ts-home-links" style="background:#fff; border:1px solid #ccc; padding:10px 14px; margin:10px 0;">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+          <a href="timesheet-reports.html" id="ts-closed-link" style="font-weight:600;">
+            &#10145;&#65039; Link to Closed Timesheets
+          </a>
+          <a href="#" onclick="return false;">
+            &#10145;&#65039; Create a Timesheet
+          </a>
+        </div>
+        <div class="section-bar" style="margin:0;">OPEN TIMESHEETS</div>
+        <div style="padding:8px 0 2px; font-size:0.8rem; color:#666;">
+          There are currently no open trainee timesheets.
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-reversal.html" class="nav-btn green">&larr; Back to Timesheet Reversal</a>
+    <a href="timesheet-reports.html" class="nav-btn">Continue to Closed Timesheets &amp; Reports &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-closed-email-tour.js"></script>
+</body>
+</html>

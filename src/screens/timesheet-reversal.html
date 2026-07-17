@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Timesheet Reversal (Step 8)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Doo Scooby (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheets for Duck Duffy</span>
+    <a class="back-link" href="timesheet-review.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer</option>
+            <option>Timesheet User</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="ts-dialog" style="max-width:640px;">
+        <div class="ts-dialog-title">Timesheet Reversal</div>
+        <div class="ts-dialog-body">
+
+          <!-- Reversal Notes -->
+          <div id="ts-reversal-note" style="font-size:0.78rem; line-height:1.8; margin-bottom:16px;">
+            <strong>Note the following when clicking on the "Send Back to Timesheet User" button:</strong>
+            <ul style="margin:6px 0 0 20px;">
+              <li>The Timesheet User's initial sign off date will be cleared from all reports.</li>
+              <li>The document will be reverted to the previous step, which is "Step 1" and status = "With Timesheet User".</li>
+              <li>Once received, the Timesheet User should make the required amendments to the document as indicated by the Reviewer in the comment column added below.</li>
+              <li>Once finalised by Timesheet User, then as usual, the document should be re-assigned to the Reviewer.</li>
+            </ul>
+          </div>
+
+          <!-- Reversal Comment -->
+          <div id="ts-reversal-comment" style="max-width:520px; margin:0 auto 20px;">
+            <label style="display:block; text-align:center; font-weight:700; font-size:0.8rem; margin-bottom:4px;">Reversal Comment</label>
+            <textarea style="width:100%; min-height:90px; font-size:0.82rem; padding:5px; border:1px solid #ccc; box-sizing:border-box;" placeholder="Capture reason for Timesheet reversal">Capture reason for Timesheet reversal</textarea>
+          </div>
+
+          <!-- Action Buttons -->
+          <div id="ts-reversal-actions" style="display:flex; gap:8px; justify-content:center;">
+            <button id="ts-reversal-sendback" class="btn btn-success" onclick="window.location.href='timesheet-closed-email.html'">Send Back to Timesheet User</button>
+            <button class="btn btn-primary" onclick="window.location.href='timesheet-review.html'">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-review.html" class="nav-btn green">&larr; Back to Review &amp; Sign Off</a>
+    <a href="timesheet-closed-email.html" class="nav-btn">Continue to Closed Timesheet Notification &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-reversal-tour.js"></script>
+</body>
+</html>

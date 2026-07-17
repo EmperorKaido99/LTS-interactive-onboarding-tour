@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Update Weekly Timesheet (Step 3)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheets for Duck Duffy</span>
+    <a class="back-link" href="timesheet-setup.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="ts-info-line">
+        Timesheet from 2025/01/06 to 2025/01/12 for Reviewer: Doo Scooby
+      </div>
+
+      <div class="ts-toolbar">
+        <button id="ts-request-signoff" class="btn btn-success" onclick="window.location.href='timesheet-reviewer-email.html'">Request sign off for timesheet</button>
+        <button id="ts-edit-btn" class="btn btn-primary" onclick="window.location.href='timesheet-edit.html'">Edit this timesheet</button>
+        <button id="ts-delete-btn" class="btn btn-primary">Delete this timesheet</button>
+      </div>
+
+      <div class="ts-grid-wrap">
+        <table class="ts-grid">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Type<br />Date<br />Week Total Hours</th>
+              <th>Activity<br />Date<br />Week Total Hours</th>
+              <th>Mon<br />01/06<br />8.00</th>
+              <th>Tue<br />01/07<br />8.00</th>
+              <th>Wed<br />01/08<br />8.00</th>
+              <th>Thu<br />01/09<br />0.00</th>
+              <th>Fri<br />01/10<br />0.00</th>
+              <th>Sat<br />01/11<br />0.00</th>
+              <th>Sun<br />01/12<br />0.00</th>
+              <th>Comments<br /><br />Hours: 24.00</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- New entry row -->
+            <tr id="ts-entry-row">
+              <td id="ts-company-cell">
+                <input type="text" class="ts-search-input" id="ts-company-search" placeholder="Company Search" />
+                <select>
+                  <option>Marketing</option>
+                  <option>Accounting and Financial Management</option>
+                  <option>Corporate and Project Finance Advisory</option>
+                  <option>Credit Analysis</option>
+                  <option>HR</option>
+                </select>
+              </td>
+              <td id="ts-type-cell">
+                <select>
+                  <option>CA2025: Outputs leading to outcomes</option>
+                  <option>CA2025: Inputs</option>
+                  <option>CA2025: Business activities</option>
+                  <option>General</option>
+                  <option>Training</option>
+                  <option>Leave</option>
+                </select>
+              </td>
+              <td id="ts-activity-cell">
+                <input type="text" class="ts-search-input" id="ts-activity-search" placeholder="Activity Search" />
+                <select>
+                  <option>F1 - Concepts and principles of assurance engagements</option>
+                  <option>A4 - Finance strategy</option>
+                  <option>B3 - Risk management and control</option>
+                </select>
+              </td>
+              <td id="ts-hours-cells"><input type="text" class="ts-day-input" /></td>
+              <td><input type="text" class="ts-day-input" /></td>
+              <td><input type="text" class="ts-day-input" /></td>
+              <td><input type="text" class="ts-day-input" value="8" /></td>
+              <td><input type="text" class="ts-day-input" /></td>
+              <td><input type="text" class="ts-day-input" /></td>
+              <td><input type="text" class="ts-day-input" /></td>
+              <td id="ts-comments-cell">
+                <textarea class="ts-comments">Provide a brief description of the work demonstrated under the Activity selected</textarea>
+              </td>
+              <td><button class="ts-btn-add" id="ts-add-btn">Add</button></td>
+            </tr>
+            <!-- Saved rows -->
+            <tr>
+              <td>Corporate and Project Finance Advisory</td>
+              <td>CA2025: Business activities</td>
+              <td>B3 - Risk management and control</td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="8.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><textarea class="ts-comments">Provide a brief description of the work demonstrated under the Activity selected.</textarea></td>
+              <td><button class="ts-btn-del">Del</button></td>
+            </tr>
+            <tr>
+              <td>Credit Analysis</td>
+              <td>CA2025: Inputs</td>
+              <td>A4 - Finance strategy</td>
+              <td><input type="text" class="ts-day-input" value="8.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><textarea class="ts-comments">Provide a brief description of the work demonstrated under the Activity selected.</textarea></td>
+              <td><button class="ts-btn-del">Del</button></td>
+            </tr>
+            <tr class="ts-leave">
+              <td>HR</td>
+              <td>Leave</td>
+              <td>Annual Leave</td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="8.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><input type="text" class="ts-day-input" value="0.00" /></td>
+              <td><textarea class="ts-comments">Provide a brief description of the work demonstrated under the Activity selected.</textarea></td>
+              <td><button class="ts-btn-del" id="ts-del-btn">Del</button></td>
+            </tr>
+          </tbody>
+          <tfoot id="ts-totals">
+            <tr class="ts-total-row">
+              <td colspan="3">Total Core</td>
+              <td>8.00</td><td>8.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td>
+              <td style="text-align:right;">16.00</td>
+              <td></td>
+            </tr>
+            <tr class="ts-total-row">
+              <td colspan="3">Total Attendance</td>
+              <td>8.00</td><td>8.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td>
+              <td style="text-align:right;">16.00</td>
+              <td></td>
+            </tr>
+            <tr class="ts-total-hours">
+              <td colspan="3">Total Hours</td>
+              <td>8.00</td><td>8.00</td><td>8.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td>
+              <td class="ts-hours-flag" style="text-align:right;">24.00</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div style="display:flex; gap:8px; justify-content:center; margin-top:10px;">
+          <button id="ts-update-btn" class="btn btn-success">Update</button>
+          <button class="btn btn-primary" onclick="window.location.href='timesheet-home.html'">Back</button>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-setup.html" class="nav-btn green">&larr; Back to Create a Timesheet</a>
+    <a href="timesheet-edit.html" class="nav-btn">Continue to Edit Timesheet &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-capture-tour.js"></script>
+</body>
+</html>

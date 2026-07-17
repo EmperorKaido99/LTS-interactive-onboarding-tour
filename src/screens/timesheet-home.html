@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Timesheet User Home (Step 1)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Timesheet User Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select" id="ts-profile-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        Online learning. Anytime. Anywhere. &mdash; Tax Series 2025 &nbsp;
+        <a href="#" onclick="return false;">Read more &raquo;</a>
+      </div>
+
+      <!-- OPEN TIMESHEETS -->
+      <div class="section-bar">OPEN TIMESHEETS</div>
+      <div class="open-items" id="ts-open-timesheets">
+        There are currently no open trainee timesheets.
+      </div>
+
+      <!-- TIMESHEET USER LINKS -->
+      <div class="section-bar">TIMESHEET USER LINKS</div>
+      <div class="open-items" id="ts-user-links" style="background:#fff; border:1px solid #ccc; padding:10px 14px;">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+          <a href="timesheet-setup.html" id="ts-create-link" style="font-weight:600;">
+            &#10145;&#65039; Create a Timesheets
+          </a>
+          <a href="#" onclick="return false;" id="ts-status-report">
+            &#128196; Status Report
+          </a>
+        </div>
+        <div style="margin-top:8px;">
+          <a href="timesheet-reports.html" id="ts-closed-timesheets">
+            &#128196; Closed Timesheets
+          </a>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="select.html" class="nav-btn green">&larr; Back to Training Selection</a>
+    <a href="timesheet-setup.html" class="nav-btn">Continue to Create a Timesheet &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-home-tour.js"></script>
+</body>
+</html>

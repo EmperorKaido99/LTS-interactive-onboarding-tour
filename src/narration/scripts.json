@@ -359,5 +359,79 @@
     "sb-audit-class": "Select the audit class if relevant, and complete all the audit class sections.",
     "sb-other-hours": "Capture any hours not included in the audit class selected above.",
     "sb-signoff-btn": "Click Sign Off Skill Review to assign it to the Reviewer or Supervisor. A declaration will appear. Read it carefully before clicking Agree."
+  },
+  "timesheet-home-tour": {
+    "step-0": "As a Timesheet User, everything starts here on your home page. Let's walk through how to create and sign off on your weekly timesheet.",
+    "ts-open-timesheets": "The Open Timesheets section lists any weekly timesheets that are still in progress. It is empty right now, because we are about to create our first one.",
+    "ts-user-links": "The Timesheet User Links section gives you quick access to create a new timesheet, open your status report, and view your closed timesheets.",
+    "ts-create-link": "To start, click on the Create a Timesheets hyperlink. This initiates a brand new weekly timesheet."
+  },
+  "timesheet-setup-tour": {
+    "step-0": "This is the Create a Timesheet page. Here you choose the week you want to record time for, and the reviewer who will sign it off.",
+    "ts-date-field": "First, select any date that falls inside the week you want to record time for. LTS automatically calculates the start and end dates of that week.",
+    "ts-reviewer-field": "Next, select your reviewer or supervisor from the drop-down list. This is the person your timesheet will be assigned to for sign off.",
+    "ts-new-btn": "Now click the New Timesheet button to save your changes and open the weekly timesheet.",
+    "ts-faq": "One quick tip: if your reviewer is not on the drop-down list, ask your office administrator to contact LTS Support with the reviewer's name, surname, and email address, so they can be activated."
+  },
+  "timesheet-capture-tour": {
+    "step-0": "This is the weekly timesheet layout page. Here you capture the hours you worked, per company and per activity, for each day of the week.",
+    "ts-company-cell": "Start by selecting the department or business unit under the Company column. You can use the search box to quickly find the right company.",
+    "ts-type-cell": "Then select the relevant type from the drop-down list.",
+    "ts-activity-cell": "Next, select the relevant activity. Again, the search box helps you find an activity quickly.",
+    "ts-hours-cells": "Now capture the hours you worked each day for this company and activity. There is one column for each day of the week.",
+    "ts-comments-cell": "In the Comments section, provide a brief description of the work you did under the selected activity.",
+    "ts-add-btn": "Click Add to save the entry to your timesheet. Always remember to click Add before assigning the timesheet to your reviewer, otherwise the line is not saved.",
+    "ts-del-btn": "If you added a line by mistake, click the Del button next to that entry to remove it.",
+    "ts-update-btn": "You can also modify hours or comments directly in the fields, and then click Update to save your changes.",
+    "ts-totals": "At the bottom, Total Core displays the hours logged for core activities, Total Attendance shows the sum of all recorded hours, and Total Hours shows the complete total for the week.",
+    "ts-edit-btn": "The Edit this Timesheet function lets you correct the timesheet period, or change the reviewer if you selected the wrong one. We will look at it on the next screen.",
+    "ts-delete-btn": "Delete this Timesheet removes a timesheet that is no longer relevant, or was created in error.",
+    "ts-request-signoff": "Once everything is in order, click Request sign off for timesheet to assign it to your reviewer. Note that this button only appears once hours have been captured."
+  },
+  "timesheet-edit-tour": {
+    "step-0": "Clicking Edit this Timesheet opens the Timesheet Change window. Here you can update the timesheet period, or the reviewer assigned to it.",
+    "ts-change-date": "To correct the timesheet period, update the date. Select any date during the relevant week, and LTS recalculates the start and end dates.",
+    "ts-change-reviewer": "You can also change the reviewer, supervisor, or manager here, if you selected the wrong person.",
+    "ts-change-comment": "Add a comment explaining the change. A comment is required for any update.",
+    "ts-change-save": "Finally, click Save to apply your changes. Note that the timesheet is updated permanently."
+  },
+  "timesheet-reviewer-email-tour": {
+    "step-0": "The weekly timesheet has now been assigned to the reviewer for sign off. From here, we switch to the reviewer's point of view.",
+    "ts-email-body": "The reviewer receives an email notification of the assigned timesheet. It shows who assigned it, and the timesheet period.",
+    "ts-email-logon": "The email asks the reviewer to log on to L T Systems dot co dot za with their reviewer permission, to finalise the timesheet."
+  },
+  "timesheet-reviewer-home-tour": {
+    "step-0": "After logging in with the reviewer profile, the reviewer lands on the L T S Reviewer Home page.",
+    "ts-rev-open-timesheets": "The Open Timesheets section lists all the timesheets assigned to this reviewer for review and sign off.",
+    "ts-rev-status": "The status on the right, Awaiting Reviewer Sign Off, shows this timesheet is currently with the reviewer. The print link gives a view of the timesheet as it currently stands.",
+    "ts-rev-open-link": "Click on the assigned timesheet hyperlink to open it for review and sign off.",
+    "ts-rev-status-report": "There is also a status report on the reviewer's home page, giving an overview of all documents and their statuses."
+  },
+  "timesheet-review-tour": {
+    "step-0": "This is the reviewer's view of the timesheet. The reviewer checks the information and the hours captured for the week.",
+    "ts-review-table": "Review each line item. Check the company, the type, the activity, the daily hours, and the comments describing the work that was done.",
+    "ts-review-totals": "Then verify the total core, total attendance, and total hours for the week before signing off.",
+    "ts-signoff-btn": "If everything is in order, click Sign Off to approve the timesheet for the stated week. The timesheet is then closed.",
+    "ts-correct-btn": "But if the timesheet needs to be corrected, click Timesheet User to correct timesheet, to send it back to the timesheet user. Let's look at that next."
+  },
+  "timesheet-reversal-tour": {
+    "step-0": "If the reviewer does not approve the timesheet, the Timesheet Reversal window is used to send it back to the timesheet user for correction.",
+    "ts-reversal-note": "Take note of what happens on reversal. The initial sign off date is cleared, and the timesheet reverts to step one, with the status, With Timesheet User. Once corrected, it is re-assigned to the reviewer as usual.",
+    "ts-reversal-comment": "Capture the reason for the reversal in the comment box. This tells the timesheet user exactly what to amend.",
+    "ts-reversal-actions": "Finally, click Send Back to Timesheet User to return the timesheet for correction, or cancel to go back."
+  },
+  "timesheet-closed-email-tour": {
+    "step-0": "Once the reviewer signs off, the weekly timesheet is finalised. The timesheet user receives an email notification about the closed timesheet.",
+    "ts-final-body": "The email confirms which reviewer finalised the timesheet, for which period, and when.",
+    "ts-final-howto": "To view, save, or print a copy of the document, log on to L T S, open your status report from the home page, and click the document's status hyperlink.",
+    "ts-closed-link": "To view the completed timesheet, click on the Link to Closed Timesheets hyperlink on your home page."
+  },
+  "timesheet-reports-tour": {
+    "step-0": "Finally, let's look at closed timesheets and reports. On this page you can view all your completed timesheets, and generate detailed reports for any period.",
+    "ts-closed-list": "Under Closed Timesheets you will see the list of all completed timesheets. Each one shows who signed it off and when.",
+    "ts-period-link": "Click on the period hyperlink of any timesheet to view its detailed report, including comments, and total core, attendance, and accumulated hours. The report can also be downloaded as a P D F.",
+    "ts-summary-link": "The Timesheet User Summary Report hyperlink opens the summary report form.",
+    "ts-report-form": "Select the start and end dates, choose the report type, and click Generate Report. Once generated, click, Click here to download, to export the report to Excel. The first sheet summarises all firms, with totals per firm on the following sheets.",
+    "ts-total-form": "The Timesheet User Total Report works the same way. It displays your total hours per activity type for the selected period, including core and attendance hours. And that completes the weekly timesheet training module. Well done!"
   }
 }

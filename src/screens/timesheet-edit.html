@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Edit Timesheet (Step 4)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheets for Duck Duffy</span>
+    <a class="back-link" href="timesheet-capture.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="ts-dialog">
+        <div class="ts-dialog-title">Timesheet Change</div>
+        <div class="ts-dialog-body">
+
+          <p id="ts-change-note" style="margin:0 0 14px; line-height:1.6;">
+            Note the following when clicking on the "Change this Timesheet" button:<br />
+            This timesheet will be updated permanently.
+          </p>
+
+          <div id="ts-change-date" style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+            <label style="font-weight:600; width:100px; text-align:right;">Date :</label>
+            <input type="text" value="2025/05/05" style="width:110px; padding:4px 8px; border:1px solid #ccc; font-size:0.8rem;" />
+            <span style="font-size:0.76rem;">YYYY/MM/DD</span>
+          </div>
+          <p style="font-size:0.74rem; color:#555; margin:0 0 14px 110px;">
+            Select any date during the relevant week of the timesheet<br />
+            to calculate the relevant start and end dates.
+          </p>
+
+          <div id="ts-change-reviewer" style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <label style="font-weight:600; width:100px; text-align:right;">Reviewer:</label>
+            <select style="padding:4px 8px; font-size:0.8rem;">
+              <option>Scooby, Doo</option>
+              <option>Supervisor, Thato</option>
+            </select>
+          </div>
+
+          <div id="ts-change-comment" style="display:flex; align-items:flex-start; gap:10px; margin-bottom:16px;">
+            <label style="font-weight:600; width:100px; text-align:right;">Edit Comment :</label>
+            <textarea style="flex:1; min-height:80px; font-size:0.78rem; padding:5px; border:1px solid #ccc;" placeholder="Comments is required for any update."></textarea>
+          </div>
+
+          <div id="ts-change-actions" style="display:flex; gap:8px; justify-content:center;">
+            <button id="ts-change-save" class="btn btn-success" onclick="window.location.href='timesheet-capture.html'">Save</button>
+            <button class="btn btn-primary" onclick="window.location.href='timesheet-capture.html'">Cancel</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-capture.html" class="nav-btn green">&larr; Back to Weekly Timesheet</a>
+    <a href="timesheet-reviewer-email.html" class="nav-btn">Continue to Reviewer Notification &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-edit-tour.js"></script>
+</body>
+</html>
