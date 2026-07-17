@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Reviewer Home (Step 6)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Doo Scooby (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>LTS Reviewer Home</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Reviewer Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer</option>
+            <option>Timesheet User</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- NEWS -->
+      <div class="section-bar">NEWS</div>
+      <div class="news-content">
+        Online learning. Anytime. Anywhere. &mdash; Tax Series 2025 &nbsp;
+        <a href="#" onclick="return false;">Read more &raquo;</a>
+      </div>
+
+      <!-- OPEN REVIEWS -->
+      <div class="section-bar">OPEN REVIEWS</div>
+      <div class="open-items">
+        No Open Reviews
+        <div id="ts-rev-status-report" style="text-align:right; margin-top:8px; font-size:0.8rem;">
+          <a href="#" onclick="return false;">&#128196; STATUS REPORT</a>
+        </div>
+      </div>
+
+      <!-- OPEN TIMESHEETS -->
+      <div class="section-bar">OPEN TIMESHEETS</div>
+      <div class="open-items" id="ts-rev-open-timesheets">
+        <div>
+          <a href="timesheet-review.html" id="ts-rev-open-link" style="font-weight:600;">
+            &#128197; From 2025/01/06 to 2025/01/12 (Duffy, Duck)
+          </a>
+          <span id="ts-rev-status" style="float:right; font-size:0.78rem;">Awaiting Reviewer SignOff &nbsp; <a href="#">Print</a></span>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-reviewer-email.html" class="nav-btn green">&larr; Back to Email Notification</a>
+    <a href="timesheet-review.html" class="nav-btn">Continue to Review &amp; Sign Off &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-reviewer-home-tour.js"></script>
+</body>
+</html>

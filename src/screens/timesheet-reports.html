@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Closed Timesheets &amp; Reports (Step 10)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheets for Duck Duffy</span>
+    <a class="back-link" href="timesheet-closed-email.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Report links -->
+      <div style="background:#fff; border:1px solid #ccc; padding:10px 14px; margin-bottom:10px;">
+        <div style="margin-bottom:6px;">
+          <a href="#" onclick="return false;" id="ts-summary-link" style="font-weight:600;">&#10145;&#65039; Timesheet User Summary Report</a>
+        </div>
+        <div>
+          <a href="#" onclick="return false;" id="ts-total-link" style="font-weight:600;">&#10145;&#65039; Timesheet User Total Report</a>
+        </div>
+      </div>
+
+      <!-- CLOSED TIMESHEETS -->
+      <div class="section-bar">CLOSED TIMESHEETS</div>
+      <div class="open-items" id="ts-closed-list">
+        <div style="margin-bottom:6px;">
+          <a href="#" onclick="return false;" id="ts-period-link" style="font-weight:600;">&#128197; From 2025/01/06 to 2025/01/12</a>
+          <span style="float:right; font-size:0.78rem;">Signed Off: Doo Scooby on 2025/03/25</span>
+        </div>
+        <div style="margin-bottom:6px;">
+          <a href="#" onclick="return false;" style="font-weight:600;">&#128197; From 2024/12/30 to 2025/01/05</a>
+          <span style="float:right; font-size:0.78rem;">Signed Off: Doo Scooby on 2025/01/07</span>
+        </div>
+        <div>
+          <a href="#" onclick="return false;" style="font-weight:600;">&#128197; From 2024/12/23 to 2024/12/29</a>
+          <span style="float:right; font-size:0.78rem;">Signed Off: Doo Scooby on 2024/12/31</span>
+        </div>
+      </div>
+
+      <!-- Summary Report panel -->
+      <div class="ts-report-panel" id="ts-report-form" style="margin-top:14px;">
+        <h3>Timesheet User Summary Report</h3>
+        <div class="ts-report-row">
+          <label style="font-weight:600;">Start Date:</label>
+          <input type="text" value="2025/01/01" />
+          <span style="font-size:0.74rem;">YYYY/MM/DD</span>
+        </div>
+        <div class="ts-report-row">
+          <label style="font-weight:600;">End Date:</label>
+          <input type="text" value="2025/03/25" />
+          <span style="font-size:0.74rem;">YYYY/MM/DD</span>
+        </div>
+        <div class="ts-report-row" id="ts-report-type">
+          <label style="font-weight:600;">Report Type:</label>
+          <label><input type="radio" name="report-type" checked /> Type</label>
+          <label><input type="radio" name="report-type" /> Activity</label>
+        </div>
+        <div class="ts-report-row">
+          <button class="btn btn-primary" id="ts-generate-btn">Generate Report</button>
+          <button class="btn">Clear</button>
+          <button class="btn btn-primary">Include in Combined Export Report List</button>
+        </div>
+        <div class="ts-report-row">
+          <a href="#" onclick="return false;" id="ts-download-link" style="font-weight:600;">Click here to download.</a>
+        </div>
+        <p style="font-size:0.74rem; color:#555; margin:8px 0 0;">
+          The first sheet provides a summary of all firms and their total hours,
+          while the subsequent sheets display totals per firm.
+        </p>
+      </div>
+
+      <!-- Total Report panel -->
+      <div class="ts-report-panel" id="ts-total-form">
+        <h3>Timesheet User Total Report</h3>
+        <div class="ts-report-row">
+          <label style="font-weight:600;">Start Date:</label>
+          <input type="text" value="2025/01/01" />
+          <span style="font-size:0.74rem;">YYYY/MM/DD</span>
+        </div>
+        <div class="ts-report-row">
+          <label style="font-weight:600;">End Date:</label>
+          <input type="text" value="2025/03/25" />
+          <span style="font-size:0.74rem;">YYYY/MM/DD</span>
+        </div>
+        <div class="ts-report-row">
+          <label style="font-weight:600;">Report Type:</label>
+          <label><input type="radio" name="total-report-type" checked /> Type</label>
+          <label><input type="radio" name="total-report-type" /> Activity</label>
+        </div>
+        <div class="ts-report-row">
+          <button class="btn btn-primary">Generate Report</button>
+          <button class="btn">Clear</button>
+        </div>
+        <p style="font-size:0.74rem; color:#555; margin:8px 0 0;">
+          This report displays total hours per Activity Type for the selected period —
+          the Activity option adds the Type, Activities, Core Hours, and Attendance Hours
+          for each activity type.
+        </p>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-closed-email.html" class="nav-btn green">&larr; Back to Closed Timesheet Notification</a>
+    <a href="select.html" class="nav-btn">Finish — Back to Training Selection &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-reports-tour.js"></script>
+</body>
+</html>

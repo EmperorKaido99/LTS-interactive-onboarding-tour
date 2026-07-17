@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Setup a Timesheet (Step 2)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Duck Duffy (Timesheet User) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheets for Duck Duffy</span>
+    <a class="back-link" href="timesheet-home.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Timesheet User</option>
+            <option>Reviewer</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <div class="section-bar blue">CREATE A TIMESHEET</div>
+
+      <div style="background:#fff; border:1px solid #ccc; padding:30px 20px;">
+
+        <div id="ts-date-field" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:6px;">
+          <label style="font-size:0.82rem; font-weight:600;">Date:</label>
+          <input type="text" value="2025/01/01" style="width:110px; padding:4px 8px; border:1px solid #ccc; font-size:0.82rem;" />
+          <span style="font-size:0.78rem;">YYYY/MM/DD</span>
+        </div>
+        <p style="text-align:center; font-size:0.76rem; color:#555; margin:0 0 18px;">
+          Select any date during the relevant week of the timesheet<br />
+          to calculate the relevant start and end dates.
+        </p>
+
+        <div id="ts-reviewer-field" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:20px;">
+          <label style="font-size:0.82rem; font-weight:600;">Reviewer:</label>
+          <select style="padding:4px 8px; font-size:0.82rem;">
+            <option>Scooby, Doo</option>
+            <option>Supervisor, Thato</option>
+          </select>
+        </div>
+
+        <div style="text-align:center;">
+          <button id="ts-new-btn" class="btn btn-primary" onclick="window.location.href='timesheet-capture.html'">New Timesheet</button>
+        </div>
+
+        <!-- FAQ -->
+        <div id="ts-faq" style="margin-top:30px; font-size:0.76rem; color:#444; font-style:italic; line-height:1.7;">
+          <u>FAQ:</u><br />
+          <strong style="color:#b03a2e;">Question</strong>: My Reviewer/ Supervisor/Manager is not on the drop-down list.<br />
+          <strong style="color:#b03a2e;">Answer</strong>: LTS Support to activate the Reviewer/ Supervisor/Manager.<br />
+          Contact your office administrator and request that they inform LTS Support
+          (<a href="mailto:Support@LTSystems.co.za">Support@LTSystems.co.za</a>) of the Reviewer/ Supervisor/Manager to be added.
+          <ul style="margin:4px 0 0 24px;">
+            <li>We require the Reviewer/ Supervisor/Manager <strong>Name, Surname</strong> and <strong>Email address</strong>.</li>
+          </ul>
+          Note in the email the assigned permission to user is Reviewer/ Supervisor/Manager.
+        </div>
+
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-home.html" class="nav-btn green">&larr; Back to Timesheet User Home</a>
+    <a href="timesheet-capture.html" class="nav-btn">Continue to Update Weekly Timesheet &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-setup-tour.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Timesheets: Reviewer Email Notification (Step 5)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Training Demo Firm</span>
+    <span class="user-info">Doo Scooby (Reviewer/Supervisor) | <a href="select.html">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Timesheet Assigned — Email Notification</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="timesheet-reviewer-home.html"><span class="dot green"></span> Reviewer Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option>Reviewer</option>
+            <option>Timesheet User</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Email Notification Panel -->
+      <div id="ts-email-panel" style="background:#fff; border:1px solid #ccc; padding:20px; margin:10px 0;">
+        <div style="background:#2b6da3; color:#fff; padding:10px 14px; font-weight:600; font-size:0.95rem;">
+          LTS Timesheet (2025/01/06 - 2025/01/12) for Trainee Duck Duffy
+        </div>
+        <div style="padding:14px; border:1px solid #ddd; border-top:none; font-size:0.85rem; line-height:1.7;">
+          <p style="margin:0 0 4px;"><strong>From:</strong> noreply@ltsystems.co.za</p>
+          <p style="margin:0 0 12px;"><strong>To:</strong> Scooby Doo</p>
+          <hr style="border:none; border-top:1px solid #ddd; margin:8px 0;" />
+          <p>Dear Doo Scooby,</p>
+          <p id="ts-email-body">Trainee <strong>Duck Duffy</strong> assigned Timesheet (2025/01/06 - 2025/01/12) to you for review on 2025/03/25 12:00:27.</p>
+          <p id="ts-email-logon">Logon to <a href="#" onclick="return false;">www.LTSystems.co.za</a> with your Reviewer permission to finalise the timesheet.</p>
+          <p>Contact the Support team on <a href="mailto:Support@LTSystems.co.za">Support@LTSystems.co.za</a> for all LTS related enquiries.</p>
+          <p style="font-size:0.78rem; color:#999; font-style:italic; margin-top:8px;">***** THIS IS A SYSTEM GENERATED E-MAIL. PLEASE DO NOT REPLY *****</p>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="timesheet-edit.html" class="nav-btn green">&larr; Back to Edit Timesheet</a>
+    <a href="timesheet-reviewer-home.html" class="nav-btn">Continue to Reviewer Home &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/timesheet-reviewer-email-tour.js"></script>
+</body>
+</html>
