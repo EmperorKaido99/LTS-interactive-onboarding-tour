@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — User Details (Evaluator)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Main Combined Demo Firm</span>
+    <span class="user-info">Reviewer Test (Evaluator) | <a href="#">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>User Details</span>
+    <a class="back-link" href="mgmt-login-evaluator.html">&#9664; BACK</a>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-links">
+          <a href="#"><span class="dot green"></span> Evaluator Home</a>
+          <a href="#"><span class="dot grey"></span> Edit your details</a>
+          <a href="#"><span class="dot blue"></span> Documents</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option selected>Evaluator</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+      <div class="sidebar-upcoming">
+        <h4>Upcoming</h4>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Taxation and after emigration - Part 1</div>
+            <div class="event-details">Thursday, August 6 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Taxation and after emigration - Part 2</div>
+            <div class="event-details">Thursday, August 13 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+      <!-- Alert Banner -->
+      <div id="alert-banner" class="alert-banner">
+        PLEASE ENSURE ALL INFORMATION IS CORRECT.
+      </div>
+
+      <div id="view-credentials" style="padding: 6px 14px; background: #fff; border-bottom: 1px solid #ccc;">
+        <a href="mgmt-login-evaluator.html" class="view-credentials-link">View/Update Login Credentials</a>
+      </div>
+
+      <div id="note-area" class="note-text">
+        Please review the below and ensure all information is <strong>accurate</strong> and <strong>up to date</strong>. Click on <strong>UPDATE</strong> to proceed to your LTS home page.<br /><br />
+        <strong>NOTE:</strong><br />
+        Email 1 must be your <strong>work email address</strong>. If you want to receive notifications on an additional email, then add the additional email address to email 2.
+      </div>
+
+      <!-- Personal Information -->
+      <div id="personal-info" class="details-form">
+        <div class="form-section-header">Personal Information</div>
+        <div class="form-row">
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" value="Test" class="mandatory" />
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" value="Reviewer" class="mandatory" />
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="second-name">Second Name:</label>
+          <input type="text" id="second-name" value="" />
+        </div>
+        <div class="form-row">
+          <label for="dob">Date Of Birth:</label>
+          <input type="text" id="dob" value="1976/07/23" class="mandatory" />
+          <span style="font-size:0.7rem; color:#888; margin-left:6px;">YYYY/MM/DD</span>
+          <span class="asterisk">*</span>
+        </div>
+        <div class="form-row">
+          <label for="staff-number">Staff Number:</label>
+          <input type="text" id="staff-number" value="" />
+        </div>
+        <div class="form-row">
+          <label for="country">Country:</label>
+          <select id="country" class="mandatory">
+            <option selected>South Africa</option>
+            <option>Other</option>
+          </select>
+          <span class="asterisk">*</span>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div id="contact-info" class="details-form">
+        <div class="form-section-header">Contact Information</div>
+        <div class="form-row">
+          <label for="email1">EMail 1:</label>
+          <input type="email" id="email1" value="evaluator@LTSystems.co.za" class="mandatory" />
+          <span class="asterisk">*</span>
+          <span class="field-note">Work Email</span>
+        </div>
+        <div class="form-row">
+          <label for="email2">EMail 2:</label>
+          <input type="email" id="email2" value="" />
+          <span class="field-note" style="color: #666;">Additional Email</span>
+        </div>
+      </div>
+
+      <!-- Training Program Information -->
+      <div id="training-info" class="details-form">
+        <div class="form-section-header">Training Program Information</div>
+        <div id="membership-row" class="form-row">
+          <label for="saica-number">SAICA Membership Number:</label>
+          <input type="text" id="saica-number" value="77" class="mandatory" />
+        </div>
+        <div class="form-row">
+          <label for="designation">Designation:</label>
+          <input type="text" id="designation" value="" />
+        </div>
+        <div class="form-row">
+          <label for="assessor-number">Assessor Number:</label>
+          <input type="text" id="assessor-number" value="" />
+        </div>
+      </div>
+
+      <!-- Update Button -->
+      <div class="button-row">
+        <button id="update-btn" class="btn-primary btn" onclick="goToSelect()">Update</button>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <div class="screen-nav">
+    <a href="mgmt-login-evaluator.html" class="nav-btn green">&larr; Back to Login Credentials</a>
+    <a href="select.html" class="nav-btn">Back to Training Modules &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/mgmt-details-evaluator-tour.js"></script>
+  <script>
+    function goToSelect() {
+      window.location.href = "select.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTS — Login Credentials (Evaluator)</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+</head>
+<body>
+
+  <!-- LTS Internal Header -->
+  <div class="lts-internal-header">
+    <div class="lts-logo">
+      <div class="lts-logo-hexagon"><span class="lts-logo-wordmark"></span></div>
+    </div>
+  </div>
+
+  <!-- Firm Bar -->
+  <div class="lts-firm-bar">
+    <span class="firm-name">Firm: LTS Main Combined Demo Firm</span>
+    <span class="user-info">Reviewer Test (Evaluator) | <a href="#">LOG OUT</a></span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="lts-page-header">
+    <span>Login Credentials for Reviewer Test</span>
+  </div>
+
+  <div class="lts-layout">
+
+    <!-- Sidebar -->
+    <div class="lts-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Registered Users <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          Technical Support <span class="chevron">&#9660;</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-header blue">
+          User Logon <span class="chevron">&#9650;</span>
+        </div>
+        <div class="sidebar-select">
+          <label>Select Profile:</label>
+          <select>
+            <option selected>Evaluator</option>
+          </select>
+        </div>
+        <button class="sidebar-continue-btn">Continue</button>
+      </div>
+      <div class="sidebar-promo">Don't display adverts</div>
+      <div class="sidebar-calendar">Upskill Events Calendar</div>
+      <div class="sidebar-upcoming">
+        <h4>Upcoming</h4>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Taxation and after emigration - Part 1</div>
+            <div class="event-details">Thursday, August 6 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+        <div class="upcoming-event">
+          <span class="event-dot"></span>
+          <div>
+            <div class="event-title">2026 Taxation and after emigration - Part 2</div>
+            <div class="event-details">Thursday, August 13 - 9:00 – 11:00am (SAST)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="lts-content">
+
+      <!-- Login Credentials Panel -->
+      <div id="credentials-panel" class="credentials-panel">
+        <div class="credentials-header">LOGIN CREDENTIALS</div>
+        <div class="credentials-body">
+          <div class="instructions">
+            Click on <strong>CREATE NEW PASSWORD</strong> to update your password (follow instructions and click on SAVE, then CONTINUE once new password created),<br />
+            OR<br />
+            Click on <strong>CONTINUE</strong> to proceed to then next screen &ldquo;Edit/Update User Details.
+          </div>
+
+          <div class="credentials-fields">
+            <div class="credentials-row">
+              <label>UserName:</label>
+              <span class="credentials-value" id="cred-username">testreviewer1</span>
+            </div>
+            <div class="credentials-row">
+              <label>Password:</label>
+              <span class="credentials-value" id="cred-password">**********</span>
+              <div class="btn-group">
+                <button id="create-password-btn" class="btn-blue" onclick="showPasswordDialog()">Create New Password</button>
+                <button id="send-password-btn" class="btn-blue">Send Password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="credentials-footer-bar"></div>
+        <div class="credentials-footer">
+          <button id="continue-btn" class="btn-blue" onclick="goToUserDetails()">Continue</button>
+        </div>
+      </div>
+
+      <!-- Password Dialog (hidden initially) -->
+      <div id="password-dialog" class="credentials-panel password-dialog" style="display:none;">
+        <div class="credentials-header">LOGIN CREDENTIALS</div>
+        <div class="credentials-body">
+          <div class="instructions">
+            Click on <strong>CREATE NEW PASSWORD</strong> to update your password (follow instructions and click on SAVE, then CONTINUE once new password created),<br />
+            OR<br />
+            Click on <strong>CONTINUE</strong> to proceed to then next screen &ldquo;Edit/Update User Details.
+          </div>
+
+          <div class="credentials-fields">
+            <div class="credentials-row">
+              <label>UserName:</label>
+              <span class="credentials-value">testreviewer1</span>
+            </div>
+            <div class="credentials-row">
+              <label>Password:</label>
+              <span class="credentials-value">**********</span>
+              <div class="btn-group">
+                <button class="btn-blue">Create New Password</button>
+                <button class="btn-blue">Send Password</button>
+              </div>
+            </div>
+
+            <div class="credentials-row">
+              <label for="new-password">New Password:</label>
+              <input type="password" id="new-password" class="password-input" />
+            </div>
+            <div class="credentials-row">
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" class="password-input" />
+            </div>
+
+            <div id="password-rules" class="password-rules-text">
+              Password must contain:<br />
+              Minimum 8 characters, maximum 15 characters,<br />
+              at least 1 alphabet character and at least 1 number.
+            </div>
+
+            <div class="password-case-note">*** NOTE: Password is Case Sensitive. ***</div>
+
+            <div class="password-cancel-row">
+              <button id="cancel-btn" class="btn-blue" onclick="hidePasswordDialog()">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="credentials-footer-bar"></div>
+        <div class="credentials-footer">
+          <button id="save-btn" class="btn-blue" onclick="goToUserDetails()">Save</button>
+        </div>
+      </div>
+
+    </div><!-- end lts-content -->
+  </div><!-- end lts-layout -->
+
+  <!-- Navigation -->
+  <div class="screen-nav">
+    <a href="mgmt-details-evaluator.html" class="nav-btn">Continue to User Details &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="lts-footer">
+    Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
+  </div>
+
+  <script type="module" src="../tours/mgmt-login-evaluator-tour.js"></script>
+  <script>
+    function showPasswordDialog() {
+      document.getElementById("password-dialog").style.display = "block";
+    }
+
+    function hidePasswordDialog() {
+      document.getElementById("password-dialog").style.display = "none";
+    }
+
+    function goToUserDetails() {
+      window.location.href = "mgmt-details-evaluator.html";
+    }
+  </script>
+</body>
+</html>

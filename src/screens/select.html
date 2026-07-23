@@ -42,6 +42,25 @@
           </div>
         </a>
 
+        <!-- Card 1b: How to Log In for Management -->
+        <div class="select-card" id="mgmt-login-card" style="cursor:default;">
+          <div class="card-number">1b</div>
+          <div class="card-title">How to Log In for Management</div>
+          <div class="card-description">
+            Logging in and updating user details for Reviewer, Evaluator, and Assessor management profiles.
+          </div>
+          <div class="card-steps">Training Slide 1b — 3 Views</div>
+          <div class="card-view-picker" id="mgmt-view-picker">
+            <label for="mgmt-view-select">View:</label>
+            <select id="mgmt-view-select">
+              <option value="reviewer">Reviewer</option>
+              <option value="evaluator">Evaluator</option>
+              <option value="assessor">Assessor</option>
+            </select>
+            <a id="mgmt-start-btn" href="mgmt-login-reviewer.html" class="btn-blue" style="margin-left:8px; padding:4px 14px; font-size:0.78rem; text-decoration:none; border-radius:3px;">Start Tour</a>
+          </div>
+        </div>
+
         <!-- Card 2: Trainee Initiate Skill Review -->
         <a href="trainee-sr-home.html" class="select-card">
           <div class="card-number">2</div>
@@ -160,6 +179,36 @@
       });
       select.addEventListener("change", function () {
         localStorage.setItem("lts-view", select.value);
+      });
+    })();
+
+    // Management login card — route to correct profile view
+    (function () {
+      var mgmtPicker = document.getElementById("mgmt-view-picker");
+      var mgmtSelect = document.getElementById("mgmt-view-select");
+      var mgmtBtn = document.getElementById("mgmt-start-btn");
+      var mgmtCard = document.getElementById("mgmt-login-card");
+
+      var routes = {
+        reviewer: "mgmt-login-reviewer.html",
+        evaluator: "mgmt-login-evaluator.html",
+        assessor: "mgmt-login-assessor.html",
+      };
+
+      mgmtSelect.addEventListener("change", function () {
+        mgmtBtn.href = routes[mgmtSelect.value] || routes.reviewer;
+      });
+
+      // Prevent card-level click from navigating
+      mgmtCard.addEventListener("click", function (e) {
+        if (e.target !== mgmtBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      });
+
+      mgmtPicker.addEventListener("click", function (e) {
+        e.stopPropagation();
       });
     })();
   </script>
