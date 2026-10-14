@@ -1,13 +1,16 @@
-/* ===== Reset & Base ===== */
-*,
-*::before,
-*::after {
+/* ===== Reset & Base =====
+   Every page-wide rule is scoped to .lts-app (set on <body>), so this stylesheet can sit
+   next to a host page without restyling it. :where() keeps the specificity unchanged. */
+:where(.lts-app),
+:where(.lts-app) *,
+:where(.lts-app) *::before,
+:where(.lts-app) *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
+body:where(.lts-app) {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #e8e8e8;
   color: #333;
@@ -15,11 +18,11 @@ body {
   font-size: 13px;
 }
 
-a {
+:where(.lts-app) a {
   color: #0066cc;
   text-decoration: none;
 }
-a:hover {
+:where(.lts-app) a:hover {
   text-decoration: underline;
 }
 
@@ -1017,21 +1020,21 @@ a:hover {
 }
 
 /* ===== Tables ===== */
-table {
+:where(.lts-app) table {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
 }
 
-table th,
-table td {
+:where(.lts-app) table th,
+:where(.lts-app) table td {
   padding: 6px 14px;
   text-align: left;
   border: 1px solid #ccc;
   font-size: 0.8rem;
 }
 
-table th {
+:where(.lts-app) table th {
   background: #f0f0f0;
   font-weight: 600;
   color: #333;

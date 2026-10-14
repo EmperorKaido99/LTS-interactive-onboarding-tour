@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LTS — Login Credentials (Reviewer)</title>
   <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+  <link rel="stylesheet" href="../vendor/driver/driver.css" />
 </head>
-<body>
+<body class="lts-app">
 
   <!-- LTS Internal Header -->
   <div class="lts-internal-header">
@@ -19,12 +19,12 @@
   <!-- Firm Bar -->
   <div class="lts-firm-bar">
     <span class="firm-name">Firm: LTS Main Combined Demo Firm</span>
-    <span class="user-info">Reviewer Test (Reviewer) | <a href="#">LOG OUT</a></span>
+    <span class="user-info" data-role>Reviewer Test (Reviewer) | <a href="#">LOG OUT</a></span>
   </div>
 
   <!-- Page Header -->
   <div class="lts-page-header">
-    <span>Login Credentials for Reviewer Test</span>
+    <span data-role>Login Credentials for Reviewer Test</span>
   </div>
 
   <div class="lts-layout">
@@ -48,7 +48,7 @@
         <div class="sidebar-select">
           <label>Select Profile:</label>
           <select>
-            <option selected>Reviewer</option>
+            <option selected data-role>Reviewer</option>
           </select>
         </div>
         <button class="sidebar-continue-btn">Continue</button>
@@ -90,7 +90,7 @@
           <div class="credentials-fields">
             <div class="credentials-row">
               <label>UserName:</label>
-              <span class="credentials-value" id="cred-username">testreviewer1</span>
+              <span class="credentials-value" id="cred-username" data-role>testreviewer1</span>
             </div>
             <div class="credentials-row">
               <label>Password:</label>
@@ -121,7 +121,7 @@
           <div class="credentials-fields">
             <div class="credentials-row">
               <label>UserName:</label>
-              <span class="credentials-value">testreviewer1</span>
+              <span class="credentials-value" data-role>testreviewer1</span>
             </div>
             <div class="credentials-row">
               <label>Password:</label>
@@ -165,7 +165,7 @@
 
   <!-- Navigation -->
   <div class="screen-nav">
-    <a href="mgmt-details-reviewer.html" class="nav-btn">Continue to User Details &rarr;</a>
+    <a href="mgmt-details.html" data-profile-link class="nav-btn">Continue to User Details &rarr;</a>
   </div>
 
   <!-- Footer -->
@@ -173,6 +173,7 @@
     Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
+  <script src="../shared/mgmt-profile.js"></script>
   <script type="module" src="../tours/mgmt-login-tour.js"></script>
   <script>
     function showPasswordDialog() {
@@ -184,7 +185,7 @@
     }
 
     function goToUserDetails() {
-      window.location.href = "mgmt-details-reviewer.html";
+      window.location.href = "mgmt-details.html?profile=" + window.MGMT_PROFILE;
     }
   </script>
 </body>

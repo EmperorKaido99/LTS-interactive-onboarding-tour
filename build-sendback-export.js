@@ -13,6 +13,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { loadCommon, stripExports, toPlainScript, loadAudioDir, speechFallbackJS } = require("./build-lib");
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, "dist");
@@ -21,11 +22,8 @@ const OUT_FILE = path.join(DIST, "LTS-Edit-or-Send-Back-SR.html");
 
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
 
-const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.css"), "utf-8");
-const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
-const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
-const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
-const narrateConverted = narrateJS.replace(/export\s+/g, "");
+const { driverCSS, driverJS, mainCSS, narrateJS } = loadCommon();
+const narrateConverted = stripExports(narrateJS);
 const narrationScripts = JSON.parse(
   fs.readFileSync(path.join(SRC, "narration/scripts.json"), "utf-8")
 );
@@ -33,37 +31,6 @@ const narrationScripts = JSON.parse(
 // Fallback narration: when a step has no pre-recorded edge-tts MP3, speak the
 // narration script with the browser's built-in speech engine (Web Speech API),
 // so the standalone file always has voice — offline, no downloads.
-const speechFallbackJS = `
-(function () {
-  var baseNarrate = narrate;
-  var baseStop = stopNarration;
-  function speak(text) {
-    if (!window.speechSynthesis) return;
-    var u = new SpeechSynthesisUtterance(text);
-    u.rate = 0.95;
-    var voices = speechSynthesis.getVoices().filter(function (v) { return /^en([-_]|$)/i.test(v.lang); });
-    var preferred = voices.filter(function (v) { return /female|zira|hazel|sonia|libby|susan|serena/i.test(v.name); })[0] || voices[0];
-    if (preferred) u.voice = preferred;
-    speechSynthesis.speak(u);
-  }
-  window.stopNarration = function () {
-    if (window.speechSynthesis) speechSynthesis.cancel();
-    baseStop();
-  };
-  window.narrate = function (tourName, stepId) {
-    window.stopNarration();
-    if (!stepId) return;
-    var hasMp3 = window.__LTS_AUDIO && window.__LTS_AUDIO[tourName] && window.__LTS_AUDIO[tourName][stepId];
-    if (hasMp3) return baseNarrate(tourName, stepId);
-    var text = window.__LTS_NARRATION && window.__LTS_NARRATION[tourName] && window.__LTS_NARRATION[tourName][stepId];
-    if (text) speak(text);
-  };
-  if (window.speechSynthesis && speechSynthesis.getVoices().length === 0) {
-    speechSynthesis.onvoiceschanged = function () {};
-  }
-})();
-`;
-
 const SCREENS = [
   { file: "sendback-email", label: "1. Reviewer Email" },
   { file: "sendback-home", label: "2. Supervisor Home" },
@@ -78,16 +45,7 @@ const SCREENS = [
 // Embed the tour's edge-tts narration as base64 data URIs (same mechanism
 // as build-login-export.js) — narrate.js picks them up via window.__LTS_AUDIO
 function loadTourAudio(tourName) {
-  const audioDir = path.join(SRC, "audio", tourName);
-  const tourAudio = {};
-  if (fs.existsSync(audioDir)) {
-    for (const mp3 of fs.readdirSync(audioDir).filter((f) => f.endsWith(".mp3"))) {
-      const stepId = mp3.replace(".mp3", "");
-      const base64 = fs.readFileSync(path.join(audioDir, mp3)).toString("base64");
-      tourAudio[stepId] = `data:audio/mpeg;base64,${base64}`;
-    }
-  }
-  return tourAudio;
+  return loadAudioDir(path.join(SRC, "audio", tourName));
 }
 
 function buildScreen(name) {
@@ -104,9 +62,7 @@ function buildScreen(name) {
 
   // Inline the tour (module imports don't work from a srcdoc frame)
   let tourCode = fs.readFileSync(path.join(SRC, "tours", `${name}-tour.js`), "utf-8");
-  tourCode = tourCode.replace(/^import\s+.*;\s*$/gm, "");
-  tourCode = tourCode.replace(/\bdriver\(\{/g, "window.driver.js.driver({");
-  tourCode = `(function() {\n${tourCode}\n})();`;
+  tourCode = toPlainScript(tourCode);
 
   const tourAudio = loadTourAudio(`${name}-tour`);
   const audioCount = Object.keys(tourAudio).length;

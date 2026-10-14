@@ -1,4 +1,4 @@
-import { driver } from "../../node_modules/driver.js/dist/driver.js.mjs";
+import { driver } from "../vendor/driver/driver.js.mjs";
 import { narrate, stopNarration } from "../shared/narrate.js";
 
 const TOUR_NAME = "sendback-review-tour";

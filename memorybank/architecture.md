@@ -2,7 +2,7 @@
 
 ## Project Structure
 
-LTS Interactive Onboarding Tour is a static HTML/CSS/JS application that uses Shepherd.js to provide guided interactive tours of the LTS platform interface.
+LTS Interactive Onboarding Tour is a static HTML/CSS/JS application that uses Driver.js to provide guided interactive tours of the LTS platform interface.
 
 ```
 LTS-interactive-onboarding-tour/
@@ -11,7 +11,7 @@ LTS-interactive-onboarding-tour/
 │   ├── screens/                  # HTML files for each tour view/screen
 │   ├── styles/
 │   │   └── main.css              # Centralized CSS (all styling)
-│   ├── tours/                    # Shepherd.js tour step definitions
+│   ├── tours/                    # Driver.js tour step definitions
 │   └── audio/                    # TTS voice-over MP3 files per tour
 ├── assets/                       # Static assets (images, fonts)
 ├── lts elements/                 # Reference designs and original assets
@@ -26,18 +26,18 @@ LTS-interactive-onboarding-tour/
 |--------|---------------|
 | `src/screens/` | Static HTML pages simulating LTS platform views (login, home, ACCA, SAGIA, SATIE, timesheets, etc.) |
 | `src/styles/main.css` | Single CSS file containing all styles for all views |
-| `src/tours/` | Shepherd.js tour configurations defining step sequences, tooltips, and navigation |
+| `src/tours/` | Driver.js tour configurations defining step sequences, tooltips, and navigation |
 | `src/audio/` | Pre-generated TTS MP3 files for voice-guided tour narration |
 | `build-*.js` | Node.js scripts to bundle/export specific tour sections |
 
 ## Data Flow
 
-This is a static front-end application with no backend. Tours navigate between HTML screen files using Shepherd.js step definitions. Each screen simulates a view of the real LTS platform.
+This is a static front-end application with no backend. Tours navigate between HTML screen files using Driver.js step definitions. Each screen simulates a view of the real LTS platform.
 
 ```
 index.html (landing) → login.html → select.html → [role-specific home] → [section screens]
                                                                               ↓
-                                                                    Shepherd.js tour overlay
+                                                                    Driver.js tour overlay
                                                                               ↓
                                                                     Audio playback (TTS MP3s)
 ```

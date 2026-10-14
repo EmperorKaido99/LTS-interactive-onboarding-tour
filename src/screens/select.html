@@ -6,7 +6,7 @@
   <title>LTS — Select Training Module</title>
   <link rel="stylesheet" href="../styles/main.css" />
 </head>
-<body>
+<body class="lts-app">
 
   <!-- LTS Banner Header -->
   <div class="lts-internal-header">
@@ -57,7 +57,7 @@
               <option value="evaluator">Evaluator</option>
               <option value="assessor">Assessor</option>
             </select>
-            <a id="mgmt-start-btn" href="mgmt-login-reviewer.html" class="btn-blue mgmt-start-btn">Start Tour</a>
+            <a id="mgmt-start-btn" href="mgmt-login.html?profile=reviewer" class="btn-blue mgmt-start-btn">Start Tour</a>
           </div>
         </div>
 
@@ -188,7 +188,7 @@
       var mgmtBtn = document.getElementById("mgmt-start-btn");
 
       mgmtSelect.addEventListener("change", function () {
-        mgmtBtn.href = "mgmt-login-" + mgmtSelect.value + ".html";
+        mgmtBtn.href = "mgmt-login.html?profile=" + mgmtSelect.value;
       });
     })();
   </script>

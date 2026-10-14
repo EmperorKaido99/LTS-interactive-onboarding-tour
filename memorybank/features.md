@@ -20,4 +20,4 @@
 | Weekly Timesheets | Timesheet capture, edit, review, and reports | Active |
 | Send-back Flow | Send-back review and resolution workflow | Active |
 | TTS Voice-Over | Text-to-speech audio narration for tour steps | Active |
-| Shepherd.js Tours | Interactive guided tours with tooltips and highlights | Active |
+| Driver.js Tours | Interactive guided tours with tooltips and highlights | Active |

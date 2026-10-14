@@ -5,15 +5,18 @@
  * Converts ES modules to regular scripts, inlines dependencies,
  * and embeds pre-recorded audio as base64 data URIs.
  *
- * Usage: node build-offline.js
+ * Usage: node build-offline.js              (voice-over embedded, about 23 MB zipped)
+ *        node build-offline.js --no-audio   (small package; the browser's own voice reads the narration)
  */
 
 const fs = require("fs");
 const path = require("path");
+const { loadCommon, stripExports, toPlainScript, loadAudioDir, speechFallbackJS } = require("./build-lib");
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, "dist");
 const SRC = path.join(ROOT, "src");
+const NO_AUDIO = process.argv.includes("--no-audio");
 
 // Clean and create dist
 if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true });
@@ -22,45 +25,31 @@ fs.mkdirSync(path.join(DIST, "screens"), { recursive: true });
 fs.mkdirSync(path.join(DIST, "styles"), { recursive: true });
 
 // 1. Read source files
-const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.css"), "utf-8");
-const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
-const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
-const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
+const { driverCSS, driverJS, mainCSS, narrateJS } = loadCommon();
 const blurOverlayJS = fs.readFileSync(path.join(SRC, "shared/blur-overlay.js"), "utf-8");
-const viewJS = fs.readFileSync(path.join(SRC, "shared/view.js"), "utf-8");
 
 // 2. Build embedded audio map (base64 data URIs)
 const audioDir = path.join(SRC, "audio");
 const audioMap = {};
 let audioCount = 0;
 
-if (fs.existsSync(audioDir)) {
+if (!NO_AUDIO && fs.existsSync(audioDir)) {
   const tourDirs = fs.readdirSync(audioDir).filter(d =>
     fs.statSync(path.join(audioDir, d)).isDirectory()
   );
 
   for (const tourName of tourDirs) {
-    audioMap[tourName] = {};
-    const tourAudioDir = path.join(audioDir, tourName);
-    const mp3Files = fs.readdirSync(tourAudioDir).filter(f => f.endsWith(".mp3"));
-
-    for (const mp3 of mp3Files) {
-      const stepId = mp3.replace(".mp3", "");
-      const mp3Data = fs.readFileSync(path.join(tourAudioDir, mp3));
-      const base64 = mp3Data.toString("base64");
-      audioMap[tourName][stepId] = `data:audio/mpeg;base64,${base64}`;
-      audioCount++;
-    }
+    audioMap[tourName] = loadAudioDir(path.join(audioDir, tourName));
+    audioCount += Object.keys(audioMap[tourName]).length;
   }
 }
 
-console.log(`Embedded ${audioCount} audio files as base64`);
+const narrationScripts = JSON.parse(fs.readFileSync(path.join(SRC, "narration/scripts.json"), "utf-8"));
+console.log(NO_AUDIO ? "Audio skipped (--no-audio): narration will use the browser voice" : `Embedded ${audioCount} audio files as base64`);
 
 // 3. Convert narrate.js and blur-overlay.js from ES modules to plain scripts
-const narrateConverted = narrateJS
-  .replace(/export\s+/g, "");
-const blurOverlayConverted = blurOverlayJS
-  .replace(/export\s+/g, "");
+const narrateConverted = stripExports(narrateJS);
+const blurOverlayConverted = stripExports(blurOverlayJS);
 
 // 4. Process each tour JS file — convert from ES module to plain script
 const toursDir = path.join(SRC, "tours");
@@ -70,14 +59,7 @@ const tourScripts = {};
 for (const file of tourFiles) {
   let content = fs.readFileSync(path.join(toursDir, file), "utf-8");
 
-  // Remove import lines
-  content = content.replace(/^import\s+.*;\s*$/gm, "");
-
-  // Replace driver import usage: driver({...}) -> window.driver.js.driver({...})
-  content = content.replace(/\bdriver\(\{/g, "window.driver.js.driver({");
-
-  // Remove "type=module" requirement by wrapping in IIFE
-  content = `(function() {\n${content}\n})();`;
+  content = toPlainScript(content);
 
   tourScripts[file] = content;
 }
@@ -87,16 +69,25 @@ function buildInlineScripts(tourFileName) {
   const tourCode = tourScripts[tourFileName];
   if (!tourCode) return "";
 
-  // Determine which tour this is to only embed its audio
-  const tourName = tourFileName.replace("-tour.js", "-tour");
+  // The tour's own name decides which audio it plays (some tours reuse another tour's audio)
+  const tourName = (tourCode.match(/TOUR_NAME\s*=\s*"([^"]+)"/) || [])[1]
+    || tourFileName.replace("-tour.js", "-tour");
   const tourAudio = audioMap[tourName] || {};
+
+  // --no-audio: no MP3s; the browser's own voice reads the narration text instead
+  const narrationBlock = NO_AUDIO
+    ? `window.__LTS_NARRATION = window.__LTS_NARRATION || {};
+window.__LTS_NARRATION["${tourName}"] = ${JSON.stringify(narrationScripts[tourName] || {})};
+`
+    : "";
+  const speechBlock = NO_AUDIO ? `\n<!-- Browser voice fallback -->\n<script>\n${speechFallbackJS}\n</script>\n` : "";
 
   return `
 <!-- Embedded Audio -->
 <script>
 window.__LTS_AUDIO = window.__LTS_AUDIO || {};
 window.__LTS_AUDIO["${tourName}"] = ${JSON.stringify(tourAudio)};
-</script>
+${narrationBlock}</script>
 
 <!-- Driver.js (IIFE) -->
 <script>${driverJS}</script>
@@ -105,7 +96,7 @@ window.__LTS_AUDIO["${tourName}"] = ${JSON.stringify(tourAudio)};
 <script>
 ${narrateConverted}
 </script>
-
+${speechBlock}
 <!-- Blur Overlay -->
 <script>
 ${blurOverlayConverted}
@@ -148,11 +139,11 @@ function processHTML(filePath, isScreen) {
     html = html.replace("</body>", `${inlineBlock}\n</body>`);
   }
 
-  // Inline the view switcher (plain script) so dist works without src/shared
-  html = html.replace(
-    /<script\s+src="\.\.\/shared\/view\.js"><\/script>/,
-    `<script>${viewJS}</script>`
-  );
+  // Inline the plain shared scripts (view switcher, management profile) so dist works without src/shared
+  html = html.replace(/<script\s+src="\.\.\/shared\/([\w-]+)\.js"><\/script>/g, (match, name) => {
+    const file = path.join(SRC, "shared", name + ".js");
+    return fs.existsSync(file) ? `<script>${fs.readFileSync(file, "utf-8")}</script>` : match;
+  });
 
   // Inline images from the "lts elements" folder as data URIs so the
   // dist build works standalone (zipped/emailed without the repo)
@@ -207,5 +198,7 @@ console.log(`Files:`);
 console.log(`  - index.html`);
 screenFiles.forEach(f => console.log(`  - screens/${f}`));
 console.log("");
-console.log("You can now ZIP the dist/ folder and email it.");
+console.log(NO_AUDIO
+  ? "Small package: ZIP the dist/ folder and email it."
+  : "ZIP the dist/ folder (about 23 MB zipped; use --no-audio for an email-sized package).");
 console.log("Recipients just unzip and double-click index.html.");

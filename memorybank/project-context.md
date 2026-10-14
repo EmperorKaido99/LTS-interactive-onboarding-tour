@@ -13,7 +13,7 @@ _This file contains the unobvious rules and patterns AI agents must follow when 
 ## Technology Stack & Versions
 
 - **Frontend:** Pure HTML5, CSS3, vanilla JavaScript (no framework)
-- **Tour Library:** Shepherd.js (loaded via CDN)
+- **Tour Library:** Driver.js 1.4.0, vendored in `src/vendor/driver/` (no CDN, no `npm install` needed to run)
 - **Styling:** Single monolithic CSS file (`src/styles/main.css`) — all views share this file
 - **Audio:** Pre-generated TTS MP3 files in `src/audio/`
 - **Build:** Node.js scripts (`build-*.js`) for packaging/exporting

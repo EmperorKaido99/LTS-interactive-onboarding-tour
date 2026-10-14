@@ -204,7 +204,7 @@ _(Updated progressively — each section filled in as discovery proceeds)_
 This is an HTML/CSS/JS interactive onboarding tour for the LTS platform. Key directories:
 - `src/screens/` — HTML screen files for each tour view
 - `src/styles/main.css` — centralized CSS styling
-- `src/tours/` — Shepherd.js tour definitions
+- `src/tours/` — Driver.js tour definitions
 - `src/audio/` — TTS voice-over MP3 files
 - `lts elements/` — reference designs and assets
 - `assets/` — static assets (images, fonts)

@@ -11,6 +11,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { loadCommon, stripExports, toPlainScript, loadAudioDir } = require("./build-lib");
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, "dist");
@@ -19,31 +20,19 @@ const OUT_FILE = path.join(DIST, "LTS-How-to-Login.html");
 
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
 
-const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.css"), "utf-8");
-const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
-const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
-const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
+const { driverCSS, driverJS, mainCSS, narrateJS } = loadCommon();
 const blurOverlayJS = fs.readFileSync(path.join(SRC, "shared/blur-overlay.js"), "utf-8");
 const viewJS = fs.readFileSync(path.join(SRC, "shared/view.js"), "utf-8");
-const narrateConverted = narrateJS.replace(/export\s+/g, "");
-const blurOverlayConverted = blurOverlayJS.replace(/export\s+/g, "");
+const narrateConverted = stripExports(narrateJS);
+const blurOverlayConverted = stripExports(blurOverlayJS);
 
 // Embed only the login-tour audio
 const audioDir = path.join(SRC, "audio/login-tour");
-const tourAudio = {};
-if (fs.existsSync(audioDir)) {
-  for (const mp3 of fs.readdirSync(audioDir).filter((f) => f.endsWith(".mp3"))) {
-    const stepId = mp3.replace(".mp3", "");
-    const base64 = fs.readFileSync(path.join(audioDir, mp3)).toString("base64");
-    tourAudio[stepId] = `data:audio/mpeg;base64,${base64}`;
-  }
-}
+const tourAudio = loadAudioDir(audioDir);
 console.log(`Embedded ${Object.keys(tourAudio).length} login-tour audio files`);
 
 let tourCode = fs.readFileSync(path.join(SRC, "tours/login-tour.js"), "utf-8");
-tourCode = tourCode.replace(/^import\s+.*;\s*$/gm, "");
-tourCode = tourCode.replace(/\bdriver\(\{/g, "window.driver.js.driver({");
-tourCode = `(function() {\n${tourCode}\n})();`;
+tourCode = toPlainScript(tourCode);
 
 let html = fs.readFileSync(path.join(SRC, "screens/login.html"), "utf-8");
 
@@ -116,7 +105,7 @@ const previewBar = `
   });
 })();
 </script>`;
-html = html.replace("<body>", `<body>\n${previewBar}`);
+html = html.replace('<body class="lts-app">', `<body class="lts-app">\n${previewBar}`);
 
 fs.writeFileSync(OUT_FILE, html);
 

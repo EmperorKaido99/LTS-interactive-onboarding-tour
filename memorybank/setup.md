@@ -13,18 +13,24 @@
 | None | Static app, no env vars needed | N/A | N/A |
 
 ## Getting Started
-
 ```bash
 # Clone the repo
 git clone https://github.com/EmperorKaido99/LTS-interactive-onboarding-tour.git
 cd LTS-interactive-onboarding-tour
 
-# Install dependencies
-npm install
+# Run it (needs Node.js; serves the folder over http://localhost:3000)
+npm start
 
-# Open the app
-# Simply open index.html in a browser, or use a local server
+# Check tours, audio and links before committing
+npm test
 ```
+
+Do not open `index.html` straight from disk: browsers block the tour scripts (ES modules) on `file://`.
+For a copy that works from disk, run `node build-offline.js` and open `dist/index.html`.
+
+Driver.js is vendored in `src/vendor/driver/`, so `npm install` is not needed to run the app.
+
+See [INTEGRATION.md](../INTEGRATION.md) for embedding the tours in another system.
 
 ## Build Scripts
 

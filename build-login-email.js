@@ -11,6 +11,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { loadCommon, stripExports, toPlainScript, loadAudioDir } = require("./build-lib");
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, "src");
@@ -18,10 +19,7 @@ const ELEMENTS = path.join(ROOT, "lts elements");
 const OUTPUT = path.join(ELEMENTS, "LTS-Login-Tour.html");
 
 // 1. Read all source files
-const driverCSS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.css"), "utf-8");
-const driverJS = fs.readFileSync(path.join(ROOT, "node_modules/driver.js/dist/driver.js.iife.js"), "utf-8");
-const mainCSS = fs.readFileSync(path.join(SRC, "styles/main.css"), "utf-8");
-const narrateJS = fs.readFileSync(path.join(SRC, "shared/narrate.js"), "utf-8");
+const { driverCSS, driverJS, mainCSS, narrateJS } = loadCommon();
 const blurJS = fs.readFileSync(path.join(SRC, "shared/blur-overlay.js"), "utf-8");
 const loginTourJS = fs.readFileSync(path.join(SRC, "tours/login-tour.js"), "utf-8");
 const loginHTML = fs.readFileSync(path.join(SRC, "screens/login.html"), "utf-8");
@@ -54,30 +52,16 @@ console.log(`Embedded ${Object.keys(images).length} images as base64`);
 
 // 3. Embed login-tour audio as base64
 const audioDir = path.join(SRC, "audio/login-tour");
-const audioMap = {};
-let audioCount = 0;
-
-if (fs.existsSync(audioDir)) {
-  const mp3Files = fs.readdirSync(audioDir).filter(f => f.endsWith(".mp3"));
-  for (const mp3 of mp3Files) {
-    const stepId = mp3.replace(".mp3", "");
-    const mp3Data = fs.readFileSync(path.join(audioDir, mp3));
-    audioMap[stepId] = `data:audio/mpeg;base64,${mp3Data.toString("base64")}`;
-    audioCount++;
-  }
-}
+const audioMap = loadAudioDir(audioDir);
+const audioCount = Object.keys(audioMap).length;
 
 console.log(`Embedded ${audioCount} audio files as base64`);
 
 // 4. Convert ES modules to plain scripts
-const narrateConverted = narrateJS.replace(/export\s+/g, "");
-const blurConverted = blurJS.replace(/export\s+/g, "");
+const narrateConverted = stripExports(narrateJS);
+const blurConverted = stripExports(blurJS);
 
-let tourConverted = loginTourJS
-  .replace(/^import\s+.*;\s*$/gm, "")
-  .replace(/\bdriver\(\{/g, "window.driver.js.driver({");
-
-tourConverted = `(function() {\n${tourConverted}\n})();`;
+const tourConverted = toPlainScript(loginTourJS);
 
 // 5. Extract the <body> content from login.html
 const bodyMatch = loginHTML.match(/<body[^>]*>([\s\S]*)<\/body>/i);
@@ -119,7 +103,7 @@ ${finalCSS}
 .screen-nav { display: none; }
   </style>
 </head>
-<body>
+<body class="lts-app">
 
 ${bodyContent}
 

@@ -58,6 +58,22 @@ function speak(text) {
 }
 
 /**
+ * Play audio. If the browser blocks autoplay (for example when the tours are embedded
+ * in another site's iframe without allow="autoplay"), play it on the first click instead.
+ */
+function playAudio(audio) {
+  audio.play().catch(() => {
+    document.addEventListener(
+      "click",
+      () => {
+        if (audio === currentAudio) audio.play().catch(() => {});
+      },
+      { once: true }
+    );
+  });
+}
+
+/**
  * Play pre-recorded narration for a given tour step.
  * @param {string} tourName - Tour name (e.g. "login-tour")
  * @param {string} stepId   - Step ID (e.g. "login-username" or "step-0")
@@ -74,7 +90,7 @@ export async function narrate(tourName, stepId) {
     const dataUri = window.__LTS_AUDIO[tourName][stepId];
     const audio = new Audio(dataUri);
     currentAudio = audio;
-    audio.play().catch(() => {});
+    playAudio(audio);
     return;
   }
 
@@ -89,7 +105,7 @@ export async function narrate(tourName, stepId) {
     });
     if (token !== narrationToken) return; // superseded by a newer step
     currentAudio = audio;
-    audio.play().catch(() => {});
+    playAudio(audio);
   } catch {
     // No MP3 for this step — speak the narration script instead
     const scripts = await loadScripts();

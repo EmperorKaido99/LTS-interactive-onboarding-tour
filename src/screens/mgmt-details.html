@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LTS — User Details (Evaluator)</title>
+  <title>LTS — User Details (Reviewer)</title>
   <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="../../node_modules/driver.js/dist/driver.css" />
+  <link rel="stylesheet" href="../vendor/driver/driver.css" />
 </head>
-<body>
+<body class="lts-app">
 
   <!-- LTS Internal Header -->
   <div class="lts-internal-header">
@@ -19,13 +19,13 @@
   <!-- Firm Bar -->
   <div class="lts-firm-bar">
     <span class="firm-name">Firm: LTS Main Combined Demo Firm</span>
-    <span class="user-info">Evaluator Test (Evaluator) | <a href="#">LOG OUT</a></span>
+    <span class="user-info" data-role>Reviewer Test (Reviewer) | <a href="#">LOG OUT</a></span>
   </div>
 
   <!-- Page Header -->
   <div class="lts-page-header">
     <span>User Details</span>
-    <a class="back-link" href="mgmt-login-evaluator.html">&#9664; BACK</a>
+    <a class="back-link" href="mgmt-login.html" data-profile-link>&#9664; BACK</a>
   </div>
 
   <div class="lts-layout">
@@ -37,7 +37,7 @@
           Registered Users <span class="chevron">&#9650;</span>
         </div>
         <div class="sidebar-links">
-          <a href="#"><span class="dot green"></span> Evaluator Home</a>
+          <a href="#" data-role><span class="dot green"></span> Reviewer Home</a>
           <a href="#"><span class="dot grey"></span> Edit your details</a>
           <a href="#"><span class="dot blue"></span> Documents</a>
         </div>
@@ -54,7 +54,7 @@
         <div class="sidebar-select">
           <label>Select Profile:</label>
           <select>
-            <option selected>Evaluator</option>
+            <option selected data-role>Reviewer</option>
           </select>
         </div>
         <button class="sidebar-continue-btn">Continue</button>
@@ -88,7 +88,7 @@
       </div>
 
       <div id="view-credentials" style="padding: 6px 14px; background: #fff; border-bottom: 1px solid #ccc;">
-        <a href="mgmt-login-evaluator.html" class="view-credentials-link">View/Update Login Credentials</a>
+        <a href="mgmt-login.html" data-profile-link class="view-credentials-link">View/Update Login Credentials</a>
       </div>
 
       <div id="note-area" class="note-text">
@@ -107,7 +107,7 @@
         </div>
         <div class="form-row">
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" value="Evaluator" class="mandatory" />
+          <input type="text" id="first-name" value="Reviewer" class="mandatory" data-role />
           <span class="asterisk">*</span>
         </div>
         <div class="form-row">
@@ -139,7 +139,7 @@
         <div class="form-section-header">Contact Information</div>
         <div class="form-row">
           <label for="email1">EMail 1:</label>
-          <input type="email" id="email1" value="evaluator@LTSystems.co.za" class="mandatory" />
+          <input type="email" id="email1" value="reviewer@LTSystems.co.za" class="mandatory" data-role />
           <span class="asterisk">*</span>
           <span class="field-note">Work Email</span>
         </div>
@@ -176,7 +176,7 @@
   </div><!-- end lts-layout -->
 
   <div class="screen-nav">
-    <a href="mgmt-login-evaluator.html" class="nav-btn green">&larr; Back to Login Credentials</a>
+    <a href="mgmt-login.html" data-profile-link class="nav-btn green">&larr; Back to Login Credentials</a>
     <a href="select.html" class="nav-btn">Back to Training Modules &rarr;</a>
   </div>
 
@@ -185,6 +185,7 @@
     Copyright &copy; 2020, Learner Tracking Systems (Pty) Ltd. All rights Reserved.
   </div>
 
+  <script src="../shared/mgmt-profile.js"></script>
   <script type="module" src="../tours/mgmt-details-tour.js"></script>
   <script>
     function goToSelect() {
